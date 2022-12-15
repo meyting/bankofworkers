@@ -1,0 +1,49 @@
+{{ block title }}
+{{ if participant.task_treatment == 0 }}
+        Explanations Task I
+    {{ else }}
+        Explanations Task II
+    {{ endif }}
+{{ endblock }}
+{{ block content }}
+<br>
+    <h5> <b> Task: </b> </h5>
+    <p>
+        In this part of the task you have to solve 50 mathematical questions.
+        In each of these you have to calculate the sum of 5 integer numbers between 1 and 10.
+        You have 5 minutes to complete alle the 50 calculations.
+        The task ends either if your time is over or if you have answered all the 50 questions. <br>
+        [Keep in mind, that the answer will always be a positive integer.
+        Thus, there won`t be any negative results or decimals. ???] <br>
+        If you want, you can skip a question by clicking on "next". In that case you will be directed to the next question. <br>
+        Please note that you cannot go back to the previous question after you have started with the next question by clicking "next". <br>
+        Instead of clicking on "next" you can also press "enter" to go to the next question and to confirm your input.
+        (This might save you some time.)
+    </p>
+        <br>
+    <p style="font-size:18px;"> <u> Example: </u>  </p>
+        <img src="{{ static 'mathexample.png' }}" width="250px" height=auto/> <br>
+        Adding the numbers gives the result 15. Therefore, the correct answer to enter is "15". <br>
+    <br> <br>
+    <h5> <b> Score and payment: </b> </h5>
+    <p>
+        For each correct answer, you get one point. You do <b> not </b> get any deductions for wrong or missing answers.
+        Hence, your total score will be between 0 and 50, depending on how many math problems you have solved correctly. <br>
+    (As explained previously, the bonus payment for this subtask is calculated by your score divided by 50?)
+    </p>
+    <br>
+    <p style="font-size:18px;"> <u> Example: </u> </p>
+    <img src="{{ static 'mathexample.png' }}" width="250px" height=auto/> <br>
+        If you answer with the correct result "15", you get 1 point for that question. <br>
+        If you answer a total of 30 out of 50 questions correctly, your overall score for this subtask will be 30. <br>
+    (The bonus payment you get - if this task is drawn as the task that determines you extra money for part I - is 30/50 = 0.6$.)
+    <br>
+    <br>
+    <p>
+    If you have read and understood these explanations, please click "next" to go to the next page where you can start with
+        the math task when you are ready.
+    </p>
+    {{ next_button }}
+{{ endblock }}
+
+

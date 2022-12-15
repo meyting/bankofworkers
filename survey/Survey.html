@@ -1,0 +1,60 @@
+{{ block title }}
+    Please answer some final question
+{{ endblock }}
+{{ block content }}
+<br>
+<p>
+    {{ formfield 'age' }}
+    {{ formfield 'gender' }}
+    {{ formfield 'race' }}
+</p>
+<p>
+    {{ formfield 'education' }}
+    {{ formfield 'gpa_highschool' }}
+    {{ formfield 'gpa_college' }}
+</p>
+<p>
+    <label for='pol'> In politics today, do you consider yourself a Republican, a Democrat,
+        or an Independent?</label>
+    <select onchange="CheckIndpol(this);" name="political_affiliation" id="pol" class="form-control">
+        <option selected value> --------- </option>
+        <option  value="0">Democrat</option >
+        <option  value="1">Republican</option >
+        <option  value="2">Independent</option>
+    </select>
+    <div style="display: none;" id="pol_orientation">
+       {{  formfield 'political_orientation' }}
+    </div>
+</p>
+<br>
+<br>
+<h6> Financial knowledge: </h6>
+<p>
+    {{ formfield 'financial_literacy1' }}
+    {{ formfield 'financial_literacy2' }}
+    {{ formfield 'financial_literacy3' }}
+    {{ formfield 'financial_literacy_est' }}
+</p>
+<br>
+<br> <br>
+    {{ next_button }}
+
+{{ endblock }}
+{{ block scripts }}
+<script>
+function CheckIndpol(that) {
+    if (that.value == "2") {
+        document.getElementById("pol_orientation").style.display = "block"; setRequired(true);
+        document.getElementById("pol_orientation").required = true;
+    } else {
+        document.getElementById("pol_orientation").style.display = "none"; setRequired(false);
+    }
+};
+function setRequired(val){
+    input = document.getElementById("show").getElementsByTagName('input');
+    for(i = 0; i < input.length; i++){
+        input[i].required = val;
+    }
+}
+</script>
+{{ endblock }}

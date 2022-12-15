@@ -1,0 +1,27 @@
+{{ block title }}
+{{ if participant.task_treatment == 0 }}
+        Task I
+    {{ else }}
+        Task II
+    {{ endif }}
+{{ endblock }}
+{{ block content }}
+    <h6> Question {{ player.question_num_math }} of 50: </h6>
+<p>
+<table>
+    <col>
+        <col width="5">
+            <col width="70">
+    <tr>
+        <td style="font-size:18px;"> {{ subsession.n1 }} + {{ subsession.n2 }} + {{ subsession.n3 }} + {{ subsession.n4 }} + {{subsession.n5 }} = </td>
+        <td> </td>
+        <td style="border: 2px solid black; height: 15px">
+            <input type="number" min="0" name="input_math" id="input_math" class="form-control" autofocus> </td>
+    </tr>
+</table>
+</p>
+<br>
+    [ result: {{ subsession.result_math }} ]
+    {{ next_button }}
+
+{{ endblock }}

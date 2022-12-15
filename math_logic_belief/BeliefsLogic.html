@@ -1,0 +1,286 @@
+{{ block title }}
+  Beliefs about scores in the Logic Task
+{{ endblock }}
+
+{{ block content }}
+<br>
+<P>
+    Please provide your estimate about the scores of specific subgroups in the <b> logic test </b> where the number sequences had to be continued. <br>
+Remember that the possible score in the logic test ranges from 0 to 50. <br> <br>
+    [Pop up more about logic task?]
+    </P>
+<br>
+<p id="container">
+    If you want to read the instructions for the task again, click <b class="openbox" id="openbox">here</b>.</p>
+<p class="infobox hidden" id="infobox">
+    [!insert instructions beliefs from page before!]
+</p> <br>
+<h5> Performance of the 100 sampled <u>men</u> in the logic task: </h5> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of all men: </td>
+        <td> </td>
+        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+        {{ formfield_errors 'l_male1' }} </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the best 10 men: </td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_male2" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the worst 10 men:</td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_male3" class="form-control" required> </td>
+    </tr>
+</table>
+<br> <br>
+<h5> Performance of the 100 sampled <u>women</u> in the logic task: </h5> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of all women: </td>
+        <td> </td>
+        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_female1" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the best 10 women: </td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_female2" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the worst 10 women:</td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_female3" class="form-control" required> </td>
+    </tr>
+</table>
+<br> <br> <br>
+<h5> Performance of the 100 sampled <u>asians</u> in the logic task: </h5> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of all asians:</td>
+        <td> </td>
+        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_asian1" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the best 10 asians: </td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_asian2" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the worst 10 asians:</td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_asian3" class="form-control" required> </td>
+    </tr>
+</table>
+<br> <br>
+<h5> Performance of the 100 sampled <u>hispanics</u> in the logic task: </h5> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of all hispanics:</td>
+        <td> </td>
+        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_hispanic1" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the best 10 hispanics: </td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the worst 10 hispanics:</td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required> </td>
+    </tr>
+</table>
+<br> <br> <br>
+<h5> Performance of the 100 sampled <u>democrats</u> in the logic task: </h5> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of all democrats:</td>
+        <td> </td>
+        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_democrat1" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the best 10 democrats: </td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_democrat2" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the worst 10 democrats:</td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_democrat3" class="form-control" required> </td>
+    </tr>
+</table>
+<br> <br>
+<h5> Performance of the 100 sampled <u>republicans</u> in the logic task: </h5> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of all republicans:</td>
+        <td> </td>
+        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_republican1" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the best 10 republicans: </td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_republican2" class="form-control" required> </td>
+    </tr>
+</table> <br>
+<table>
+    <colgroup>
+    <col>
+        <col width="5">
+            <col>
+    </colgroup>
+    <tr>
+        <td style="font-size:18px;">Estimation of the average score of the worst 10 republicans:</td>
+        <td> </td>
+        <td style="border: 2px solid black">
+            <input type="number" min="0" max="50" name="l_republican3" class="form-control" required> </td>
+    </tr>
+</table>
+<br> <br>
+
+    {{ next_button }}
+{{ endblock }}
+
+
+{{ block styles }}
+<style type="text/css">
+.hidden {
+	display:none;
+}
+.infobox {
+    background-color:#f0f0f5
+    }
+.openbox {
+        cursor: pointer;
+		margin: 15px 0;
+		  }
+</style>
+{{ endblock }}
+{{ block app_scripts }}
+<script>
+document.getElementById("openbox").addEventListener("click", function(){
+document.getElementById("infobox").classList.remove("hidden");
+document.getElementById("container").classList.add("hidden");
+        });
+
+</script>
+{{ endblock }}

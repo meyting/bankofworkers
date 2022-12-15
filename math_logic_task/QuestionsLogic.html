@@ -1,0 +1,27 @@
+{{ block title }}
+    {{ if participant.task_treatment == 1 }}
+        Task I
+    {{ else }}
+        Task II
+    {{ endif }}
+{{ endblock }}
+{{ block content }}
+    <h6> Question {{ player.question_num_logic }} of 50: </h6>
+<p>
+<table>
+    <col>
+        <col width="5">
+            <col width="70">
+    <tr>
+        <td style="font-size:18px;"> {{ subsession.question_logic }} </td>
+        <td> </td>
+        <td style="border: 2px solid black; height: 15px">
+            <input type="number" min="0" name="input_logic" id="input_logic" class="form-control" autofocus> </td>
+    </tr>
+</table>
+</p>
+    <br>
+    [ result: {{ player.solution_logic }} ]
+    {{ next_button }}
+
+{{ endblock }}
