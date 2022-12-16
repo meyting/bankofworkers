@@ -1,12 +1,12 @@
 {{ block title }}
-{{ if participant.task_treatment == 0 }}
+{{ if participant.task_first == "math" }}
         Task I
     {{ else }}
         Task II
     {{ endif }}
 {{ endblock }}
 {{ block content }}
-    <h6> Question {{ player.question_num_math }} of 50: </h6>
+    <h6> Question {{ player.question_num_math }} of {{ C.num_rounds_task }}: </h6>
 <p>
 <table>
     <col>

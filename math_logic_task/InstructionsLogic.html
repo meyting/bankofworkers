@@ -1,52 +1,51 @@
 {{ block title }}
- {{ if participant.task_treatment == 1 }}
-        Explanations Task I
+ {{ if participant.task_first == "logic" }}
+        Part I - Subtask I
     {{ else }}
-        Explanations Task II
+        Part I - Subtask II
     {{ endif }}
 {{ endblock }}
 
 {{ block content }}
-    <p> <h5> <b> Task: </b> </h5> </p>
     <p>
-        In this task, you have to solve 50 "logic" questions.
+        In this task, you have to solve {{C.num_rounds_task}}  "logic" questions.
         Each question consists of a sequence of numbers.
-        Your task is to complete the sequence by finding out which number continues the given sequence. <br>
-        You have 5 minutes to complete alle the 50 calculations.
-        For this, you need to figure out according to which pattern the number sequence is constructed.
-        The task ends either if your time is over or if you have answered all the 50 questions. <br>
+        Your task is to complete the sequence by finding out which number continues the given sequence.
+    </p>
+    <p>
+        You have {{C.time_maths_mins}} minutes to complete all {{C.num_rounds_task}} calculations.
+        For this, you need to figure out the pattern with which the number sequence is constructed.
+        The task ends either if your time is over or if you have answered all the {{C.num_rounds_task}} questions.
+    </p>
+    <p>
         Note that the answer will always be a non-negative integer.
-        Thus, there won`t be any negative results or decimals. ??? <br>
-        If you want, you can skip a question by clicking on "next". In that case you will be directed to the next question. <br>
+        Thus, there won`t be any negative results or decimals. <b style="color:red"> DO WE NEED THIS?</b>
+    </p>
+    <p>
+        If you want, you can skip a question by clicking on "next". In that case you will be directed to the next question.
         Please note that you cannot go back to the previous question after you have started the next question by clicking "next". <br>
         Instead of clicking on "next" you can also press "enter" to go to the next question and to confirm your input.
         (This might save you some time.)
     </p>
-        <br>
-        <p style="font-size:18px;"> <u> Example: </u>  </p>
-        <img src="{{ static 'logicexample.png' }}" width="180px" height=auto/> <br>
-             In this example, the rule according to which the sequence of numbers is constructed is to
-            subtract 1 from the previous number in the sequence.
-            Therefore, the correct answer you should type in is "5". <br>
-    <br> <br>
-    <p> <h5> <b> Score and Payment: </b> </h5> </p>
+    <p style="font-size:18px;"> <u> Example: </u>  </p>
+    <img src="{{ static 'logicexample.png' }}" width="180px" height=auto/> <br>
+    <p>
+        In this example, the rule according to which the sequence of numbers is constructed is to subtract 1 from the previous number in the sequence.
+        Therefore, the correct answer would be "5".
+    </p>
+<br>
+    <h5> <b> Score and Payment: </b> </h5>
     <p>
         For each correct answer, you get one point. You do <b> not </b> get any deductions for wrong or missing answers.
-        Hence, your total score will be between 0 and 50, depending on how many math problems you have solved correctly. <br>
-    (As explained previously, the bonus payment for this subtask is calculated by your score divided by 50.)
+        Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many math problems you have solved correctly.
+        (As explained before, the bonus payment for this subtask is calculated by multiplying the number of correct answers by {{C.bonusrate}}.)
     </p>
-    <br>
     <p style="font-size:18px;"> <u> Example: </u>  </p>
-        <img src="{{ static 'logicexample.png' }}" width="180px" height=auto/> <br>
-         If you answer with the correct result "5", you get 1 point for that question. <br>
-    If you answer a total of 2 out of 50 questions correctly, your overall score for this subtask will be 22. <br>
-    The additional money you would receive in this example -
-    if this task is drawn as the part that determines you bonus payment - is 22/50 = 0.44$.
-    <br>
-    <br>
+        If you answer a total of {{C.bonusexample_logic}} out of {{C.num_rounds_task}} questions correctly, your overall score for this subtask will be {{C.bonusexample_logic}}. <br>
+        The bonus payment that you would receive - if this task is drawn as the part that determines you bonus payment - is {{C.bonusexample_logic}} * {{C.bonusrate}} = {{C.bonusexampleresult_logic}}.
+    </p>
     <p>
-    If you have read and understood these explanations, please click "next" to go to the next page where you can start with
-        the logic task when you are ready.
+        If you have read and understood these explanations, please click "next" to go to the next page to start the logic task.
     </p>
     {{ next_button }}
 {{ endblock }}

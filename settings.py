@@ -3,7 +3,7 @@ from os import environ
 SESSION_CONFIGS = [
     dict(
         name='alles',
-        app_sequence=['instructions', 'math_logic_task', 'math_logic_belief', 'self_estimation', 'survey'],
+        app_sequence=['welcome','instructions', 'math_logic_task', 'math_logic_belief', 'self_estimation', 'survey'],
         num_demo_participants=10,
     ),
     dict(
@@ -37,8 +37,8 @@ SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
 )
 
-PARTICIPANT_FIELDS = ['expiry', 'total_points_math', 'timer', 'task_treatment', 'belief_treatment', 'task_rounds',
-                      'total_points_logic']
+PARTICIPANT_FIELDS = ['expiry', 'total_points_math', 'task_first', 'belief_treatment', 'task_rounds',
+                      'total_points_logic', "sequences_logic", "solutions_logic"]
 SESSION_FIELDS = []
 
 # ISO-639 code
@@ -47,7 +47,7 @@ LANGUAGE_CODE = 'en'
 
 # e.g. EUR, GBP, CNY, JPY
 REAL_WORLD_CURRENCY_CODE = 'USD'
-USE_POINTS = True
+USE_POINTS = False
 
 ADMIN_USERNAME = 'admin'
 # for security, best to set admin password in an environment variable
