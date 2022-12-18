@@ -3,19 +3,16 @@
 {{ endblock }}
 
 {{ block content }}
-<br>
-<P>
-    Please provide your estimate about the scores of specific subgroups in the <b> logic test </b> where the number sequences had to be continued. <br>
-Remember that the possible score in the logic test ranges from 0 to 50. <br> <br>
-    [Pop up more about logic task?]
-    </P>
-<br>
+<p>
+    Please provide your estimate about the scores of specific subgroups in the <b> logic test </b> where the number sequences had to be continued.
+    Remember that the possible score in the logic test ranges from 0 to {{ C.num_rounds_task}}.
+</p>
 <p id="container">
     If you want to read the instructions for the task again, click <b class="openbox" id="openbox">here</b>.</p>
 <p class="infobox hidden" id="infobox">
     [!insert instructions beliefs from page before!]
-</p> <br>
-<h5> Performance of the 100 sampled <u>men</u> in the logic task: </h5> <br>
+</p>
+<h5> Performance of the {{ C.samples }} sampled <u>men</u> in the logic task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -56,7 +53,7 @@ Remember that the possible score in the logic test ranges from 0 to 50. <br> <br
     </tr>
 </table>
 <br> <br>
-<h5> Performance of the 100 sampled <u>women</u> in the logic task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>women</u> in the logic task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -96,7 +93,7 @@ Remember that the possible score in the logic test ranges from 0 to 50. <br> <br
     </tr>
 </table>
 <br> <br> <br>
-<h5> Performance of the 100 sampled <u>asians</u> in the logic task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>asians</u> in the logic task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -136,7 +133,7 @@ Remember that the possible score in the logic test ranges from 0 to 50. <br> <br
     </tr>
 </table>
 <br> <br>
-<h5> Performance of the 100 sampled <u>hispanics</u> in the logic task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>hispanics</u> in the logic task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -176,7 +173,7 @@ Remember that the possible score in the logic test ranges from 0 to 50. <br> <br
     </tr>
 </table>
 <br> <br> <br>
-<h5> Performance of the 100 sampled <u>democrats</u> in the logic task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>democrats</u> in the logic task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -216,7 +213,7 @@ Remember that the possible score in the logic test ranges from 0 to 50. <br> <br
     </tr>
 </table>
 <br> <br>
-<h5> Performance of the 100 sampled <u>republicans</u> in the logic task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>republicans</u> in the logic task: </h5> <br>
 <table>
     <colgroup>
     <col>

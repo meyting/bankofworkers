@@ -6,7 +6,7 @@
 <br>
 <p>
     Please provide your estimate of the scores of specific subgroups in the <b> math task </b> where 5 numbers had to be added. <br>
-    Remember that the possible total score in the math test ranges from 0 to 50. <br> <br>
+    Remember that the possible total score in the math test ranges from 0 to {{ C.num_rounds_task}}. <br> <br>
     Please enter whole numbers as your answer. <br> <br>
     [Pop up more about math task?] <br>
     </p>
@@ -16,7 +16,7 @@
 <p class="infobox hidden" id="infobox">
     [!insert instructions beliefs from page before!]
 </p> <br>
-<h5> Performance of 100 sampled <u>men</u> in the math task: </h5> <br>
+<h5> Performance of {{ C.samples }} sampled <u>men</u> in the math task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -56,7 +56,7 @@
     </tr>
 </table>
 <br> <br>
-<h5> Performance of the 100 sampled <u>women</u> in the math task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>women</u> in the math task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -96,7 +96,7 @@
     </tr>
 </table>
 <br> <br> <br>
-<h5> Performance of the 100 sampled <u>asians</u> in the math task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>asians</u> in the math task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -136,7 +136,7 @@
     </tr>
 </table>
 <br> <br>
-<h5> Performance of the 100 sampled <u>hispanics</u> in the math task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>hispanics</u> in the math task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -176,7 +176,7 @@
     </tr>
 </table>
 <br> <br> <br>
-<h5> Performance of the 100 sampled <u>democrats</u> in the math task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>democrats</u> in the math task: </h5> <br>
 <table>
     <colgroup>
     <col>
@@ -216,7 +216,7 @@
     </tr>
 </table>
 <br> <br>
-<h5> Performance of the 100 sampled <u>republicans</u> in the math task: </h5> <br>
+<h5> Performance of the {{ C.samples }} sampled <u>republicans</u> in the math task: </h5> <br>
 <table>
     <colgroup>
     <col>

@@ -24,7 +24,6 @@ def creating_session(subsession: Subsession):
                 p.participant.task_first = subsession.session.config['task_first']
             else:
                 p.participant.task_first = next(task_first)
-            print("WELCOME", p.participant.task_first)
 
 class Group(BaseGroup):
     pass

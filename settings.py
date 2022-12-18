@@ -8,12 +8,12 @@ SESSION_CONFIGS = [
     ),
     dict(
         name='mathe_logic_test',
-        app_sequence=['math_logic_task'],
+        app_sequence=['welcome','math_logic_task'],
         num_demo_participants=5,
     ),
     dict(
         name='beliefs',
-        app_sequence=['math_logic_belief'],
+        app_sequence=['welcome','math_logic_belief'],
         num_demo_participants=10,
     ),
 dict(

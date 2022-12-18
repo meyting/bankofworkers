@@ -27,11 +27,8 @@ class C(BaseConstants):
                        '96, 48, 24, 12, __', '1, 3, 5, 7, __', '2, 4, 8, 16, __', '1, 2, 4, 7, 11, __',
                        '1, 3, 9, 27, __', '32, 26, 20, 14, __', '11, 22, 33, 44, __', '33, 38, 43, 48, __',
                        '1, 8, 27, 64, __']
-    print("seq", SEQUENCES_LOGIC)
     SOLUTIONS_LOGIC = [11, 56, 3, 28, 107, 26, 32, 9, 5, 5, 28, 18, 288, 47, 16, 12, 36, 64, 11, 44, 22, 21, 17, 10, 12,
                        6, 27, 120, 10, 25, 9, 56, 25, 71, 42, 61, 57, 23, 29, 33, 63, 6, 9, 32, 16, 81, 8, 55, 53, 125,]
-    print("sol", SOLUTIONS_LOGIC)
-    # jeweils 50 doppelt hintereinander (wegen 100 Runden)
     bonusrate = cu(0.05)
     bonusexample = 30
     bonusexample_math = 25
@@ -61,7 +58,6 @@ class Subsession(BaseSubsession):
 
 import itertools
 def creating_session(subsession):
-    task_first = itertools.cycle(['logic', 'math'])
     subsession.n1 = create_numbers(0)
     subsession.n2 = create_numbers(1)
     subsession.n3 = create_numbers(2)
