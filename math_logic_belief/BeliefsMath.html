@@ -4,8 +4,8 @@
 
 {{ block content }}
 <p>
-    Please provide your estimate about the scores of specific subgroups in the <b> math task </b> where {{ C.num_integers }} numbers had to be added up.
-    Remember that the possible score in the math task ranges from 0 to {{ C.num_rounds_task}}.
+    Please provide your estimate about the scores of specific subgroups in the <b> math task </b> where the {{C.num_integers}} numbers had to be added up.
+    Remember that the possible score in the math test ranges from 0 to {{ C.num_rounds_task}}.
 </p>
 <p id="container">
     If you want to read the instructions for the task again, click <b class="openbox" id="openbox">here</b>.</p>
@@ -16,24 +16,23 @@
 <hr>
 <br>
 
-
-{{ if participant.cats == "grp" }}
+ {{ if participant.cats == "grp" }}
 <p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the math task: </p>
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" >
-        <td><label for="m_male1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" id="m_male1_1" class="form-control" >
+        <td><label for="m_male1_1">points</label>
         {{ formfield_errors 'm_male1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" >
-        <td><label for="m_male2">points</label>
+        <td><input type="number" min="0" max="50" name="m_male2" id="m_male2_1" class="form-control" >
+        <td><label for="m_male2_1">points</label>
         {{ formfield_errors 'm_male2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" >
-        <td><label for="m_male3">points</label>
+        <td><input type="number" min="0" max="50" name="m_male3" id="m_male3_1" class="form-control" >
+        <td><label for="m_male3_1">points</label>
         {{ formfield_errors 'm_male3' }} </td>
   </tr>
 </table>
@@ -44,18 +43,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" >
-        <td><label for="m_female1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" id="m_female1_1" class="form-control" >
+        <td><label for="m_female1_1">points</label>
         {{ formfield_errors 'm_female1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" >
-        <td><label for="m_female2">points</label>
+        <td><input type="number" min="0" max="50" name="m_female2" id="m_female2_1" class="form-control" >
+        <td><label for="m_female2_1">points</label>
         {{ formfield_errors 'm_female2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" >
-        <td><label for="m_female3">points</label>
+        <td><input type="number" min="0" max="50" name="m_female3" id="m_female3_1" class="form-control" >
+        <td><label for="m_female3_1">points</label>
         {{ formfield_errors 'm_female3' }} </td>
   </tr>
 </table>
@@ -68,18 +67,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" >
-        <td><label for="m_white1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" id="m_white1_1" class="form-control" >
+        <td><label for="m_white1_1">points</label>
         {{ formfield_errors 'm_white1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" >
-        <td><label for="m_white2">points</label>
+        <td><input type="number" min="0" max="50" name="m_white2" id="m_white2_1" class="form-control" >
+        <td><label for="m_white2_1">points</label>
         {{ formfield_errors 'm_white2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" >
-        <td><label for="m_white3">points</label>
+        <td><input type="number" min="0" max="50" name="m_white3" id="m_white3_1" class="form-control" >
+        <td><label for="m_white3_1">points</label>
         {{ formfield_errors 'm_white3' }} </td>
   </tr>
 </table>
@@ -90,18 +89,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" >
-        <td><label for="m_asian1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" id="m_asian1_1" class="form-control" >
+        <td><label for="m_asian1_1">points</label>
       {{ formfield_errors 'm_asian1' }}</td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" >
-        <td><label for="m_asian2">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian2" id="m_asian2_1" class="form-control" >
+        <td><label for="m_asian2_1">points</label>
         {{ formfield_errors 'm_asian2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" >
-        <td><label for="m_asian3">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian3" id="m_asian3_1" class="form-control" >
+        <td><label for="m_asian3_1">points</label>
         {{ formfield_errors 'm_asian3' }} </td>
   </tr>
 </table>
@@ -112,18 +111,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" >
-        <td><label for="m_hispanic1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_hispanic1" id="m_hispanic1_1" class="form-control" >
+        <td><label for="m_hispanic1_1">points</label>
       {{ formfield_errors 'm_hispanic1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" >
-        <td><label for="m_hispanic2">points</label>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" id="m_hispanic2_1" class="form-control" >
+        <td><label for="m_hispanic2_1">points</label>
         {{ formfield_errors 'm_hispanic2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" >
-        <td><label for="m_hispanic3">points</label></td>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" id="m_hispanic3_1" class="form-control" >
+        <td><label for="m_hispanic3_1">points</label></td>
         {{ formfield_errors 'm_hispanic3' }}
   </tr>
 </table>
@@ -134,18 +133,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" >
-        <td><label for="m_black1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" id="m_black1_1" class="form-control" >
+        <td><label for="m_black1_1">points</label>
         {{ formfield_errors 'm_black1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" >
-        <td><label for="m_black2">points</label>
+        <td><input type="number" min="0" max="50" name="m_black2" id="m_black2_1" class="form-control" >
+        <td><label for="m_black2_1">points</label>
         {{ formfield_errors 'm_black2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" >
-        <td><label for="m_black3">points</label>
+        <td><input type="number" min="0" max="50" name="m_black3" id="m_black3_1" class="form-control" >
+        <td><label for="m_black3_1">points</label>
         {{ formfield_errors 'm_black3' }} </td>
   </tr>
 </table>
@@ -157,19 +156,19 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" >
-        <td><label for="m_democrat1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" id="m_democrat1_1" class="form-control" >
+        <td><label for="m_democrat1_1">points</label>
         {{ formfield_errors 'm_democrat1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" id="m_democrat2_1" >
+        <td><label for="m_democrat2_1">points</label>
         {{ formfield_errors 'm_democrat2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
+        <td><input type="number" min="0" max="50" name="m_democrat3" class="form-control" id="m_democrat3_1" >
+        <td><label for="m_democrat3_1">points</label>
+        {{ formfield_errors 'm_democrat3' }} </td>
   </tr>
 </table>
 
@@ -179,22 +178,25 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" >
-        <td><label for="m_republican1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" id="m_republican1_1" class="form-control" >
+        <td><label for="m_republican1_1">points</label>
         {{ formfield_errors 'm_republican1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" >
-        <td><label for="m_republican2">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" id="m_republican2_1" >
+        <td><label for="m_republican2_1">points</label>
         {{ formfield_errors 'm_republican2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" >
-        <td><label for="m_republican3">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" id="m_republican3_1" >
+        <td><label for="m_republican3_1">points</label>
         {{ formfield_errors 'm_republican3' }} </td>
   </tr>
 </table>
 {{ endif }}
+
+
+
 
 
 
@@ -205,19 +207,19 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" >
-        <td><label for="m_democrat1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" id="m_democrat1_2" class="form-control" >
+        <td><label for="m_democrat1_2">points</label>
         {{ formfield_errors 'm_democrat1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
+        <td><input type="number" min="0" max="50" name="m_democrat2" id="m_democrat2_2" class="form-control" >
+        <td><label for="m_democrat2_2">points</label>
         {{ formfield_errors 'm_democrat2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
+        <td><input type="number" min="0" max="50" name="m_democrat3" id="m_democrat3_2" class="form-control" >
+        <td><label for="m_democrat3_2">points</label>
+        {{ formfield_errors 'm_democrat3' }} </td>
   </tr>
 </table>
 
@@ -227,18 +229,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" >
-        <td><label for="m_republican1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" id="m_republican1_2" class="form-control" >
+        <td><label for="m_republican1_2">points</label>
         {{ formfield_errors 'm_republican1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" >
-        <td><label for="m_republican2">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican2" id="m_republican2_2" class="form-control" >
+        <td><label for="m_republican2_2">points</label>
         {{ formfield_errors 'm_republican2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" >
-        <td><label for="m_republican3">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican3" id="m_republican3_2" class="form-control" >
+        <td><label for="m_republican3_2">points</label>
         {{ formfield_errors 'm_republican3' }} </td>
   </tr>
 </table>
@@ -251,18 +253,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" >
-        <td><label for="m_white1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" id="m_white1_2" class="form-control" >
+        <td><label for="m_white1_2">points</label>
         {{ formfield_errors 'm_white1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" >
-        <td><label for="m_white2">points</label>
+        <td><input type="number" min="0" max="50" name="m_white2" id="m_white2_2" class="form-control" >
+        <td><label for="m_white2_2">points</label>
         {{ formfield_errors 'm_white2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" >
-        <td><label for="m_white3">points</label>
+        <td><input type="number" min="0" max="50" name="m_white3" id="m_white3_2" class="form-control" >
+        <td><label for="m_white3_2">points</label>
         {{ formfield_errors 'm_white3' }} </td>
   </tr>
 </table>
@@ -273,18 +275,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" >
-        <td><label for="m_asian1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" id="m_asian1_2" class="form-control" >
+        <td><label for="m_asian1_2">points</label>
       {{ formfield_errors 'm_asian1' }}</td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" >
-        <td><label for="m_asian2">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian2" id="m_asian2_2" class="form-control" >
+        <td><label for="m_asian2_2">points</label>
         {{ formfield_errors 'm_asian2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" >
-        <td><label for="m_asian3">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian3" id="m_asian3_2" class="form-control" >
+        <td><label for="m_asian3_2">points</label>
         {{ formfield_errors 'm_asian3' }} </td>
   </tr>
 </table>
@@ -295,18 +297,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" >
-        <td><label for="m_hispanic1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_hispanic1" id="m_hispanic1_2" class="form-control" >
+        <td><label for="m_hispanic1_2">points</label>
       {{ formfield_errors 'm_hispanic1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" >
-        <td><label for="m_hispanic2">points</label>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" id="m_hispanic2_2" class="form-control" >
+        <td><label for="m_hispanic2_2">points</label>
         {{ formfield_errors 'm_hispanic2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" >
-        <td><label for="m_hispanic3">points</label></td>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" id="m_hispanic3_2" class="form-control" >
+        <td><label for="m_hispanic3_2">points</label></td>
         {{ formfield_errors 'm_hispanic3' }}
   </tr>
 </table>
@@ -317,18 +319,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" >
-        <td><label for="m_black1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" id="m_black1_2" class="form-control" >
+        <td><label for="m_black1_2">points</label>
         {{ formfield_errors 'm_black1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" >
-        <td><label for="m_black2">points</label>
+        <td><input type="number" min="0" max="50" name="m_black2" id="m_black2_2" class="form-control" >
+        <td><label for="m_black2_2">points</label>
         {{ formfield_errors 'm_black2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" >
-        <td><label for="m_black3">points</label>
+        <td><input type="number" min="0" max="50" name="m_black3" id="m_black3_2" class="form-control" >
+        <td><label for="m_black3_2">points</label>
         {{ formfield_errors 'm_black3' }} </td>
   </tr>
 </table>
@@ -340,18 +342,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" >
-        <td><label for="m_male1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" id="m_male1_2" class="form-control" >
+        <td><label for="m_male1_2">points</label>
         {{ formfield_errors 'm_male1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" >
-        <td><label for="m_male2">points</label>
+        <td><input type="number" min="0" max="50" name="m_male2" id="m_male2_2" class="form-control" >
+        <td><label for="m_male2_2">points</label>
         {{ formfield_errors 'm_male2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" >
-        <td><label for="m_male3">points</label>
+        <td><input type="number" min="0" max="50" name="m_male3" id="m_male3_2" class="form-control" >
+        <td><label for="m_male3_2">points</label>
         {{ formfield_errors 'm_male3' }} </td>
   </tr>
 </table>
@@ -362,18 +364,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" >
-        <td><label for="m_female1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" id="m_female1_2" class="form-control" >
+        <td><label for="m_female1_2">points</label>
         {{ formfield_errors 'm_female1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" >
-        <td><label for="m_female2">points</label>
+        <td><input type="number" min="0" max="50" name="m_female2" id="m_female2_2" class="form-control" >
+        <td><label for="m_female2_2">points</label>
         {{ formfield_errors 'm_female2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" >
-        <td><label for="m_female3">points</label>
+        <td><input type="number" min="0" max="50" name="m_female3" id="m_female3_2" class="form-control" >
+        <td><label for="m_female3_2">points</label>
         {{ formfield_errors 'm_female3' }} </td>
   </tr>
 </table>
@@ -400,18 +402,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" >
-        <td><label for="m_white1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" id="m_white1_3" class="form-control" >
+        <td><label for="m_white1_3">points</label>
         {{ formfield_errors 'm_white1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" >
-        <td><label for="m_white2">points</label>
+        <td><input type="number" min="0" max="50" name="m_white2" id="m_white2_3" class="form-control" >
+        <td><label for="m_white2_3">points</label>
         {{ formfield_errors 'm_white2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" >
-        <td><label for="m_white3">points</label>
+        <td><input type="number" min="0" max="50" name="m_white3" id="m_white3_3" class="form-control" >
+        <td><label for="m_white3_3">points</label>
         {{ formfield_errors 'm_white3' }} </td>
   </tr>
 </table>
@@ -422,18 +424,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" >
-        <td><label for="m_asian1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" id="m_asian1_3" class="form-control" >
+        <td><label for="m_asian1_3">points</label>
       {{ formfield_errors 'm_asian1' }}</td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" >
-        <td><label for="m_asian2">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian2" id="m_asian2_3" class="form-control" >
+        <td><label for="m_asian2_3">points</label>
         {{ formfield_errors 'm_asian2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" >
-        <td><label for="m_asian3">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian3" id="m_asian3_3" class="form-control" >
+        <td><label for="m_asian3_3">points</label>
         {{ formfield_errors 'm_asian3' }} </td>
   </tr>
 </table>
@@ -444,18 +446,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" >
-        <td><label for="m_hispanic1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_hispanic1" id="m_hispanic1_3" class="form-control" >
+        <td><label for="m_hispanic1_3">points</label>
       {{ formfield_errors 'm_hispanic1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" >
-        <td><label for="m_hispanic2">points</label>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" id="m_hispanic2_3" class="form-control" >
+        <td><label for="m_hispanic2_3">points</label>
         {{ formfield_errors 'm_hispanic2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" >
-        <td><label for="m_hispanic3">points</label></td>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" id="m_hispanic3_3" class="form-control" >
+        <td><label for="m_hispanic3_3">points</label></td>
         {{ formfield_errors 'm_hispanic3' }}
   </tr>
 </table>
@@ -466,18 +468,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" >
-        <td><label for="m_black1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" id="m_black1_3" class="form-control" >
+        <td><label for="m_black1_3">points</label>
         {{ formfield_errors 'm_black1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" >
-        <td><label for="m_black2">points</label>
+        <td><input type="number" min="0" max="50" name="m_black2" id="m_black2_3" class="form-control" >
+        <td><label for="m_black2_3">points</label>
         {{ formfield_errors 'm_black2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" >
-        <td><label for="m_black3">points</label>
+        <td><input type="number" min="0" max="50" name="m_black3" id="m_black3_3" class="form-control" >
+        <td><label for="m_black3_3">points</label>
         {{ formfield_errors 'm_black3' }} </td>
   </tr>
 </table>
@@ -490,18 +492,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" >
-        <td><label for="m_male1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" id="m_male1_3" class="form-control" >
+        <td><label for="m_male1_3">points</label>
         {{ formfield_errors 'm_male1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" >
-        <td><label for="m_male2">points</label>
+        <td><input type="number" min="0" max="50" name="m_male2" id="m_male2_3" class="form-control" >
+        <td><label for="m_male2_3">points</label>
         {{ formfield_errors 'm_male2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" >
-        <td><label for="m_male3">points</label>
+        <td><input type="number" min="0" max="50" name="m_male3" id="m_male3_3" class="form-control" >
+        <td><label for="m_male3_3">points</label>
         {{ formfield_errors 'm_male3' }} </td>
   </tr>
 </table>
@@ -512,18 +514,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" >
-        <td><label for="m_female1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" id="m_female1_3" class="form-control" >
+        <td><label for="m_female1_3">points</label>
         {{ formfield_errors 'm_female1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" >
-        <td><label for="m_female2">points</label>
+        <td><input type="number" min="0" max="50" name="m_female2" id="m_female2_3" class="form-control" >
+        <td><label for="m_female2_3">points</label>
         {{ formfield_errors 'm_female2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" >
-        <td><label for="m_female3">points</label>
+        <td><input type="number" min="0" max="50" name="m_female3" id="m_female3_3" class="form-control" >
+        <td><label for="m_female3_3">points</label>
         {{ formfield_errors 'm_female3' }} </td>
   </tr>
 </table>
@@ -537,19 +539,19 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" >
-        <td><label for="m_democrat1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" id="m_democrat1_3" class="form-control" >
+        <td><label for="m_democrat1_3">points</label>
         {{ formfield_errors 'm_democrat1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
+        <td><input type="number" min="0" max="50" name="m_democrat2" id="m_democrat2_3" class="form-control" >
+        <td><label for="m_democrat2_3">points</label>
         {{ formfield_errors 'm_democrat2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
+        <td><input type="number" min="0" max="50" name="m_democrat3" id="m_democrat3_3" class="form-control" >
+        <td><label for="m_democrat3_3">points</label>
+        {{ formfield_errors 'm_democrat3' }} </td>
   </tr>
 </table>
 
@@ -559,18 +561,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" >
-        <td><label for="m_republican1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" id="m_republican1_3" class="form-control" >
+        <td><label for="m_republican1_3">points</label>
         {{ formfield_errors 'm_republican1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" >
-        <td><label for="m_republican2">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican2" id="m_republican2_3" class="form-control" >
+        <td><label for="m_republican2_3">points</label>
         {{ formfield_errors 'm_republican2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" >
-        <td><label for="m_republican3">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican3" id="m_republican3_3" class="form-control" >
+        <td><label for="m_republican3_3">points</label>
         {{ formfield_errors 'm_republican3' }} </td>
   </tr>
 </table>
@@ -596,19 +598,19 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" >
-        <td><label for="m_democrat1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" id="m_democrat1_4" class="form-control" >
+        <td><label for="m_democrat1_4">points</label>
         {{ formfield_errors 'm_democrat1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
+        <td><input type="number" min="0" max="50" name="m_democrat2" id="m_democrat2_4" class="form-control" >
+        <td><label for="m_democrat2_4">points</label>
         {{ formfield_errors 'm_democrat2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
+        <td><input type="number" min="0" max="50" name="m_democrat3" id="m_democrat3_4" class="form-control" >
+        <td><label for="m_democrat3_4">points</label>
+        {{ formfield_errors 'm_democrat3' }} </td>
   </tr>
 </table>
 
@@ -618,18 +620,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" >
-        <td><label for="m_republican1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" id="m_republican1_4" class="form-control" >
+        <td><label for="m_republican1_4">points</label>
         {{ formfield_errors 'm_republican1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" >
-        <td><label for="m_republican2">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican2" id="m_republican2_4" class="form-control" >
+        <td><label for="m_republican2_4">points</label>
         {{ formfield_errors 'm_republican2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" >
-        <td><label for="m_republican3">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican3" id="m_republican3_4" class="form-control" >
+        <td><label for="m_republican3_4">points</label>
         {{ formfield_errors 'm_republican3' }} </td>
   </tr>
 </table>
@@ -642,18 +644,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" >
-        <td><label for="m_male1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" id="m_male1_4" class="form-control" >
+        <td><label for="m_male1_4">points</label>
         {{ formfield_errors 'm_male1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" >
-        <td><label for="m_male2">points</label>
+        <td><input type="number" min="0" max="50" name="m_male2" id="m_male2_4" class="form-control" >
+        <td><label for="m_male2_4">points</label>
         {{ formfield_errors 'm_male2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" >
-        <td><label for="m_male3">points</label>
+        <td><input type="number" min="0" max="50" name="m_male3" id="m_male3_4" class="form-control" >
+        <td><label for="m_male3_4">points</label>
         {{ formfield_errors 'm_male3' }} </td>
   </tr>
 </table>
@@ -664,18 +666,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" >
-        <td><label for="m_female1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" id="m_female1_4" class="form-control" >
+        <td><label for="m_female1_4">points</label>
         {{ formfield_errors 'm_female1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" >
-        <td><label for="m_female2">points</label>
+        <td><input type="number" min="0" max="50" name="m_female2" id="m_female2_4" class="form-control" >
+        <td><label for="m_female2_4">points</label>
         {{ formfield_errors 'm_female2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" >
-        <td><label for="m_female3">points</label>
+        <td><input type="number" min="0" max="50" name="m_female3" id="m_female3_4" class="form-control" >
+        <td><label for="m_female3_4">points</label>
         {{ formfield_errors 'm_female3' }} </td>
   </tr>
 </table>
@@ -688,18 +690,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" >
-        <td><label for="m_white1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" id="m_white1_4" class="form-control" >
+        <td><label for="m_white1_4">points</label>
         {{ formfield_errors 'm_white1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" >
-        <td><label for="m_white2">points</label>
+        <td><input type="number" min="0" max="50" name="m_white2" id="m_white2_4" class="form-control" >
+        <td><label for="m_white2_4">points</label>
         {{ formfield_errors 'm_white2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" >
-        <td><label for="m_white3">points</label>
+        <td><input type="number" min="0" max="50" name="m_white3" id="m_white3_4" class="form-control" >
+        <td><label for="m_white3_4">points</label>
         {{ formfield_errors 'm_white3' }} </td>
   </tr>
 </table>
@@ -710,18 +712,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" >
-        <td><label for="m_asian1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" id="m_asian1_4" class="form-control" >
+        <td><label for="m_asian1_4">points</label>
       {{ formfield_errors 'm_asian1' }}</td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" >
-        <td><label for="m_asian2">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian2" id="m_asian2_4" class="form-control" >
+        <td><label for="m_asian2_4">points</label>
         {{ formfield_errors 'm_asian2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" >
-        <td><label for="m_asian3">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian3" id="m_asian3_4" class="form-control" >
+        <td><label for="m_asian3_4">points</label>
         {{ formfield_errors 'm_asian3' }} </td>
   </tr>
 </table>
@@ -732,18 +734,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" >
-        <td><label for="m_hispanic1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_hispanic1" id="m_hispanic1_4" class="form-control" >
+        <td><label for="m_hispanic1_4">points</label>
       {{ formfield_errors 'm_hispanic1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" >
-        <td><label for="m_hispanic2">points</label>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" id="m_hispanic2_4" class="form-control" >
+        <td><label for="m_hispanic2_4">points</label>
         {{ formfield_errors 'm_hispanic2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" >
-        <td><label for="m_hispanic3">points</label></td>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" id="m_hispanic3_4" class="form-control" >
+        <td><label for="m_hispanic3_4">points</label></td>
         {{ formfield_errors 'm_hispanic3' }}
   </tr>
 </table>
@@ -754,18 +756,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" >
-        <td><label for="m_black1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" id="m_black1_4" class="form-control" >
+        <td><label for="m_black1_4">points</label>
         {{ formfield_errors 'm_black1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" >
-        <td><label for="m_black2">points</label>
+        <td><input type="number" min="0" max="50" name="m_black2" id="m_black2_4" class="form-control" >
+        <td><label for="m_black2_4">points</label>
         {{ formfield_errors 'm_black2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" >
-        <td><label for="m_black3">points</label>
+        <td><input type="number" min="0" max="50" name="m_black3" id="m_black3_4" class="form-control" >
+        <td><label for="m_black3_4">points</label>
         {{ formfield_errors 'm_black3' }} </td>
   </tr>
 </table>
@@ -790,18 +792,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" >
-        <td><label for="m_male1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" id="m_male1_5" class="form-control" >
+        <td><label for="m_male1_5">points</label>
         {{ formfield_errors 'm_male1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" >
-        <td><label for="m_male2">points</label>
+        <td><input type="number" min="0" max="50" name="m_male2" id="m_male2_5" class="form-control" >
+        <td><label for="m_male2_5">points</label>
         {{ formfield_errors 'm_male2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" >
-        <td><label for="m_male3">points</label>
+        <td><input type="number" min="0" max="50" name="m_male3" id="m_male3_5" class="form-control" >
+        <td><label for="m_male3_5">points</label>
         {{ formfield_errors 'm_male3' }} </td>
   </tr>
 </table>
@@ -812,18 +814,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" >
-        <td><label for="m_female1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" id="m_female1_5" class="form-control" >
+        <td><label for="m_female1_5">points</label>
         {{ formfield_errors 'm_female1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" >
-        <td><label for="m_female2">points</label>
+        <td><input type="number" min="0" max="50" name="m_female2" id="m_female2_5" class="form-control" >
+        <td><label for="m_female2_5">points</label>
         {{ formfield_errors 'm_female2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" >
-        <td><label for="m_female3">points</label>
+        <td><input type="number" min="0" max="50" name="m_female3" id="m_female3_5" class="form-control" >
+        <td><label for="m_female3_5">points</label>
         {{ formfield_errors 'm_female3' }} </td>
   </tr>
 </table>
@@ -837,19 +839,19 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" >
-        <td><label for="m_democrat1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" id="m_democrat1_5" class="form-control" >
+        <td><label for="m_democrat1_5">points</label>
         {{ formfield_errors 'm_democrat1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
+        <td><input type="number" min="0" max="50" name="m_democrat2" id="m_democrat2_5" class="form-control" >
+        <td><label for="m_democrat2_5">points</label>
         {{ formfield_errors 'm_democrat2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
+        <td><input type="number" min="0" max="50" name="m_democrat3" id="m_democrat3_5" class="form-control" >
+        <td><label for="m_democrat3_5">points</label>
+        {{ formfield_errors 'm_democrat3' }} </td>
   </tr>
 </table>
 
@@ -859,18 +861,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" >
-        <td><label for="m_republican1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" id="m_republican1_5" class="form-control" >
+        <td><label for="m_republican1_5">points</label>
         {{ formfield_errors 'm_republican1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" >
-        <td><label for="m_republican2">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican2" id="m_republican2_5" class="form-control" >
+        <td><label for="m_republican2_5">points</label>
         {{ formfield_errors 'm_republican2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" >
-        <td><label for="m_republican3">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican3" id="m_republican3_5" class="form-control" >
+        <td><label for="m_republican3_5">points</label>
         {{ formfield_errors 'm_republican3' }} </td>
   </tr>
 </table>
@@ -883,18 +885,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" >
-        <td><label for="m_white1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" id="m_white1_5" class="form-control" >
+        <td><label for="m_white1_5">points</label>
         {{ formfield_errors 'm_white1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" >
-        <td><label for="m_white2">points</label>
+        <td><input type="number" min="0" max="50" name="m_white2" id="m_white2_5" class="form-control" >
+        <td><label for="m_white2_5">points</label>
         {{ formfield_errors 'm_white2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" >
-        <td><label for="m_white3">points</label>
+        <td><input type="number" min="0" max="50" name="m_white3" id="m_white3_5" class="form-control" >
+        <td><label for="m_white3_5">points</label>
         {{ formfield_errors 'm_white3' }} </td>
   </tr>
 </table>
@@ -905,18 +907,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" >
-        <td><label for="m_asian1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" id="m_asian1_5" class="form-control" >
+        <td><label for="m_asian1_5">points</label>
       {{ formfield_errors 'm_asian1' }}</td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" >
-        <td><label for="m_asian2">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian2" id="m_asian2_5" class="form-control" >
+        <td><label for="m_asian2_5">points</label>
         {{ formfield_errors 'm_asian2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" >
-        <td><label for="m_asian3">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian3" id="m_asian3_5" class="form-control" >
+        <td><label for="m_asian3_5">points</label>
         {{ formfield_errors 'm_asian3' }} </td>
   </tr>
 </table>
@@ -927,18 +929,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" >
-        <td><label for="m_hispanic1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_hispanic1" id="m_hispanic1_5" class="form-control" >
+        <td><label for="m_hispanic1_5">points</label>
       {{ formfield_errors 'm_hispanic1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" >
-        <td><label for="m_hispanic2">points</label>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" id="m_hispanic2_5" class="form-control" >
+        <td><label for="m_hispanic2_5">points</label>
         {{ formfield_errors 'm_hispanic2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" >
-        <td><label for="m_hispanic3">points</label></td>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" id="m_hispanic3_5" class="form-control" >
+        <td><label for="m_hispanic3_5">points</label></td>
         {{ formfield_errors 'm_hispanic3' }}
   </tr>
 </table>
@@ -949,18 +951,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" >
-        <td><label for="m_black1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" id="m_black1_5" class="form-control" >
+        <td><label for="m_black1_5">points</label>
         {{ formfield_errors 'm_black1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" >
-        <td><label for="m_black2">points</label>
+        <td><input type="number" min="0" max="50" name="m_black2" id="m_black2_5" class="form-control" >
+        <td><label for="m_black2_5">points</label>
         {{ formfield_errors 'm_black2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" >
-        <td><label for="m_black3">points</label>
+        <td><input type="number" min="0" max="50" name="m_black3" id="m_black3_5" class="form-control" >
+        <td><label for="m_black3_5">points</label>
         {{ formfield_errors 'm_black3' }} </td>
   </tr>
 </table>
@@ -986,18 +988,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" >
-        <td><label for="m_white1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" id="m_white1_6" class="form-control" >
+        <td><label for="m_white1_6">points</label>
         {{ formfield_errors 'm_white1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" >
-        <td><label for="m_white2">points</label>
+        <td><input type="number" min="0" max="50" name="m_white2" id="m_white2_6" class="form-control" >
+        <td><label for="m_white2_6">points</label>
         {{ formfield_errors 'm_white2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" >
-        <td><label for="m_white3">points</label>
+        <td><input type="number" min="0" max="50" name="m_white3" id="m_white3_6" class="form-control" >
+        <td><label for="m_white3_6">points</label>
         {{ formfield_errors 'm_white3' }} </td>
   </tr>
 </table>
@@ -1008,18 +1010,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" >
-        <td><label for="m_asian1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" id="m_asian1_6" class="form-control" >
+        <td><label for="m_asian1_6">points</label>
       {{ formfield_errors 'm_asian1' }}</td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" >
-        <td><label for="m_asian2">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian2" id="m_asian2_6" class="form-control" >
+        <td><label for="m_asian2_6">points</label>
         {{ formfield_errors 'm_asian2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" >
-        <td><label for="m_asian3">points</label>
+        <td><input type="number" min="0" max="50" name="m_asian3" id="m_asian3_6" class="form-control" >
+        <td><label for="m_asian3_6">points</label>
         {{ formfield_errors 'm_asian3' }} </td>
   </tr>
 </table>
@@ -1030,18 +1032,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" >
-        <td><label for="m_hispanic1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_hispanic1" id="m_hispanic1_6" class="form-control" >
+        <td><label for="m_hispanic1_6">points</label>
       {{ formfield_errors 'm_hispanic1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" >
-        <td><label for="m_hispanic2">points</label>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" id="m_hispanic2_6" class="form-control" >
+        <td><label for="m_hispanic2_6">points</label>
         {{ formfield_errors 'm_hispanic2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" >
-        <td><label for="m_hispanic3">points</label></td>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" id="m_hispanic3_6" class="form-control" >
+        <td><label for="m_hispanic3_6">points</label></td>
         {{ formfield_errors 'm_hispanic3' }}
   </tr>
 </table>
@@ -1052,18 +1054,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" >
-        <td><label for="m_black1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" id="m_black1_6" class="form-control" >
+        <td><label for="m_black1_6">points</label>
         {{ formfield_errors 'm_black1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" >
-        <td><label for="m_black2">points</label>
+        <td><input type="number" min="0" max="50" name="m_black2" id="m_black2_6" class="form-control" >
+        <td><label for="m_black2_6">points</label>
         {{ formfield_errors 'm_black2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" >
-        <td><label for="m_black3">points</label>
+        <td><input type="number" min="0" max="50" name="m_black3" id="m_black3_6" class="form-control" >
+        <td><label for="m_black3_6">points</label>
         {{ formfield_errors 'm_black3' }} </td>
   </tr>
 </table>
@@ -1075,19 +1077,19 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" >
-        <td><label for="m_democrat1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" id="m_democrat1_6" class="form-control" >
+        <td><label for="m_democrat1_6">points</label>
         {{ formfield_errors 'm_democrat1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
+        <td><input type="number" min="0" max="50" name="m_democrat2" id="m_democrat2_6" class="form-control" >
+        <td><label for="m_democrat2_6">points</label>
         {{ formfield_errors 'm_democrat2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" >
-        <td><label for="m_democrat2">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
+        <td><input type="number" min="0" max="50" name="m_democrat3" id="m_democrat3_6" class="form-control" >
+        <td><label for="m_democrat3_6">points</label>
+        {{ formfield_errors 'm_democrat3' }} </td>
   </tr>
 </table>
 
@@ -1097,18 +1099,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" >
-        <td><label for="m_republican1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" id="m_republican1_6" class="form-control" >
+        <td><label for="m_republican1_6">points</label>
         {{ formfield_errors 'm_republican1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" >
-        <td><label for="m_republican2">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican2" id="m_republican2_6" class="form-control" >
+        <td><label for="m_republican2_6">points</label>
         {{ formfield_errors 'm_republican2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" >
-        <td><label for="m_republican3">points</label>
+        <td><input type="number" min="0" max="50" name="m_republican3" id="m_republican3_6" class="form-control" >
+        <td><label for="m_republican3_6">points</label>
         {{ formfield_errors 'm_republican3' }} </td>
   </tr>
 </table>
@@ -1123,18 +1125,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" >
-        <td><label for="m_male1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" id="m_male1_6" class="form-control" >
+        <td><label for="m_male1_6">points</label>
         {{ formfield_errors 'm_male1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" >
-        <td><label for="m_male2">points</label>
+        <td><input type="number" min="0" max="50" name="m_male2" id="m_male2_6" class="form-control" >
+        <td><label for="m_male2_6">points</label>
         {{ formfield_errors 'm_male2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" >
-        <td><label for="m_male3">points</label>
+        <td><input type="number" min="0" max="50" name="m_male3" id="m_male3_6" class="form-control" >
+        <td><label for="m_male3_6">points</label>
         {{ formfield_errors 'm_male3' }} </td>
   </tr>
 </table>
@@ -1145,18 +1147,18 @@
 <table>
   <tr>
     <th class="headlinecolumn">Mean: &nbsp;</th>
-        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" >
-        <td><label for="m_female1">points</label>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" id="m_female1_6" class="form-control" id="m_male1" >
+        <td><label for="m_female1_6">points</label>
         {{ formfield_errors 'm_female1' }} </td>
         <td class="fillercolumn">&nbsp;</td>
     <th>Top 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" >
-        <td><label for="m_female2">points</label>
+        <td><input type="number" min="0" max="50" name="m_female2" id="m_female2_6" class="form-control" >
+        <td><label for="m_female2_6">points</label>
         {{ formfield_errors 'm_female2' }} </td>
           <td class="fillercolumn">&nbsp;</td>
     <th>Bottom 10: &nbsp;</th>
-        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" >
-        <td><label for="m_female3">points</label>
+        <td><input type="number" min="0" max="50" name="m_female3" id="m_female3_6" class="form-control" >
+        <td><label for="m_female3_6">points</label>
         {{ formfield_errors 'm_female3' }} </td>
   </tr>
 </table>
@@ -1204,12 +1206,477 @@
     }
 </style>
 {{ endblock }}
+
 {{ block app_scripts }}
 <script>
 document.getElementById("openbox").addEventListener("click", function(){
 document.getElementById("infobox").classList.remove("hidden");
 document.getElementById("container").classList.add("hidden");
         });
+
+    // Run on page load
+    window.onload = function() {
+        // If values are not blank, restore them to the fields
+        var m_hispanic1 = sessionStorage.getItem('m_hispanic1');
+        if (m_hispanic1 !== null) $('#m_hispanic1_1').val(m_hispanic1);
+        var m_asian1 = sessionStorage.getItem('m_asian1');
+        if (m_asian1 !== null) $('#m_asian1_1').val(m_asian1);
+        var m_black1 = sessionStorage.getItem('m_black1');
+        if (m_black1 !== null) $('#m_black1_1').val(m_black1);
+        var m_white1 = sessionStorage.getItem('m_white1');
+        if (m_white1 !== null) $('#m_white1_1').val(m_white1);
+        var m_democrat1 = sessionStorage.getItem('m_democrat1');
+        if (m_democrat1 !== null) $('#m_democrat1_1').val(m_democrat1);
+        var m_republican1 = sessionStorage.getItem('m_republican1');
+        if (m_republican1 !== null) $('#m_republican1_1').val(m_republican1);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_1').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_1').val(m_female1);
+        var m_hispanic2 = sessionStorage.getItem('m_hispanic2');
+        if (m_hispanic2 !== null) $('#m_hispanic2_1').val(m_hispanic2);
+        var m_asian2 = sessionStorage.getItem('m_asian2');
+        if (m_asian2 !== null) $('#m_asian2_1').val(m_asian2);
+        var m_black2 = sessionStorage.getItem('m_black2');
+        if (m_black2 !== null) $('#m_black2_1').val(m_black2);
+        var m_white2 = sessionStorage.getItem('m_white2');
+        if (m_white2 !== null) $('#m_white2_1').val(m_white2);
+        var m_democrat2 = sessionStorage.getItem('m_democrat2');
+        if (m_democrat2 !== null) $('#m_democrat2_1').val(m_democrat2);
+        var m_republican2 = sessionStorage.getItem('m_republican2');
+        if (m_republican2 !== null) $('#m_republican2_1').val(m_republican2);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_1').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_1').val(m_female2);
+        var m_hispanic3 = sessionStorage.getItem('m_hispanic3');
+        if (m_hispanic3 !== null) $('#m_hispanic3_1').val(m_hispanic3);
+        var m_asian3 = sessionStorage.getItem('m_asian3');
+        if (m_asian3 !== null) $('#m_asian3_1').val(m_asian3);
+        var m_black3 = sessionStorage.getItem('m_black3');
+        if (m_black3 !== null) $('#m_black3_1').val(m_black3);
+        var m_white3 = sessionStorage.getItem('m_white3');
+        if (m_white3 !== null) $('#m_white3_1').val(m_white3);
+        var m_democrat3 = sessionStorage.getItem('m_democrat3');
+        if (m_democrat3 !== null) $('#m_democrat3_1').val(m_democrat3);
+        var m_republican3 = sessionStorage.getItem('m_republican3');
+        if (m_republican3 !== null) $('#m_republican3_1').val(m_republican3);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_1').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_1').val(m_female3);
+
+        var m_hispanic1 = sessionStorage.getItem('m_hispanic1');
+        if (m_hispanic1 !== null) $('#m_hispanic1_2').val(m_hispanic1);
+        var m_asian1 = sessionStorage.getItem('m_asian1');
+        if (m_asian1 !== null) $('#m_asian1_2').val(m_asian1);
+        var m_black1 = sessionStorage.getItem('m_black1');
+        if (m_black1 !== null) $('#m_black1_2').val(m_black1);
+        var m_white1 = sessionStorage.getItem('m_white1');
+        if (m_white1 !== null) $('#m_white1_2').val(m_white1);
+        var m_democrat1 = sessionStorage.getItem('m_democrat1');
+        if (m_democrat1 !== null) $('#m_democrat1_2').val(m_democrat1);
+        var m_republican1 = sessionStorage.getItem('m_republican1');
+        if (m_republican1 !== null) $('#m_republican1_2').val(m_republican1);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_2').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_2').val(m_female1);
+        var m_hispanic2 = sessionStorage.getItem('m_hispanic2');
+        if (m_hispanic2 !== null) $('#m_hispanic2_2').val(m_hispanic2);
+        var m_asian2 = sessionStorage.getItem('m_asian2');
+        if (m_asian2 !== null) $('#m_asian2_2').val(m_asian2);
+        var m_black2 = sessionStorage.getItem('m_black2');
+        if (m_black2 !== null) $('#m_black2_2').val(m_black2);
+        var m_white2 = sessionStorage.getItem('m_white2');
+        if (m_white2 !== null) $('#m_white2_2').val(m_white2);
+        var m_democrat2 = sessionStorage.getItem('m_democrat2');
+        if (m_democrat2 !== null) $('#m_democrat2_2').val(m_democrat2);
+        var m_republican2 = sessionStorage.getItem('m_republican2');
+        if (m_republican2 !== null) $('#m_republican2_2').val(m_republican2);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_2').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_2').val(m_female2);
+        var m_hispanic3 = sessionStorage.getItem('m_hispanic3');
+        if (m_hispanic3 !== null) $('#m_hispanic3_2').val(m_hispanic3);
+        var m_asian3 = sessionStorage.getItem('m_asian3');
+        if (m_asian3 !== null) $('#m_asian3_2').val(m_asian3);
+        var m_black3 = sessionStorage.getItem('m_black3');
+        if (m_black3 !== null) $('#m_black3_2').val(m_black3);
+        var m_white3 = sessionStorage.getItem('m_white3');
+        if (m_white3 !== null) $('#m_white3_2').val(m_white3);
+        var m_democrat3 = sessionStorage.getItem('m_democrat3');
+        if (m_democrat3 !== null) $('#m_democrat3_2').val(m_democrat3);
+        var m_republican3 = sessionStorage.getItem('m_republican3');
+        if (m_republican3 !== null) $('#m_republican3_2').val(m_republican3);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_2').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_2').val(m_female3);
+
+        var m_hispanic1 = sessionStorage.getItem('m_hispanic1');
+        if (m_hispanic1 !== null) $('#m_hispanic1_3').val(m_hispanic1);
+        var m_asian1 = sessionStorage.getItem('m_asian1');
+        if (m_asian1 !== null) $('#m_asian1_3').val(m_asian1);
+        var m_black1 = sessionStorage.getItem('m_black1');
+        if (m_black1 !== null) $('#m_black1_3').val(m_black1);
+        var m_white1 = sessionStorage.getItem('m_white1');
+        if (m_white1 !== null) $('#m_white1_3').val(m_white1);
+        var m_democrat1 = sessionStorage.getItem('m_democrat1');
+        if (m_democrat1 !== null) $('#m_democrat1_3').val(m_democrat1);
+        var m_republican1 = sessionStorage.getItem('m_republican1');
+        if (m_republican1 !== null) $('#m_republican1_3').val(m_republican1);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_3').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_3').val(m_female1);
+        var m_hispanic2 = sessionStorage.getItem('m_hispanic2');
+        if (m_hispanic2 !== null) $('#m_hispanic2_3').val(m_hispanic2);
+        var m_asian2 = sessionStorage.getItem('m_asian2');
+        if (m_asian2 !== null) $('#m_asian2_3').val(m_asian2);
+        var m_black2 = sessionStorage.getItem('m_black2');
+        if (m_black2 !== null) $('#m_black2_3').val(m_black2);
+        var m_white2 = sessionStorage.getItem('m_white2');
+        if (m_white2 !== null) $('#m_white2_3').val(m_white2);
+        var m_democrat2 = sessionStorage.getItem('m_democrat2');
+        if (m_democrat2 !== null) $('#m_democrat2_3').val(m_democrat2);
+        var m_republican2 = sessionStorage.getItem('m_republican2');
+        if (m_republican2 !== null) $('#m_republican2_3').val(m_republican2);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_3').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_3').val(m_female2);
+        var m_hispanic3 = sessionStorage.getItem('m_hispanic3');
+        if (m_hispanic3 !== null) $('#m_hispanic3_3').val(m_hispanic3);
+        var m_asian3 = sessionStorage.getItem('m_asian3');
+        if (m_asian3 !== null) $('#m_asian3_3').val(m_asian3);
+        var m_black3 = sessionStorage.getItem('m_black3');
+        if (m_black3 !== null) $('#m_black3_3').val(m_black3);
+        var m_white3 = sessionStorage.getItem('m_white3');
+        if (m_white3 !== null) $('#m_white3_3').val(m_white3);
+        var m_democrat3 = sessionStorage.getItem('m_democrat3');
+        if (m_democrat3 !== null) $('#m_democrat3_3').val(m_democrat3);
+        var m_republican3 = sessionStorage.getItem('m_republican3');
+        if (m_republican3 !== null) $('#m_republican3_3').val(m_republican3);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_3').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_3').val(m_female3);
+
+        var m_hispanic1 = sessionStorage.getItem('m_hispanic1');
+        if (m_hispanic1 !== null) $('#m_hispanic1_4').val(m_hispanic1);
+        var m_asian1 = sessionStorage.getItem('m_asian1');
+        if (m_asian1 !== null) $('#m_asian1_4').val(m_asian1);
+        var m_black1 = sessionStorage.getItem('m_black1');
+        if (m_black1 !== null) $('#m_black1_4').val(m_black1);
+        var m_white1 = sessionStorage.getItem('m_white1');
+        if (m_white1 !== null) $('#m_white1_4').val(m_white1);
+        var m_democrat1 = sessionStorage.getItem('m_democrat1');
+        if (m_democrat1 !== null) $('#m_democrat1_4').val(m_democrat1);
+        var m_republican1 = sessionStorage.getItem('m_republican1');
+        if (m_republican1 !== null) $('#m_republican1_4').val(m_republican1);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_4').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_4').val(m_female1);
+        var m_hispanic2 = sessionStorage.getItem('m_hispanic2');
+        if (m_hispanic2 !== null) $('#m_hispanic2_4').val(m_hispanic2);
+        var m_asian2 = sessionStorage.getItem('m_asian2');
+        if (m_asian2 !== null) $('#m_asian2_4').val(m_asian2);
+        var m_black2 = sessionStorage.getItem('m_black2');
+        if (m_black2 !== null) $('#m_black2_4').val(m_black2);
+        var m_white2 = sessionStorage.getItem('m_white2');
+        if (m_white2 !== null) $('#m_white2_4').val(m_white2);
+        var m_democrat2 = sessionStorage.getItem('m_democrat2');
+        if (m_democrat2 !== null) $('#m_democrat2_4').val(m_democrat2);
+        var m_republican2 = sessionStorage.getItem('m_republican2');
+        if (m_republican2 !== null) $('#m_republican2_4').val(m_republican2);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_4').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_4').val(m_female2);
+        var m_hispanic3 = sessionStorage.getItem('m_hispanic3');
+        if (m_hispanic3 !== null) $('#m_hispanic3_4').val(m_hispanic3);
+        var m_asian3 = sessionStorage.getItem('m_asian3');
+        if (m_asian3 !== null) $('#m_asian3_4').val(m_asian3);
+        var m_black3 = sessionStorage.getItem('m_black3');
+        if (m_black3 !== null) $('#m_black3_4').val(m_black3);
+        var m_white3 = sessionStorage.getItem('m_white3');
+        if (m_white3 !== null) $('#m_white3_4').val(m_white3);
+        var m_democrat3 = sessionStorage.getItem('m_democrat3');
+        if (m_democrat3 !== null) $('#m_democrat3_4').val(m_democrat3);
+        var m_republican3 = sessionStorage.getItem('m_republican3');
+        if (m_republican3 !== null) $('#m_republican3_4').val(m_republican3);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_4').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_4').val(m_female3);
+
+        var m_hispanic1 = sessionStorage.getItem('m_hispanic1');
+        if (m_hispanic1 !== null) $('#m_hispanic1_5').val(m_hispanic1);
+        var m_asian1 = sessionStorage.getItem('m_asian1');
+        if (m_asian1 !== null) $('#m_asian1_5').val(m_asian1);
+        var m_black1 = sessionStorage.getItem('m_black1');
+        if (m_black1 !== null) $('#m_black1_5').val(m_black1);
+        var m_white1 = sessionStorage.getItem('m_white1');
+        if (m_white1 !== null) $('#m_white1_5').val(m_white1);
+        var m_democrat1 = sessionStorage.getItem('m_democrat1');
+        if (m_democrat1 !== null) $('#m_democrat1_5').val(m_democrat1);
+        var m_republican1 = sessionStorage.getItem('m_republican1');
+        if (m_republican1 !== null) $('#m_republican1_5').val(m_republican1);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_5').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_5').val(m_female1);
+        var m_hispanic2 = sessionStorage.getItem('m_hispanic2');
+        if (m_hispanic2 !== null) $('#m_hispanic2_5').val(m_hispanic2);
+        var m_asian2 = sessionStorage.getItem('m_asian2');
+        if (m_asian2 !== null) $('#m_asian2_5').val(m_asian2);
+        var m_black2 = sessionStorage.getItem('m_black2');
+        if (m_black2 !== null) $('#m_black2_5').val(m_black2);
+        var m_white2 = sessionStorage.getItem('m_white2');
+        if (m_white2 !== null) $('#m_white2_5').val(m_white2);
+        var m_democrat2 = sessionStorage.getItem('m_democrat2');
+        if (m_democrat2 !== null) $('#m_democrat2_5').val(m_democrat2);
+        var m_republican2 = sessionStorage.getItem('m_republican2');
+        if (m_republican2 !== null) $('#m_republican2_5').val(m_republican2);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_5').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_5').val(m_female2);
+        var m_hispanic3 = sessionStorage.getItem('m_hispanic3');
+        if (m_hispanic3 !== null) $('#m_hispanic3_5').val(m_hispanic3);
+        var m_asian3 = sessionStorage.getItem('m_asian3');
+        if (m_asian3 !== null) $('#m_asian3_5').val(m_asian3);
+        var m_black3 = sessionStorage.getItem('m_black3');
+        if (m_black3 !== null) $('#m_black3_5').val(m_black3);
+        var m_white3 = sessionStorage.getItem('m_white3');
+        if (m_white3 !== null) $('#m_white3_5').val(m_white3);
+        var m_democrat3 = sessionStorage.getItem('m_democrat3');
+        if (m_democrat3 !== null) $('#m_democrat3_5').val(m_democrat3);
+        var m_republican3 = sessionStorage.getItem('m_republican3');
+        if (m_republican3 !== null) $('#m_republican3_5').val(m_republican3);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_5').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_5').val(m_female3);
+
+        var m_hispanic1 = sessionStorage.getItem('m_hispanic1');
+        if (m_hispanic1 !== null) $('#m_hispanic1_6').val(m_hispanic1);
+        var m_asian1 = sessionStorage.getItem('m_asian1');
+        if (m_asian1 !== null) $('#m_asian1_6').val(m_asian1);
+        var m_black1 = sessionStorage.getItem('m_black1');
+        if (m_black1 !== null) $('#m_black1_6').val(m_black1);
+        var m_white1 = sessionStorage.getItem('m_white1');
+        if (m_white1 !== null) $('#m_white1_6').val(m_white1);
+        var m_democrat1 = sessionStorage.getItem('m_democrat1');
+        if (m_democrat1 !== null) $('#m_democrat1_6').val(m_democrat1);
+        var m_republican1 = sessionStorage.getItem('m_republican1');
+        if (m_republican1 !== null) $('#m_republican1_6').val(m_republican1);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_6').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_6').val(m_female1);
+        var m_hispanic2 = sessionStorage.getItem('m_hispanic2');
+        if (m_hispanic2 !== null) $('#m_hispanic2_6').val(m_hispanic2);
+        var m_asian2 = sessionStorage.getItem('m_asian2');
+        if (m_asian2 !== null) $('#m_asian2_6').val(m_asian2);
+        var m_black2 = sessionStorage.getItem('m_black2');
+        if (m_black2 !== null) $('#m_black2_6').val(m_black2);
+        var m_white2 = sessionStorage.getItem('m_white2');
+        if (m_white2 !== null) $('#m_white2_6').val(m_white2);
+        var m_democrat2 = sessionStorage.getItem('m_democrat2');
+        if (m_democrat2 !== null) $('#m_democrat2_6').val(m_democrat2);
+        var m_republican2 = sessionStorage.getItem('m_republican2');
+        if (m_republican2 !== null) $('#m_republican6_1').val(m_republican2);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_6').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_6').val(m_female2);
+        var m_hispanic3 = sessionStorage.getItem('m_hispanic3');
+        if (m_hispanic3 !== null) $('#m_hispanic3_6').val(m_hispanic3);
+        var m_asian3 = sessionStorage.getItem('m_asian3');
+        if (m_asian3 !== null) $('#m_asian3_6').val(m_asian3);
+        var m_black3 = sessionStorage.getItem('m_black3');
+        if (m_black3 !== null) $('#m_black3_6').val(m_black3);
+        var m_white3 = sessionStorage.getItem('m_white3');
+        if (m_white3 !== null) $('#m_white3_6').val(m_white3);
+        var m_democrat3 = sessionStorage.getItem('m_democrat3');
+        if (m_democrat3 !== null) $('#m_democrat3_6').val(m_democrat3);
+        var m_republican3 = sessionStorage.getItem('m_republican3');
+        if (m_republican3 !== null) $('#m_republican3_6').val(m_republican3);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_6').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_6').val(m_female3);
+    };
+
+    let cats = js_vars.cats;
+    console.log(cats);
+    // Before refreshing the page, save the form data to sessionStorage
+    window.onbeforeunload = function() {
+        if (cats == "grp") {
+            sessionStorage.setItem("m_male1", $('#m_male1_1').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_1').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_1').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_1').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_1').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_1').val());
+            sessionStorage.setItem("m_hispanic1", $('#m_hispanic1_1').val());
+            sessionStorage.setItem("m_hispanic2", $('#m_hispanic2_1').val());
+            sessionStorage.setItem("m_hispanic3", $('#m_hispanic3_1').val());
+            sessionStorage.setItem("m_white1", $('#m_white1_1').val());
+            console.log($('#m_white1_1').val());
+            sessionStorage.setItem("m_white2", $('#m_white2_1').val());
+            sessionStorage.setItem("m_white3", $('#m_white3_1').val());
+            sessionStorage.setItem("m_asian1", $('#m_asian1_1').val());
+            sessionStorage.setItem("m_asian2", $('#m_asian2_1').val());
+            sessionStorage.setItem("m_asian3", $('#m_asian3_1').val());
+            sessionStorage.setItem("m_black1", $('#m_black1_1').val());
+            sessionStorage.setItem("m_black2", $('#m_black2_1').val());
+            sessionStorage.setItem("m_black3", $('#m_black3_1').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_1').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_1').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_1').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_1').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_1').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_1').val());
+            }
+        if (cats == "prg") {
+            sessionStorage.setItem("m_male1", $('#m_male1_2').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_2').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_2').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_2').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_2').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_2').val());
+            sessionStorage.setItem("m_hispanic1", $('#m_hispanic1_2').val());
+            sessionStorage.setItem("m_hispanic2", $('#m_hispanic2_2').val());
+            sessionStorage.setItem("m_hispanic3", $('#m_hispanic3_2').val());
+            sessionStorage.setItem("m_white1", $('#m_white1_2').val());
+            sessionStorage.setItem("m_white2", $('#m_white2_2').val());
+            sessionStorage.setItem("m_white3", $('#m_white3_2').val());
+            sessionStorage.setItem("m_asian1", $('#m_asian1_2').val());
+            sessionStorage.setItem("m_asian2", $('#m_asian2_2').val());
+            sessionStorage.setItem("m_asian3", $('#m_asian3_2').val());
+            sessionStorage.setItem("m_black1", $('#m_black1_2').val());
+            sessionStorage.setItem("m_black2", $('#m_black2_2').val());
+            sessionStorage.setItem("m_black3", $('#m_black3_2').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_2').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_2').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_2').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_2').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_2').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_2').val());
+            }
+        if (cats == "rgp") {
+            sessionStorage.setItem("m_male1", $('#m_male1_3').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_3').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_3').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_3').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_3').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_3').val());
+            sessionStorage.setItem("m_hispanic1", $('#m_hispanic1_3').val());
+            sessionStorage.setItem("m_hispanic2", $('#m_hispanic2_3').val());
+            sessionStorage.setItem("m_hispanic3", $('#m_hispanic3_3').val());
+            sessionStorage.setItem("m_white1", $('#m_white1_3').val());
+            sessionStorage.setItem("m_white2", $('#m_white2_3').val());
+            sessionStorage.setItem("m_white3", $('#m_white3_3').val());
+            sessionStorage.setItem("m_asian1", $('#m_asian1_3').val());
+            sessionStorage.setItem("m_asian2", $('#m_asian2_3').val());
+            sessionStorage.setItem("m_asian3", $('#m_asian3_3').val());
+            sessionStorage.setItem("m_black1", $('#m_black1_3').val());
+            sessionStorage.setItem("m_black2", $('#m_black2_3').val());
+            sessionStorage.setItem("m_black3", $('#m_black3_3').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_3').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_3').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_3').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_3').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_3').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_3').val());
+            }
+        if (cats == "pgr") {
+            sessionStorage.setItem("m_male1", $('#m_male1_4').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_4').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_4').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_4').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_4').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_4').val());
+            sessionStorage.setItem("m_hispanic1", $('#m_hispanic1_4').val());
+            sessionStorage.setItem("m_hispanic2", $('#m_hispanic2_4').val());
+            sessionStorage.setItem("m_hispanic3", $('#m_hispanic3_4').val());
+            sessionStorage.setItem("m_white1", $('#m_white1_4').val());
+            sessionStorage.setItem("m_white2", $('#m_white2_4').val());
+            sessionStorage.setItem("m_white3", $('#m_white3_4').val());
+            sessionStorage.setItem("m_asian1", $('#m_asian1_4').val());
+            sessionStorage.setItem("m_asian2", $('#m_asian2_4').val());
+            sessionStorage.setItem("m_asian3", $('#m_asian3_4').val());
+            sessionStorage.setItem("m_black1", $('#m_black1_4').val());
+            sessionStorage.setItem("m_black2", $('#m_black2_4').val());
+            sessionStorage.setItem("m_black3", $('#m_black3_4').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_4').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_4').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_4').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_4').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_4').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_4').val());
+            }
+        if (cats == "gpr") {
+            sessionStorage.setItem("m_male1", $('#m_male1_5').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_5').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_5').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_5').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_5').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_5').val());
+            sessionStorage.setItem("m_hispanic1", $('#m_hispanic1_5').val());
+            sessionStorage.setItem("m_hispanic2", $('#m_hispanic2_5').val());
+            sessionStorage.setItem("m_hispanic3", $('#m_hispanic3_5').val());
+            sessionStorage.setItem("m_white1", $('#m_white1_5').val());
+            sessionStorage.setItem("m_white2", $('#m_white2_5').val());
+            sessionStorage.setItem("m_white3", $('#m_white3_5').val());
+            sessionStorage.setItem("m_asian1", $('#m_asian1_5').val());
+            sessionStorage.setItem("m_asian2", $('#m_asian2_5').val());
+            sessionStorage.setItem("m_asian3", $('#m_asian3_5').val());
+            sessionStorage.setItem("m_black1", $('#m_black1_5').val());
+            sessionStorage.setItem("m_black2", $('#m_black2_5').val());
+            sessionStorage.setItem("m_black3", $('#m_black3_5').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_5').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_5').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_5').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_5').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_5').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_5').val());
+            }
+        if (cats == "rpg") {
+            sessionStorage.setItem("m_male1", $('#m_male1_6').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_6').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_6').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_6').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_6').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_6').val());
+            sessionStorage.setItem("m_hispanic1", $('#m_hispanic1_6').val());
+            sessionStorage.setItem("m_hispanic2", $('#m_hispanic2_6').val());
+            sessionStorage.setItem("m_hispanic3", $('#m_hispanic3_6').val());
+            sessionStorage.setItem("m_white1", $('#m_white1_6').val());
+            sessionStorage.setItem("m_white2", $('#m_white2_6').val());
+            sessionStorage.setItem("m_white3", $('#m_white3_6').val());
+            sessionStorage.setItem("m_asian1", $('#m_asian1_6').val());
+            sessionStorage.setItem("m_asian2", $('#m_asian2_6').val());
+            sessionStorage.setItem("m_asian3", $('#m_asian3_6').val());
+            sessionStorage.setItem("m_black1", $('#m_black1_6').val());
+            sessionStorage.setItem("m_black2", $('#m_black2_6').val());
+            sessionStorage.setItem("m_black3", $('#m_black3_6').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_6').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_6').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_6').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_6').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_6').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_6').val());
+        }
+    };
+            console.log($('#m_white1_1').val());
+            console.log($('#m_black1_1').val());
+
 
 </script>
 {{ endblock }}

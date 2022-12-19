@@ -42,11 +42,11 @@ class Group(BaseGroup):
 
 
 def make_field():
-    return models.IntegerField(
+    return models.FloatField(
         label="",
         min=0,
         max=50,
-        blank=True,
+        blank=False,
     )
 
 
@@ -118,18 +118,25 @@ class BeliefsMath(Page):
                    'm_democrat1','m_democrat2', 'm_democrat3', 'm_republican1', 'm_republican2', 'm_republican3']
 
     @staticmethod
+    def js_vars(player):
+        return dict(
+            cats=player.participant.cats,
+        )
+
+    @staticmethod
     def is_displayed(player: Player):
         return player.math_first
+
     @staticmethod
     def error_message(player, values):
         print('values is', values)
         if values['m_male1'] > values['m_male2']:
             return 'The mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
-        elif values['m_female1'] < values['m_female3']:
+        elif values['m_male1'] < values['m_male3']:
             return 'The mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
         if values['m_female1'] > values['m_female2']:
             return 'The mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
-        elif values['m_male1'] < values['m_male3']:
+        elif values['m_female1'] < values['m_female3']:
             return 'The mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
         if values['m_asian1'] > values['m_asian2']:
             return 'The mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
@@ -165,15 +172,21 @@ class BeliefsLogic(Page):
                    'l_democrat1', 'l_democrat2', 'l_democrat3', 'l_republican1', 'l_republican2', 'l_republican3']
 
     @staticmethod
+    def js_vars(player):
+        return dict(
+            cats=player.participant.cats,
+        )
+
+    @staticmethod
     def error_message(player, values):
         print('values is', values)
         if values['l_male1'] > values['l_male2']:
             return 'The mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
-        elif values['l_female1'] < values['l_female3']:
+        elif values['l_male1'] < values['l_male3']:
             return 'The mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
         if values['l_female1'] > values['l_female2']:
             return 'The mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
-        elif values['l_male1'] < values['l_male3']:
+        elif values['l_female1'] < values['l_female3']:
             return 'The mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
         if values['l_asian1'] > values['l_asian2']:
             return 'The mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
@@ -209,6 +222,12 @@ class BeliefsMath2(Page):
                    'm_democrat2', 'm_democrat3', 'm_republican1', 'm_republican2', 'm_republican3']
 
     @staticmethod
+    def js_vars(player):
+        return dict(
+            cats=player.participant.cats,
+        )
+
+    @staticmethod
     def is_displayed(player: Player):
         return not player.math_first
 
@@ -217,11 +236,11 @@ class BeliefsMath2(Page):
         print('values is', values)
         if values['m_male1'] > values['m_male2']:
             return 'The mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
-        elif values['m_female1'] < values['m_female3']:
+        elif values['m_male1'] < values['m_male3']:
             return 'The mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
         if values['m_female1'] > values['m_female2']:
             return 'The mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
-        elif values['m_male1'] < values['m_male3']:
+        elif values['m_female1'] < values['m_female3']:
             return 'The mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
         if values['m_asian1'] > values['m_asian2']:
             return 'The mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
