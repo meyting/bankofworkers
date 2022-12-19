@@ -120,6 +120,41 @@ class BeliefsMath(Page):
     @staticmethod
     def is_displayed(player: Player):
         return player.math_first
+    @staticmethod
+    def error_message(player, values):
+        print('values is', values)
+        if values['m_male1'] > values['m_male2']:
+            return 'The mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
+        elif values['m_female1'] < values['m_female3']:
+            return 'The mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
+        if values['m_female1'] > values['m_female2']:
+            return 'The mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
+        elif values['m_male1'] < values['m_male3']:
+            return 'The mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
+        if values['m_asian1'] > values['m_asian2']:
+            return 'The mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
+        elif values['m_asian1'] < values['m_asian3']:
+            return 'The mean prediction for all 100 Asian participants should not be smaller than the mean prediction for the worst 10 Asian participants.'
+        if values['m_white1'] > values['m_white2']:
+            return 'The mean prediction for all 100 white participants should not be larger than the mean prediction for the best 10 white participants.'
+        elif values['m_white1'] < values['m_white3']:
+            return 'The mean prediction for all 100 white participants should not be smaller than the mean prediction for the worst 10 white participants.'
+        if values['m_hispanic1'] > values['m_hispanic2']:
+            return 'The mean prediction for all 100 Hispanic participants should not be larger than the mean prediction for the best 10 Hispanic participants.'
+        elif values['m_hispanic1'] < values['m_hispanic3']:
+            return 'The mean prediction for all 100 Hispanic participants should not be smaller than the mean prediction for the worst 10 Hispanic participants.'
+        if values['m_black1'] > values['m_black2']:
+            return 'The mean prediction for all 100 black participants should not be larger than the mean prediction for the best 10 black participants.'
+        elif values['m_black1'] < values['m_black3']:
+            return 'The mean prediction for all 100 black participants should not be smaller than the mean prediction for the worst 10 black participants.'
+        if values['m_democrat1'] > values['m_democrat2']:
+            return 'The mean prediction for all 100 democratic participants should not be larger than the mean prediction for the best 10 democratic participants.'
+        elif values['m_democrat1'] < values['m_democrat3']:
+            return 'The mean prediction for all 100 democratic participants should not be smaller than the mean prediction for the worst 10 democratic participants.'
+        if values['m_republican1'] > values['m_republican2']:
+            return 'The mean prediction for all 100 republican participants should not be larger than the mean prediction for the best 10 republican participants.'
+        elif values['m_republican1'] < values['m_republican3']:
+            return 'The mean prediction for all 100 republican participants should not be smaller than the mean prediction for the worst 10 republican participants.'
 
 
 class BeliefsLogic(Page):
@@ -129,6 +164,42 @@ class BeliefsLogic(Page):
                    'l_white1', 'l_white2', 'l_white3', 'l_black1', 'l_black2', 'l_black3',
                    'l_democrat1', 'l_democrat2', 'l_democrat3', 'l_republican1', 'l_republican2', 'l_republican3']
 
+    @staticmethod
+    def error_message(player, values):
+        print('values is', values)
+        if values['l_male1'] > values['l_male2']:
+            return 'The mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
+        elif values['l_female1'] < values['l_female3']:
+            return 'The mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
+        if values['l_female1'] > values['l_female2']:
+            return 'The mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
+        elif values['l_male1'] < values['l_male3']:
+            return 'The mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
+        if values['l_asian1'] > values['l_asian2']:
+            return 'The mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
+        elif values['l_asian1'] < values['l_asian3']:
+            return 'The mean prediction for all 100 Asian participants should not be smaller than the mean prediction for the worst 10 Asian participants.'
+        if values['l_white1'] > values['l_white2']:
+            return 'The mean prediction for all 100 white participants should not be larger than the mean prediction for the best 10 white participants.'
+        elif values['l_white1'] < values['l_white3']:
+            return 'The mean prediction for all 100 white participants should not be smaller than the mean prediction for the worst 10 white participants.'
+        if values['l_hispanic1'] > values['l_hispanic2']:
+            return 'The mean prediction for all 100 Hispanic participants should not be larger than the mean prediction for the best 10 Hispanic participants.'
+        elif values['l_hispanic1'] < values['l_hispanic3']:
+            return 'The mean prediction for all 100 Hispanic participants should not be smaller than the mean prediction for the worst 10 Hispanic participants.'
+        if values['l_black1'] > values['l_black2']:
+            return 'The mean prediction for all 100 black participants should not be larger than the mean prediction for the best 10 black participants.'
+        elif values['l_black1'] < values['l_black3']:
+            return 'The mean prediction for all 100 black participants should not be smaller than the mean prediction for the worst 10 black participants.'
+        if values['l_democrat1'] > values['l_democrat2']:
+            return 'The mean prediction for all 100 democratic participants should not be larger than the mean prediction for the best 10 democratic participants.'
+        elif values['l_democrat1'] < values['l_democrat3']:
+            return 'The mean prediction for all 100 democratic participants should not be smaller than the mean prediction for the worst 10 democratic participants.'
+        if values['l_republican1'] > values['l_republican2']:
+            return 'The mean prediction for all 100 republican participants should not be larger than the mean prediction for the best 10 republican participants.'
+        elif values['l_republican1'] < values['l_republican3']:
+            return 'The mean prediction for all 100 republican participants should not be smaller than the mean prediction for the worst 10 republican participants.'
+ 
 
 class BeliefsMath2(Page):
     form_model = 'player'
@@ -141,14 +212,42 @@ class BeliefsMath2(Page):
     def is_displayed(player: Player):
         return not player.math_first
 
+    @staticmethod
+    def error_message(player, values):
+        print('values is', values)
+        if values['m_male1'] > values['m_male2']:
+            return 'The mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
+        elif values['m_female1'] < values['m_female3']:
+            return 'The mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
+        if values['m_female1'] > values['m_female2']:
+            return 'The mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
+        elif values['m_male1'] < values['m_male3']:
+            return 'The mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
+        if values['m_asian1'] > values['m_asian2']:
+            return 'The mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
+        elif values['m_asian1'] < values['m_asian3']:
+            return 'The mean prediction for all 100 Asian participants should not be smaller than the mean prediction for the worst 10 Asian participants.'
+        if values['m_white1'] > values['m_white2']:
+            return 'The mean prediction for all 100 white participants should not be larger than the mean prediction for the best 10 white participants.'
+        elif values['m_white1'] < values['m_white3']:
+            return 'The mean prediction for all 100 white participants should not be smaller than the mean prediction for the worst 10 white participants.'
+        if values['m_hispanic1'] > values['m_hispanic2']:
+            return 'The mean prediction for all 100 Hispanic participants should not be larger than the mean prediction for the best 10 Hispanic participants.'
+        elif values['m_hispanic1'] < values['m_hispanic3']:
+            return 'The mean prediction for all 100 Hispanic participants should not be smaller than the mean prediction for the worst 10 Hispanic participants.'
+        if values['m_black1'] > values['m_black2']:
+            return 'The mean prediction for all 100 black participants should not be larger than the mean prediction for the best 10 black participants.'
+        elif values['m_black1'] < values['m_black3']:
+            return 'The mean prediction for all 100 black participants should not be smaller than the mean prediction for the worst 10 black participants.'
+        if values['m_democrat1'] > values['m_democrat2']:
+            return 'The mean prediction for all 100 democratic participants should not be larger than the mean prediction for the best 10 democratic participants.'
+        elif values['m_democrat1'] < values['m_democrat3']:
+            return 'The mean prediction for all 100 democratic participants should not be smaller than the mean prediction for the worst 10 democratic participants.'
+        if values['m_republican1'] > values['m_republican2']:
+            return 'The mean prediction for all 100 republican participants should not be larger than the mean prediction for the best 10 republican participants.'
+        elif values['m_republican1'] < values['m_republican3']:
+            return 'The mean prediction for all 100 republican participants should not be smaller than the mean prediction for the worst 10 republican participants.'
 
-
-
-    #@staticmethod
-    #def error_message(player, value):
-     #   print('value is', value)
-      #  if value['l_male1'] <= -1 or value['l_male1'] >= 51:
-       #     return 'Please type in a number between 0 and 50'
 
 
 page_sequence = [InstructionsBeliefs, BeliefsMath, BeliefsLogic, BeliefsMath2]
