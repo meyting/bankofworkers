@@ -64,11 +64,18 @@ class Subsession(BaseSubsession):
 
 import itertools
 def creating_session(subsession):
-    subsession.n1 = create_numbers(0)
-    subsession.n2 = create_numbers(1)
-    subsession.n3 = create_numbers(2)
-    subsession.n4 = create_numbers(3)
-    subsession.n5 = create_numbers(4)
+    if subsession.round_number <= 50:
+        subsession.n1 = create_numbers(0)
+        subsession.n2 = create_numbers(1)
+        subsession.n3 = create_numbers(2)
+        subsession.n4 = create_numbers(3)
+        subsession.n5 = create_numbers(4)
+    if subsession.round_number > 50:
+        subsession.n1 = subsession.in_round(subsession.round_number-50).n1
+        subsession.n2 = subsession.in_round(subsession.round_number-50).n2
+        subsession.n3 = subsession.in_round(subsession.round_number-50).n3
+        subsession.n4 = subsession.in_round(subsession.round_number-50).n4
+        subsession.n5 = subsession.in_round(subsession.round_number-50).n5
     subsession.result_math = get_result(subsession.n1, subsession.n2, subsession.n3, subsession.n4, subsession.n5)
     if subsession.round_number == 1:
         for p in subsession.get_players():
