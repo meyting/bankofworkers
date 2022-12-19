@@ -15,10 +15,6 @@
         The task ends either if your time is over or if you have answered all the {{C.num_rounds_task}}  questions. <br>
     </p>
     <p>
-        Keep in mind, that the answer will always be a positive integer.
-        Thus, there won`t be any negative results or decimals. <b style="color:red"> DO WE NEED THIS?</b>
-    </p>
-    <p>
         If you want, you can skip a question by clicking on "next". In that case you will be directed to the next question. <br>
         Please note that you cannot go back to the previous question after you have started with the next question by clicking "next". <br>
         Instead of clicking on "next" you can also press "enter" to go to the next question and to confirm your input.
@@ -26,9 +22,18 @@
     </p>
 
     <p style="font-size:18px;"> <u> Example: </u>  </p>
-    <img src="{{ static 'mathexample.png' }}" width="250px" height=auto/> <br>
+    <table class="center">
+    <tr>
+        <td style="font-size:30px; width:70"> {{ C.example_math_n1 }} + {{ C.example_math_n2 }} + {{ C.example_math_n3 }} + {{ C.example_math_n4 }} + {{ C.example_math_n5 }} = </td>
+        <td>&nbsp;</td>
+        <td style="width:50px">
+            <input type="number" min="0" name="input_logic" id="input_logic" class="form-control" readonly>
+        </td>
+    </tr>
+</table>
+<br>
     <p>
-        Adding the numbers gives the result 15. Therefore, the correct answer to enter is "15".
+        Adding the numbers gives the result 17. Therefore, the correct answer to enter is "17".
     </p>
 <br>
     <h5> <b> Score and payment: </b> </h5>
@@ -48,4 +53,11 @@
     {{ next_button }}
 {{ endblock }}
 
-
+{{ block styles }}
+<style type="text/css">
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+{{ endblock }}

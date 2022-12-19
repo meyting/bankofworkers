@@ -5,28 +5,34 @@ from otree.api import *
 doc = """
 Your app description
 """
-random.seed(10)
+random.seed(0)
 
 class C(BaseConstants):
     NAME_IN_URL = 'math_logic_task'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 100
     TIMER_TEXT = "Time to complete this section:"
-    SEQUENCES_LOGIC = ['1, 5, 4, 8, 7, __ ', '12, 23, 34, 45, __ ', '15, 12, 9, 6, __ ', '2, 6, 4, 12, 10, 30, __',
-                       '100, 99, 104, 103, 108, __', '2, 8, 14, 20, __', '64, 56, 48, 40, __',
-                       '2, 5, 4, 7, 6, __', '120, 120, 60, 20, __ ', '1, 9, 2, 99, 3, 999, 4, 9999, __',
-                       '8, 13, 18, 23, __ ', '2, 6, 10, 14, __', '18, 36, 72, 144, __', '7, 17, 27, 37, __',
-                       '10, 15, 13, 18, __ ', '12, 10, 13, 11, 14, __', '1, 4, 9, 16, 25, __ ', '24, 34, 44, 54, __',
-                       '88, 66, 44, 22, __', '22, 11, 44, 22, 88, __', '38, 34, 30, 26, __',
-                       '1, 1, 2, 3, 5, 8, 13, __', '124, 62, 64, 32, 34, __', '2, 4, 6, 8, __',
-                       '13, 4, 26, 8, 39, __', '21, 20, 18, 15, 11, __', '4, 12, 6, 18, 9, __',
-                       '1, 1, 2, 6, 24, __', '50, 40, 31, 23, 16, __', '10, 11, 13, 16, 20, __',
-                       '1, 3, 4, 6, 7, __', '53, 8, 54, 9, 55, 10, __', '2, 4, 3, 9, 4, 16, 5, __',
-                       '87, 83, 79, 75, __', '10, 18, 26, 34, __', '101, 91, 81, 71, __', '95, 59, 85, 58, 75, __',
-                       '3, 7, 11, 15, 19, __', '3, 4, 7, 11, 18, __', '9, 15, 21, 27, __', '27, 36, 45, 54, __',
-                       '96, 48, 24, 12, __', '1, 3, 5, 7, __', '2, 4, 8, 16, __', '1, 2, 4, 7, 11, __',
-                       '1, 3, 9, 27, __', '32, 26, 20, 14, __', '11, 22, 33, 44, __', '33, 38, 43, 48, __',
-                       '1, 8, 27, 64, __']
+    SEQUENCES_LOGIC = ['1 , 5 , 4 , 8 , 7 , ', '12 , 23 , 34 , 45 , ', '15 , 12 , 9 , 6 , ', '2 , 6 , 4 , 12 , 10 , 30 , ',
+                       '100 , 99 , 104 , 103 , 108 , ', '2 , 8 , 14 , 20 , ', '64 , 56 , 48 , 40 , ',
+                       '2 , 5 , 4 , 7 , 6 , ', '120 , 120 , 60 , 20 , ', '1 , 9 , 2 , 99 , 3 , 999 , 4 , 9999 , ',
+                       '8 , 13 , 18 , 23 , ', '2 , 6 , 10 , 14 , ', '18 , 36 , 72 , 143 , ', '7 , 17 , 27 , 37 , ',
+                       '10 , 15 , 13 , 18 , ', '12 , 10 , 13 , 11 , 14 , ', '1 , 4 , 9 , 16 , 25 , ', '24 , 34 , 44 , 54 , ',
+                       '88 , 66 , 44 , 22 , ' , '22 , 11 , 44 , 22 , 88 , ' , '38 , 34 , 30 , 26 , ' ,
+                       '1 , 1 , 2 , 3 , 5 , 8 , 13 , ' , '124 , 62 , 64 , 32 , 34 , ' , '2 , 4 , 6 , 8 , ' ,
+                       '13 , 4 , 26 , 8 , 39 , ' , '21 , 20 , 18 , 15 , 11 , ' , '4 , 12 , 6 , 18 , 9 , ' ,
+                       '1 , 1 , 2 , 6 , 24 , ' , '50 , 40 , 31 , 23 , 16 , ' , '10 , 11 , 13 , 16 , 20 , ' ,
+                       '1 , 3 , 4 , 6 , 7 , ' , '53 , 8 , 54 , 9 , 55 , 10 , ' , '2 , 4 , 3 , 9 , 4 , 16 , 5 , ' ,
+                       '87 , 83 , 79 , 75 , ' , '10 , 18 , 26 , 34 , ' , '101 , 91 , 81 , 71 , ' , '95 , 59 , 85 , 58 , 75 , ' ,
+                       '3 , 7 , 11 , 15 , 19 , ' , '3 , 4 , 7 , 11 , 18 , ' , '9 , 15 , 21 , 27 , ' , '27 , 36 , 45 , 54 , ' ,
+                       '96 , 48 , 24 , 12 , ' , '1 , 3 , 5 , 7 , ' , '2  , 4  , 8  , 16  , ' , '1 , 2 , 4 , 7 , 11 , ' ,
+                       '1 , 3 , 9 , 27 , ' , '32 , 26 , 20 , 14 , ' , '11 , 22 , 33 , 44 , ' , '33 , 38 , 43 , 48 , ' ,
+                       '1 , 8 , 27 , 64 , ']
+    example_math_n1 = 4
+    example_math_n2 = 8
+    example_math_n3 = 2
+    example_math_n4 = 1
+    example_math_n5 = 2
+    result_math = example_math_n1+example_math_n2+example_math_n3+example_math_n4+example_math_n5
     SOLUTIONS_LOGIC = [11, 56, 3, 28, 107, 26, 32, 9, 5, 5, 28, 18, 288, 47, 16, 12, 36, 64, 11, 44, 22, 21, 17, 10, 12,
                        6, 27, 120, 10, 25, 9, 56, 25, 71, 42, 61, 57, 23, 29, 33, 63, 6, 9, 32, 16, 81, 8, 55, 53, 125,]
     bonusrate = cu(0.05)
@@ -72,14 +78,18 @@ def creating_session(subsession):
             p.participant.total_points_logic = 0
             p.task_first = p.participant.task_first
             solutions_logic = C.SOLUTIONS_LOGIC.copy()
-            random.Random(0).shuffle(solutions_logic)
+            #random.Random(0).shuffle(solutions_logic)
             solutions_logic.extend(solutions_logic)
             p.participant.solutions_logic = solutions_logic
             sequences_logic = C.SEQUENCES_LOGIC.copy()
-            random.Random(0).shuffle(sequences_logic)
+            #random.Random(0).shuffle(sequences_logic)
             sequences_logic.extend(sequences_logic)
             p.participant.sequences_logic = sequences_logic
     for p in subsession.get_players():
+        #if p.participant.task_first == "math":
+#        if p.participant.task_first == "logic":
+#            random_numbers = random.Random(p.round_number-50).sample(range(0,10),5)
+#            print("logic",random_numbers)
         p.solution_math = subsession.result_math
         subsession.question_logic = p.participant.sequences_logic[p.round_number - 1]
         subsession.result_logic = p.participant.solutions_logic[p.round_number - 1]
@@ -200,8 +210,22 @@ class QuestionsMath(Page):
         print(player.task_first)
         if participant.task_first == "math":
             player.question_num_math = player.round_number
+            return {
+                "n1": player.subsession.n1,
+                "n2": player.subsession.n2,
+                "n3": player.subsession.n3,
+                "n4": player.subsession.n4,
+                "n5": player.subsession.n5
+            }
         else:
             player.question_num_math = player.round_number-C.num_rounds_task
+            return {
+                "n1": player.in_round(player.round_number-50).subsession.n1,
+                "n2": player.in_round(player.round_number-50).subsession.n2,
+                "n3": player.in_round(player.round_number-50).subsession.n3,
+                "n4": player.in_round(player.round_number-50).subsession.n4,
+                "n5": player.in_round(player.round_number-50).subsession.n5
+            }
 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):

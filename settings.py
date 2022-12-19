@@ -9,7 +9,7 @@ SESSION_CONFIGS = [
     dict(
         name='mathe_logic_test',
         app_sequence=['welcome','math_logic_task'],
-        num_demo_participants=5,
+        num_demo_participants=4,
     ),
     dict(
         name='beliefs',

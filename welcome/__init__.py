@@ -17,7 +17,7 @@ class Subsession(BaseSubsession):
 
 def creating_session(subsession: Subsession):
     import itertools
-    task_first = itertools.cycle(['logic', 'realeffort'])
+    task_first = itertools.cycle(['logic', 'math'])
     if subsession.round_number == 1:
         for p in subsession.get_players():
             if 'task_first' in subsession.session.config:

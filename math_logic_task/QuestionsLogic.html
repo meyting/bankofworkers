@@ -1,27 +1,38 @@
-{{ block title }}
-    {{ if participant.task_first == "logic" }}
-        Task I
-    {{ else }}
-        Task II
-    {{ endif }}
-{{ endblock }}
+
 {{ block content }}
-    <h6> Question {{ player.question_num_logic }} of {{ C.num_rounds_task }}: </h6>
 <p>
-<table>
-    <col>
-        <col width="5">
-            <col width="70">
+<table class="center">
     <tr>
-        <td style="font-size:18px;"> {{ subsession.question_logic }} </td>
-        <td> </td>
-        <td style="border: 2px solid black; height: 15px">
-            <input type="number" min="0" name="input_logic" id="input_logic" class="form-control" autofocus> </td>
+        <td style="font-size:30px; width:70"> {{ subsession.question_logic }} </td>
+        <td> &nbsp;</td>
+        <td style="width:55px">
+            <input type="number" min="0" name="input_logic" id="input_logic" class="form-control" autofocus>
+        </td>
     </tr>
 </table>
+<br>
+<p>
+(Question {{ player.question_num_logic }} of {{ C.num_rounds_task }})
 </p>
-    <br>
-    [ result: {{ player.solution_logic }} ]
+
+
     {{ next_button }}
 
+{{ endblock }}
+
+{{ block styles }}
+<style type="text/css">
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.otree-timer {
+    width: 30%;
+    background-color: white;
+    border: none;
+    margin-left:0;
+    padding:0;
+   }
+
+</style>
 {{ endblock }}
