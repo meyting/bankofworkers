@@ -1,265 +1,1176 @@
 {{ block title }}
-     Beliefs about Scores in the Math Task
+  Beliefs about scores in the Math Task
 {{ endblock }}
 
 {{ block content }}
-<br>
-<P>
-    Please provide your estimate of the scores of specific subgroups in the <b> math task </b> where 5 numbers had to be added. <br>
-    Remember that the possible score in the test ranges from 0 to {{ C.num_rounds_task}}. <br> <br>
-    [Pop up more about math task?] <br>
-    </p>
-<br>
+<p>
+    Please provide your estimate about the scores of specific subgroups in the <b> math task </b> where {{ C.num_integers }} numbers had to be added up.
+    Remember that the possible score in the math task ranges from 0 to {{ C.num_rounds_task}}.
+</p>
 <p id="container">
     If you want to read the instructions for the task again, click <b class="openbox" id="openbox">here</b>.</p>
 <p class="infobox hidden" id="infobox">
     [!insert instructions beliefs from page before!]
-</p> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>women</u> in the math task: </h5> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all women: </td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="m_female1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 women: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_female2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 women:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_female3" class="form-control" required> </td>
-    </tr>
-</table>
-<br> <br>
-<h5> Performance of {{ C.samples }} sampled <u>men</u> in the math task: </h5> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all men: </td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="m_male1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 men: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_male2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 men:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_male3" class="form-control" required> </td>
-    </tr>
-</table>
-<br> <br> <br>
+</p>
 
-<h5> Performance of the {{ C.samples }} sampled <u>hispanics</u> in the math task: </h5> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all hispanics:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="m_hispanic1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 hispanics: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_hispanic2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 hispanics:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_hispanic3" class="form-control" required> </td>
-    </tr>
-</table>
-<br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>asians</u> in the math task: </h5> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all asians:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="m_asian1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 asians: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_asian2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 asians:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_asian3" class="form-control" required> </td>
-    </tr>
-</table>
-<br> <br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>republicans</u> in the math task: </h5> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all republicans:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="m_republican1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 republicans: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_republican2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 republicans:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_republican3" class="form-control" required> </td>
-    </tr>
-</table>
-<br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>democrats</u> in the math task: </h5> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all democrats:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="m_democrat1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 democrats: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_democrat2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 democrats:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="m_democrat3" class="form-control" required> </td>
-    </tr>
-</table>
-<br> <br>
+<hr>
+<br>
 
+
+{{ if participant.cats == "grp" }}
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" required>
+        <td><label for="m_male1">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" required>
+        <td><label for="m_male2">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" required>
+        <td><label for="m_male3">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" required>
+        <td><label for="m_female1">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" required>
+        <td><label for="m_female2">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" required>
+        <td><label for="m_female3">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" required>
+        <td><label for="m_white1">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" required>
+        <td><label for="m_white2">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" required>
+        <td><label for="m_white3">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" required>
+        <td><label for="m_asian1">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" required>
+        <td><label for="m_asian2">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" required>
+        <td><label for="m_asian3">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" required>
+        <td><label for="m_hispanic1">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" required>
+        <td><label for="m_hispanic2">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" required>
+        <td><label for="m_hispanic3">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" required>
+        <td><label for="m_black1">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" required>
+        <td><label for="m_black2">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" required>
+        <td><label for="m_black3">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" required>
+        <td><label for="m_democrat1">points</label>
+        {{ formfield_errors 'm_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" required>
+        <td><label for="m_republican1">points</label>
+        {{ formfield_errors 'm_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" required>
+        <td><label for="m_republican2">points</label>
+        {{ formfield_errors 'm_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" required>
+        <td><label for="m_republican3">points</label>
+        {{ formfield_errors 'm_republican3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+ {{ if participant.cats == "prg" }}
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" required>
+        <td><label for="m_democrat1">points</label>
+        {{ formfield_errors 'm_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" required>
+        <td><label for="m_republican1">points</label>
+        {{ formfield_errors 'm_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" required>
+        <td><label for="m_republican2">points</label>
+        {{ formfield_errors 'm_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" required>
+        <td><label for="m_republican3">points</label>
+        {{ formfield_errors 'm_republican3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" required>
+        <td><label for="m_white1">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" required>
+        <td><label for="m_white2">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" required>
+        <td><label for="m_white3">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" required>
+        <td><label for="m_asian1">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" required>
+        <td><label for="m_asian2">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" required>
+        <td><label for="m_asian3">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" required>
+        <td><label for="m_hispanic1">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" required>
+        <td><label for="m_hispanic2">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" required>
+        <td><label for="m_hispanic3">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" required>
+        <td><label for="m_black1">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" required>
+        <td><label for="m_black2">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" required>
+        <td><label for="m_black3">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" required>
+        <td><label for="m_male1">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" required>
+        <td><label for="m_male2">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" required>
+        <td><label for="m_male3">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" required>
+        <td><label for="m_female1">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" required>
+        <td><label for="m_female2">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" required>
+        <td><label for="m_female3">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "rgp" }}
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" required>
+        <td><label for="m_white1">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" required>
+        <td><label for="m_white2">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" required>
+        <td><label for="m_white3">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" required>
+        <td><label for="m_asian1">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" required>
+        <td><label for="m_asian2">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" required>
+        <td><label for="m_asian3">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" required>
+        <td><label for="m_hispanic1">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" required>
+        <td><label for="m_hispanic2">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" required>
+        <td><label for="m_hispanic3">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" required>
+        <td><label for="m_black1">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" required>
+        <td><label for="m_black2">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" required>
+        <td><label for="m_black3">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" required>
+        <td><label for="m_male1">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" required>
+        <td><label for="m_male2">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" required>
+        <td><label for="m_male3">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" required>
+        <td><label for="m_female1">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" required>
+        <td><label for="m_female2">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" required>
+        <td><label for="m_female3">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" required>
+        <td><label for="m_democrat1">points</label>
+        {{ formfield_errors 'm_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" required>
+        <td><label for="m_republican1">points</label>
+        {{ formfield_errors 'm_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" required>
+        <td><label for="m_republican2">points</label>
+        {{ formfield_errors 'm_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" required>
+        <td><label for="m_republican3">points</label>
+        {{ formfield_errors 'm_republican3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "pgr" }}
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" required>
+        <td><label for="m_democrat1">points</label>
+        {{ formfield_errors 'm_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" required>
+        <td><label for="m_republican1">points</label>
+        {{ formfield_errors 'm_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" required>
+        <td><label for="m_republican2">points</label>
+        {{ formfield_errors 'm_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" required>
+        <td><label for="m_republican3">points</label>
+        {{ formfield_errors 'm_republican3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" required>
+        <td><label for="m_male1">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" required>
+        <td><label for="m_male2">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" required>
+        <td><label for="m_male3">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" required>
+        <td><label for="m_female1">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" required>
+        <td><label for="m_female2">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" required>
+        <td><label for="m_female3">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" required>
+        <td><label for="m_white1">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" required>
+        <td><label for="m_white2">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" required>
+        <td><label for="m_white3">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" required>
+        <td><label for="m_asian1">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" required>
+        <td><label for="m_asian2">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" required>
+        <td><label for="m_asian3">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" required>
+        <td><label for="m_hispanic1">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" required>
+        <td><label for="m_hispanic2">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" required>
+        <td><label for="m_hispanic3">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" required>
+        <td><label for="m_black1">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" required>
+        <td><label for="m_black2">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" required>
+        <td><label for="m_black3">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "gpr" }}
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" required>
+        <td><label for="m_male1">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" required>
+        <td><label for="m_male2">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" required>
+        <td><label for="m_male3">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" required>
+        <td><label for="m_female1">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" required>
+        <td><label for="m_female2">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" required>
+        <td><label for="m_female3">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" required>
+        <td><label for="m_democrat1">points</label>
+        {{ formfield_errors 'm_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" required>
+        <td><label for="m_republican1">points</label>
+        {{ formfield_errors 'm_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" required>
+        <td><label for="m_republican2">points</label>
+        {{ formfield_errors 'm_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" required>
+        <td><label for="m_republican3">points</label>
+        {{ formfield_errors 'm_republican3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" required>
+        <td><label for="m_white1">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" required>
+        <td><label for="m_white2">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" required>
+        <td><label for="m_white3">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" required>
+        <td><label for="m_asian1">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" required>
+        <td><label for="m_asian2">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" required>
+        <td><label for="m_asian3">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" required>
+        <td><label for="m_hispanic1">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" required>
+        <td><label for="m_hispanic2">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" required>
+        <td><label for="m_hispanic3">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" required>
+        <td><label for="m_black1">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" required>
+        <td><label for="m_black2">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" required>
+        <td><label for="m_black3">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "rpg" }}
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_white1" class="form-control" required>
+        <td><label for="m_white1">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white2" class="form-control" required>
+        <td><label for="m_white2">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_white3" class="form-control" required>
+        <td><label for="m_white3">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_asian1" class="form-control" required>
+        <td><label for="m_asian1">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian2" class="form-control" required>
+        <td><label for="m_asian2">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_asian3" class="form-control" required>
+        <td><label for="m_asian3">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" required>
+        <td><label for="m_hispanic1">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic2" class="form-control" required>
+        <td><label for="m_hispanic2">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_hispanic3" class="form-control" required>
+        <td><label for="m_hispanic3">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_black1" class="form-control" id="m_male1" required>
+        <td><label for="m_black1">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black2" class="form-control" required>
+        <td><label for="m_black2">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_black3" class="form-control" required>
+        <td><label for="m_black3">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_democrat1" class="form-control" required>
+        <td><label for="m_democrat1">points</label>
+        {{ formfield_errors 'm_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_democrat2" class="form-control" required>
+        <td><label for="m_democrat2">points</label>
+        {{ formfield_errors 'm_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_republican1" class="form-control" required>
+        <td><label for="m_republican1">points</label>
+        {{ formfield_errors 'm_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican2" class="form-control" required>
+        <td><label for="m_republican2">points</label>
+        {{ formfield_errors 'm_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_republican3" class="form-control" required>
+        <td><label for="m_republican3">points</label>
+        {{ formfield_errors 'm_republican3' }} </td>
+  </tr>
+</table>
+
+
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_male1" class="form-control" id="m_male1" required>
+        <td><label for="m_male1">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male2" class="form-control" required>
+        <td><label for="m_male2">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_male3" class="form-control" required>
+        <td><label for="m_male3">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the math task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="m_female1" class="form-control" id="m_male1" required>
+        <td><label for="m_female1">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female2" class="form-control" required>
+        <td><label for="m_female2">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="m_female3" class="form-control" required>
+        <td><label for="m_female3">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+<br> <br>
 
     {{ next_button }}
 {{ endblock }}
+
 
 {{ block styles }}
 <style type="text/css">
@@ -273,6 +1184,24 @@
         cursor: pointer;
 		margin: 15px 0;
 		  }
+
+.fillercolumn {
+    width: 15%;
+    }
+
+.inputcolumn {
+    width: 65px;
+    }
+
+    table {
+      text-align: center;
+      width: 100%;
+    }
+
+   label {
+      display: inline-block;
+      float: left;
+    }
 </style>
 {{ endblock }}
 {{ block app_scripts }}

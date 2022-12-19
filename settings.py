@@ -38,7 +38,7 @@ SESSION_CONFIG_DEFAULTS = dict(
 )
 
 PARTICIPANT_FIELDS = ['expiry', 'total_points_math', 'task_first', 'belief_treatment', 'task_rounds',
-                      'total_points_logic', "sequences_logic", "solutions_logic"]
+                      'total_points_logic', "sequences_logic", "solutions_logic", "cats"]
 SESSION_FIELDS = []
 
 # ISO-639 code

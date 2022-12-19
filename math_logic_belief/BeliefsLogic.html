@@ -12,246 +12,1159 @@
 <p class="infobox hidden" id="infobox">
     [!insert instructions beliefs from page before!]
 </p>
-<h5> Performance of the {{ C.samples }} sampled <u>men</u> in the logic task: </h5> <br>
+
+<hr>
+<br>
+
+ {{ if participant.cats == "grp" }}
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the logic task: </p>
 <table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all men: </td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" id="l_male1" required>
+        <td><label for="l_male1">points</label>
         {{ formfield_errors 'l_male1' }} </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 men: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_male2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 men:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_male3" class="form-control" required> </td>
-    </tr>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male2" class="form-control" required>
+        <td><label for="l_male2">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male3" class="form-control" required>
+        <td><label for="l_male3">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
 </table>
-<br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>women</u> in the logic task: </h5> <br>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the logic task: </p>
 <table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all women: </td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_female1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 women: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_female2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 women:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_female3" class="form-control" required> </td>
-    </tr>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_female1" class="form-control" id="l_male1" required>
+        <td><label for="l_female1">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female2" class="form-control" required>
+        <td><label for="l_female2">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female3" class="form-control" required>
+        <td><label for="l_female3">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
 </table>
-<br> <br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>asians</u> in the logic task: </h5> <br>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the logic task: </p>
 <table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all asians:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_asian1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 asians: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_asian2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 asians:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_asian3" class="form-control" required> </td>
-    </tr>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_white1" class="form-control" required>
+        <td><label for="l_white1">points</label>
+        {{ formfield_errors 'l_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white2" class="form-control" required>
+        <td><label for="l_white2">points</label>
+        {{ formfield_errors 'l_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white3" class="form-control" required>
+        <td><label for="l_white3">points</label>
+        {{ formfield_errors 'l_white3' }} </td>
+  </tr>
 </table>
-<br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>hispanics</u> in the logic task: </h5> <br>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the logic task: </p>
 <table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all hispanics:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_hispanic1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 hispanics: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 hispanics:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required> </td>
-    </tr>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_asian1" class="form-control" required>
+        <td><label for="l_asian1">points</label>
+      {{ formfield_errors 'l_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian2" class="form-control" required>
+        <td><label for="l_asian2">points</label>
+        {{ formfield_errors 'l_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian3" class="form-control" required>
+        <td><label for="l_asian3">points</label>
+        {{ formfield_errors 'l_asian3' }} </td>
+  </tr>
 </table>
-<br> <br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>democrats</u> in the logic task: </h5> <br>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the logic task: </p>
 <table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all democrats:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_democrat1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 democrats: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_democrat2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 democrats:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_democrat3" class="form-control" required> </td>
-    </tr>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+        <td><label for="l_hispanic1">points</label>
+      {{ formfield_errors 'l_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required>
+        <td><label for="l_hispanic2">points</label>
+        {{ formfield_errors 'l_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required>
+        <td><label for="l_hispanic3">points</label></td>
+        {{ formfield_errors 'l_hispanic3' }}
+  </tr>
 </table>
-<br> <br>
-<h5> Performance of the {{ C.samples }} sampled <u>republicans</u> in the logic task: </h5> <br>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the logic task: </p>
 <table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of all republicans:</td>
-        <td> </td>
-        <td style="border: 2px solid black"> <input type="number" min="0" max="50" name="l_republican1" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the best 10 republicans: </td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_republican2" class="form-control" required> </td>
-    </tr>
-</table> <br>
-<table>
-    <colgroup>
-    <col>
-        <col width="5">
-            <col>
-    </colgroup>
-    <tr>
-        <td style="font-size:18px;">Estimation of the average score of the worst 10 republicans:</td>
-        <td> </td>
-        <td style="border: 2px solid black">
-            <input type="number" min="0" max="50" name="l_republican3" class="form-control" required> </td>
-    </tr>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_black1" class="form-control" id="l_male1" required>
+        <td><label for="l_black1">points</label>
+        {{ formfield_errors 'l_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black2" class="form-control" required>
+        <td><label for="l_black2">points</label>
+        {{ formfield_errors 'l_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black3" class="form-control" required>
+        <td><label for="l_black3">points</label>
+        {{ formfield_errors 'l_black3' }} </td>
+  </tr>
 </table>
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_democrat1" class="form-control" required>
+        <td><label for="l_democrat1">points</label>
+        {{ formfield_errors 'l_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_republican1" class="form-control" required>
+        <td><label for="l_republican1">points</label>
+        {{ formfield_errors 'l_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican2" class="form-control" required>
+        <td><label for="l_republican2">points</label>
+        {{ formfield_errors 'l_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican3" class="form-control" required>
+        <td><label for="l_republican3">points</label>
+        {{ formfield_errors 'l_republican3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+ {{ if participant.cats == "prg" }}
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_democrat1" class="form-control" required>
+        <td><label for="l_democrat1">points</label>
+        {{ formfield_errors 'l_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_republican1" class="form-control" required>
+        <td><label for="l_republican1">points</label>
+        {{ formfield_errors 'l_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican2" class="form-control" required>
+        <td><label for="l_republican2">points</label>
+        {{ formfield_errors 'l_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican3" class="form-control" required>
+        <td><label for="l_republican3">points</label>
+        {{ formfield_errors 'l_republican3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_white1" class="form-control" required>
+        <td><label for="l_white1">points</label>
+        {{ formfield_errors 'l_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white2" class="form-control" required>
+        <td><label for="l_white2">points</label>
+        {{ formfield_errors 'l_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white3" class="form-control" required>
+        <td><label for="l_white3">points</label>
+        {{ formfield_errors 'l_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_asian1" class="form-control" required>
+        <td><label for="l_asian1">points</label>
+      {{ formfield_errors 'l_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian2" class="form-control" required>
+        <td><label for="l_asian2">points</label>
+        {{ formfield_errors 'l_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian3" class="form-control" required>
+        <td><label for="l_asian3">points</label>
+        {{ formfield_errors 'l_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+        <td><label for="l_hispanic1">points</label>
+      {{ formfield_errors 'l_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required>
+        <td><label for="l_hispanic2">points</label>
+        {{ formfield_errors 'l_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required>
+        <td><label for="l_hispanic3">points</label></td>
+        {{ formfield_errors 'l_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_black1" class="form-control" id="l_male1" required>
+        <td><label for="l_black1">points</label>
+        {{ formfield_errors 'l_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black2" class="form-control" required>
+        <td><label for="l_black2">points</label>
+        {{ formfield_errors 'l_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black3" class="form-control" required>
+        <td><label for="l_black3">points</label>
+        {{ formfield_errors 'l_black3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" id="l_male1" required>
+        <td><label for="l_male1">points</label>
+        {{ formfield_errors 'l_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male2" class="form-control" required>
+        <td><label for="l_male2">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male3" class="form-control" required>
+        <td><label for="l_male3">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_female1" class="form-control" id="l_male1" required>
+        <td><label for="l_female1">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female2" class="form-control" required>
+        <td><label for="l_female2">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female3" class="form-control" required>
+        <td><label for="l_female3">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "rgp" }}
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_white1" class="form-control" required>
+        <td><label for="l_white1">points</label>
+        {{ formfield_errors 'l_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white2" class="form-control" required>
+        <td><label for="l_white2">points</label>
+        {{ formfield_errors 'l_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white3" class="form-control" required>
+        <td><label for="l_white3">points</label>
+        {{ formfield_errors 'l_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_asian1" class="form-control" required>
+        <td><label for="l_asian1">points</label>
+      {{ formfield_errors 'l_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian2" class="form-control" required>
+        <td><label for="l_asian2">points</label>
+        {{ formfield_errors 'l_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian3" class="form-control" required>
+        <td><label for="l_asian3">points</label>
+        {{ formfield_errors 'l_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+        <td><label for="l_hispanic1">points</label>
+      {{ formfield_errors 'l_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required>
+        <td><label for="l_hispanic2">points</label>
+        {{ formfield_errors 'l_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required>
+        <td><label for="l_hispanic3">points</label></td>
+        {{ formfield_errors 'l_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_black1" class="form-control" id="l_male1" required>
+        <td><label for="l_black1">points</label>
+        {{ formfield_errors 'l_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black2" class="form-control" required>
+        <td><label for="l_black2">points</label>
+        {{ formfield_errors 'l_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black3" class="form-control" required>
+        <td><label for="l_black3">points</label>
+        {{ formfield_errors 'l_black3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" id="l_male1" required>
+        <td><label for="l_male1">points</label>
+        {{ formfield_errors 'l_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male2" class="form-control" required>
+        <td><label for="l_male2">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male3" class="form-control" required>
+        <td><label for="l_male3">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_female1" class="form-control" id="l_male1" required>
+        <td><label for="l_female1">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female2" class="form-control" required>
+        <td><label for="l_female2">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female3" class="form-control" required>
+        <td><label for="l_female3">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_democrat1" class="form-control" required>
+        <td><label for="l_democrat1">points</label>
+        {{ formfield_errors 'l_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_republican1" class="form-control" required>
+        <td><label for="l_republican1">points</label>
+        {{ formfield_errors 'l_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican2" class="form-control" required>
+        <td><label for="l_republican2">points</label>
+        {{ formfield_errors 'l_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican3" class="form-control" required>
+        <td><label for="l_republican3">points</label>
+        {{ formfield_errors 'l_republican3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "pgr" }}
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_democrat1" class="form-control" required>
+        <td><label for="l_democrat1">points</label>
+        {{ formfield_errors 'l_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_republican1" class="form-control" required>
+        <td><label for="l_republican1">points</label>
+        {{ formfield_errors 'l_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican2" class="form-control" required>
+        <td><label for="l_republican2">points</label>
+        {{ formfield_errors 'l_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican3" class="form-control" required>
+        <td><label for="l_republican3">points</label>
+        {{ formfield_errors 'l_republican3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" id="l_male1" required>
+        <td><label for="l_male1">points</label>
+        {{ formfield_errors 'l_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male2" class="form-control" required>
+        <td><label for="l_male2">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male3" class="form-control" required>
+        <td><label for="l_male3">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_female1" class="form-control" id="l_male1" required>
+        <td><label for="l_female1">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female2" class="form-control" required>
+        <td><label for="l_female2">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female3" class="form-control" required>
+        <td><label for="l_female3">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_white1" class="form-control" required>
+        <td><label for="l_white1">points</label>
+        {{ formfield_errors 'l_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white2" class="form-control" required>
+        <td><label for="l_white2">points</label>
+        {{ formfield_errors 'l_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white3" class="form-control" required>
+        <td><label for="l_white3">points</label>
+        {{ formfield_errors 'l_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_asian1" class="form-control" required>
+        <td><label for="l_asian1">points</label>
+      {{ formfield_errors 'l_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian2" class="form-control" required>
+        <td><label for="l_asian2">points</label>
+        {{ formfield_errors 'l_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian3" class="form-control" required>
+        <td><label for="l_asian3">points</label>
+        {{ formfield_errors 'l_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+        <td><label for="l_hispanic1">points</label>
+      {{ formfield_errors 'l_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required>
+        <td><label for="l_hispanic2">points</label>
+        {{ formfield_errors 'l_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required>
+        <td><label for="l_hispanic3">points</label></td>
+        {{ formfield_errors 'l_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_black1" class="form-control" id="l_male1" required>
+        <td><label for="l_black1">points</label>
+        {{ formfield_errors 'l_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black2" class="form-control" required>
+        <td><label for="l_black2">points</label>
+        {{ formfield_errors 'l_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black3" class="form-control" required>
+        <td><label for="l_black3">points</label>
+        {{ formfield_errors 'l_black3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "gpr" }}
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" id="l_male1" required>
+        <td><label for="l_male1">points</label>
+        {{ formfield_errors 'l_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male2" class="form-control" required>
+        <td><label for="l_male2">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male3" class="form-control" required>
+        <td><label for="l_male3">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_female1" class="form-control" id="l_male1" required>
+        <td><label for="l_female1">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female2" class="form-control" required>
+        <td><label for="l_female2">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female3" class="form-control" required>
+        <td><label for="l_female3">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_democrat1" class="form-control" required>
+        <td><label for="l_democrat1">points</label>
+        {{ formfield_errors 'l_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_republican1" class="form-control" required>
+        <td><label for="l_republican1">points</label>
+        {{ formfield_errors 'l_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican2" class="form-control" required>
+        <td><label for="l_republican2">points</label>
+        {{ formfield_errors 'l_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican3" class="form-control" required>
+        <td><label for="l_republican3">points</label>
+        {{ formfield_errors 'l_republican3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_white1" class="form-control" required>
+        <td><label for="l_white1">points</label>
+        {{ formfield_errors 'l_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white2" class="form-control" required>
+        <td><label for="l_white2">points</label>
+        {{ formfield_errors 'l_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white3" class="form-control" required>
+        <td><label for="l_white3">points</label>
+        {{ formfield_errors 'l_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_asian1" class="form-control" required>
+        <td><label for="l_asian1">points</label>
+      {{ formfield_errors 'l_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian2" class="form-control" required>
+        <td><label for="l_asian2">points</label>
+        {{ formfield_errors 'l_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian3" class="form-control" required>
+        <td><label for="l_asian3">points</label>
+        {{ formfield_errors 'l_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+        <td><label for="l_hispanic1">points</label>
+      {{ formfield_errors 'l_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required>
+        <td><label for="l_hispanic2">points</label>
+        {{ formfield_errors 'l_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required>
+        <td><label for="l_hispanic3">points</label></td>
+        {{ formfield_errors 'l_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_black1" class="form-control" id="l_male1" required>
+        <td><label for="l_black1">points</label>
+        {{ formfield_errors 'l_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black2" class="form-control" required>
+        <td><label for="l_black2">points</label>
+        {{ formfield_errors 'l_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black3" class="form-control" required>
+        <td><label for="l_black3">points</label>
+        {{ formfield_errors 'l_black3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {{ if participant.cats == "rpg" }}
+<p> Scores of the {{ C.samples }} sampled <b>white</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_white1" class="form-control" required>
+        <td><label for="l_white1">points</label>
+        {{ formfield_errors 'l_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white2" class="form-control" required>
+        <td><label for="l_white2">points</label>
+        {{ formfield_errors 'l_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_white3" class="form-control" required>
+        <td><label for="l_white3">points</label>
+        {{ formfield_errors 'l_white3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Asian</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_asian1" class="form-control" required>
+        <td><label for="l_asian1">points</label>
+      {{ formfield_errors 'l_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian2" class="form-control" required>
+        <td><label for="l_asian2">points</label>
+        {{ formfield_errors 'l_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_asian3" class="form-control" required>
+        <td><label for="l_asian3">points</label>
+        {{ formfield_errors 'l_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Hispanic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" required>
+        <td><label for="l_hispanic1">points</label>
+      {{ formfield_errors 'l_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic2" class="form-control" required>
+        <td><label for="l_hispanic2">points</label>
+        {{ formfield_errors 'l_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_hispanic3" class="form-control" required>
+        <td><label for="l_hispanic3">points</label></td>
+        {{ formfield_errors 'l_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Black</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_black1" class="form-control" id="l_male1" required>
+        <td><label for="l_black1">points</label>
+        {{ formfield_errors 'l_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black2" class="form-control" required>
+        <td><label for="l_black2">points</label>
+        {{ formfield_errors 'l_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_black3" class="form-control" required>
+        <td><label for="l_black3">points</label>
+        {{ formfield_errors 'l_black3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Democratic</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_democrat1" class="form-control" required>
+        <td><label for="l_democrat1">points</label>
+        {{ formfield_errors 'l_democrat1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_democrat2" class="form-control" required>
+        <td><label for="l_democrat2">points</label>
+        {{ formfield_errors 'l_democrat2' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>Republican</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_republican1" class="form-control" required>
+        <td><label for="l_republican1">points</label>
+        {{ formfield_errors 'l_republican1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican2" class="form-control" required>
+        <td><label for="l_republican2">points</label>
+        {{ formfield_errors 'l_republican2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_republican3" class="form-control" required>
+        <td><label for="l_republican3">points</label>
+        {{ formfield_errors 'l_republican3' }} </td>
+  </tr>
+</table>
+
+
+<br>
+<hr>
+<br>
+
+
+<p> Scores of the {{ C.samples }} sampled <b>male</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_male1" class="form-control" id="l_male1" required>
+        <td><label for="l_male1">points</label>
+        {{ formfield_errors 'l_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male2" class="form-control" required>
+        <td><label for="l_male2">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_male3" class="form-control" required>
+        <td><label for="l_male3">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
+</table>
+
+<br>
+
+<p> Scores of the {{ C.samples }} sampled <b>female</b> participants in the logic task: </p>
+<table>
+  <tr>
+    <th class="headlinecolumn">Mean: &nbsp;</th>
+        <td class="inputcolumn"><input type="number" min="0" max="50" name="l_female1" class="form-control" id="l_male1" required>
+        <td><label for="l_female1">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <th>Top 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female2" class="form-control" required>
+        <td><label for="l_female2">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <th>Bottom 10: &nbsp;</th>
+        <td><input type="number" min="0" max="50" name="l_female3" class="form-control" required>
+        <td><label for="l_female3">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+
+
+
 <br> <br>
 
     {{ next_button }}
@@ -270,6 +1183,24 @@
         cursor: pointer;
 		margin: 15px 0;
 		  }
+
+.fillercolumn {
+    width: 15%;
+    }
+
+.inputcolumn {
+    width: 65px;
+    }
+
+    table {
+      text-align: center;
+      width: 100%;
+    }
+
+   label {
+      display: inline-block;
+      float: left;
+    }
 </style>
 {{ endblock }}
 {{ block app_scripts }}
