@@ -45,7 +45,8 @@ def make_field():
     return models.IntegerField(
         label="",
         min=0,
-        max=50
+        max=50,
+        blank=True,
     )
 
 
