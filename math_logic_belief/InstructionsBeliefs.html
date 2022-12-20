@@ -2,69 +2,119 @@
     Part II
 {{ endblock }}
 {{ block content }}
-<br>
-<h5> <b> Task: </b> </h5>
 <p>
     The previous part is completed by several other people besides you.
     On the next two pages, we want to know what you think how well specific subgroups of people perform in the two tasks.
 </p>
 <p>
     In total, we ask you to predict the performance of {{C.num_subtasks}} different subgroups of participants.
-    Each subgroup consist of 100 people. <br>
-    We ask you to predict...
-    <div style="text-indent:20px"> 1) ... the average score of all people of a given subgroup, </div>
-    <div style="text-indent:20px"> 2) ...  the average score of the best 10 people of a given subgroup, and </div>
-    <div style="text-indent:20px"> 3) ... the average score of the worst 10 people of a given subgroup. </div> <br>
+    Each subgroup consist of {{C.samples}} people.
 </p>
-
-<h5> <b> Payment: </b> </h5>
 <p>
-    At the end of the experiment, one of the subtasks (consisting of the three questions explained above)
-    will be randomly selected to determine your payment in this second part of the experiment. <br> <br>
-    Your bonus payment is calculated as follows: <br>
-    For each of the three questions, you receive an additional payment of $0.50 if your answer is not more than 3
-    points away from the correct value of the drawn sample.
-    </p>
-<p style="font-size:18px;"> <u> Example for one subtask: </u>  </p>
+    More specifically, we ask you to predict...
+<ul>
+    <li> ... the <b>average score of all {{C.samples}} people</b> of a given subgroup,
+    <li> ... the <b>average score of the top 10 people</b>, i.e. those with the highest scores, of the respective subgroup,
+    <li> ... the <b>average score of the bottom 10 people</b>, i.e. those with the lowest scores, of the respective subgroup.
+</ul>
+</p>
+    <p style="font-size:18px;"> <u> Example: </u>  </p>
+<p> Your predictions of the scores of {{ C.samples }} randomly drawn <b>American</b> participants in the <b>sequence</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+      <td class="inputcolumn"><input type="number" class="form-control" readonly></td>
+      <td><label for="l_male1_1">points</label></td>
+      <td class="fillercolumn">&nbsp;</td>
+      <td>Average Top 10: &nbsp;</td>
+      <td class="inputcolumn"><input type="number" class="form-control" readonly ></td>
+      <td><label for="l_male2_1">points</label></td>
+      <td class="fillercolumn">&nbsp;</td>
+      <td>Average Bottom 10: &nbsp;</td>
+      <td class="inputcolumn"><input type="number" class="form-control" readonly ></td>
+      <td><label for="l_male3_1">points</label></td>
+  </tr>
+</table>
+<br>
 <p>
-    <table style="border: 2px solid black" height="50%" width="65%" cellpadding ="10">
-        <tr style="border: 2px solid black">
-            <th style="border: 2px solid black; text-align:center"> Question </th>
-            <th style="border: 2px solid black; text-align:center"> Your guess </th>
-            <th style="border: 2px solid black; text-align:center"> True value </th>
-            <th style="border: 2px solid black; width=350; text-align:center"> Your payment </th>
+    In this case you are asked to indicate how well American participants performed in the sequence task.
+    The first estimate refers to the average of {{C.samples}} randomly drawn American participants.
+    The second estimate refers to the average among only the 10 Americans who completed the most sequences correctly.
+    The second estimate refers to the average among only the 10 Americans who completed the least sequences correctly.
+</p>
+<br>
+<h5> <b> Possible Bonus Payment: </b> </h5>
+<p>
+    At the end of the experiment, the assessment of one subgroup will be randomly selected as the "subgroup-that-counts".
+    Your assessment of the performance of individuals from this subgroup will determine your bonus payment for part II.
+</p>
+<p>
+    For each of the three predictions (avaerage all, average top 10, average bottom 10) you receive an additional payment of $0.50 if your answer
+    is within 3 points around the correct value.
+</p>
+<p style="font-size:18px;"> <u> Bonus Payment Example: </u>  </p>
+<p>
+    <table>
+        <tr>
+            <th style="padding:5px; text-align:center"> Question </th>
+            <th style="padding:5px; text-align:center"> Your guess </th>
+            <th style="padding:5px; text-align:center"> True value </th>
+            <th style="width=350; text-align:center"> Your payment </th>
         </tr>
-        <tr style="border: 2px solid black">
-            <td style="border: 2px solid black; text-align:center"> 1</td>
-            <td style="border: 2px solid black; text-align:center"> 28 </td>
-            <td style="border: 2px solid black; text-align:center"> 30 </td>
-            <td style="border: 2px solid black;">  <b> $0.50 </b> (difference between 28 and 30 is not larger than 3) </td>
+        <tr>
+            <td style="padding:5px; text-align:center"> 1 </td>
+            <td style="padding:5px; text-align:center"> 28 </td>
+            <td style="padding:5px; text-align:center"> 30 </td>
+            <td>  <b> $0.50 </b> (difference between 28 and 30 is not larger than 3)</td>
         </tr>
-        <tr style="border: 2px solid black">
-            <td style="border: 2px solid black; text-align:center"> 2</td>
-            <td style="border: 2px solid black; text-align:center"> 41 </td>
-            <td style="border: 2px solid black; text-align:center"> 36 </td>
-            <td style="border: 2px solid black">  <b> $0 </b> (difference between 41 and 36 is larger than 3) </td>
+        <tr>
+            <td style="padding:5px; text-align:center"> 2</td>
+            <td style="padding:5px; text-align:center"> 41 </td>
+            <td style="padding:5px; text-align:center"> 36 </td>
+            <td>  <b> $0 </b> (difference between 41 and 36 is larger than 3) </td>
         </tr>
-        <tr style="border: 2px solid black">
-            <td style="border: 2px solid black; text-align:center"> 3</td>
-            <td style="border: 2px solid black; text-align:center"> 19 </td>
-            <td style="border: 2px solid black; text-align:center"> 18 </td>
-            <td style="border: 2px solid black">  <b> $0.50 </b> (difference between 19 and 18 is not larger than 3) </td>
+        <tr>
+            <td style="padding:5px;text-align:center"> 3</td>
+            <td style="padding:5px;text-align:center"> 19 </td>
+            <td style="padding:5px;text-align:center"> 18 </td>
+            <td>  <b> $0.50 </b> (difference between 19 and 18 is not larger than 3) </td>
         </tr>
-        <tr style="border: 2px solid black">
-            <td colspan="3" style="border: 2px solid black; text-align:center"> Sum over the three questions:  </td>
-            <td style="border: 2px solid black; text-align:center"> <b> $1 </b> </td>
+        <tr style="height:40px">
+            <td colspan="3" style="text-align:center"> <b>Sum over the three questions:</b>  </td>
+            <td style="text-align:center"> <b> $1 </b> </td>
         </tr>
     </table>
-    </p>
+    <br>
     <p>
-        If this subtask is selected to determine your bonus payment for part II, you would receive a total of <b> $1 </b>.
+        If this subgroup was selected as the "subgroup-that-counts", you would receive an additional bonus payment of <b> $1 </b> in part II.
     </p>
 <p>
-    If you have read and understood these explanations, please click "Next" to start with the task.
+    If you have read and understood these explanations, please click "Next" to start the assessments.
 </p>
 
     {{ next_button }}
 
 {{ endblock }}
+
+{{ block styles }}
+<style type="text/css">
+.fillercolumn {
+    width: 12%;
+    }
+
+.inputcolumn {
+    width: 45px;
+    }
+
+    table {
+      text-align: center;
+      width: 100%;
+    }
+
+   label {
+      display: inline-block;
+      float: left;
+    }
+</style>
+{{ endblock }}
+
