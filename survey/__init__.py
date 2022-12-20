@@ -50,7 +50,7 @@ class Player(BasePlayer):
     political_affiliation = models.IntegerField(initial=None)
     political_orientation = models.IntegerField(
         choices=[[0, 'Democrat'], [1, 'Republican']],
-        label='Which direction would you prefer if you had to decide??',
+        label='Which direction would you prefer if you had to vote today?',
         widget=widgets.RadioSelectHorizontal(),
         blank=True,
     )
