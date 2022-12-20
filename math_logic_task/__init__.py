@@ -11,7 +11,7 @@ class C(BaseConstants):
     NAME_IN_URL = 'math_logic_task'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 100
-    TIMER_TEXT = "Time to complete this section:"
+    TIMER_TEXT = "Remaining time for this task:"
     SEQUENCES_sequence = ['1 , 5 , 4 , 8 , 7 , ', '12 , 23 , 34 , 45 , ', '15 , 12 , 9 , 6 , ', '2 , 6 , 4 , 12 , 10 , 30 , ',
                        '100 , 99 , 104 , 103 , 108 , ', '2 , 8 , 14 , 20 , ', '64 , 56 , 48 , 40 , ',
                        '2 , 5 , 4 , 7 , 6 , ', '120 , 120 , 60 , 20 , ', '1 , 9 , 2 , 99 , 3 , 999 , 4 , 9999 , ',

@@ -1,24 +1,18 @@
 {{ block title }}
  {{ if participant.task_first == "sequence" }}
-        Part I - Subtask I
+        Task I - Sequences
     {{ else }}
-        Part I - Subtask II
+        Task II - Sequences
+    {{ else }}
     {{ endif }}
 {{ endblock }}
 
 {{ block content }}
     <p>
-        In this task, you have to answer {{C.num_rounds_task}} questions, each consisting of a sequence of numbers.
-        You have {{C.time_maths_mins}} minutes to complete all {{C.num_rounds_task}} questions.
-        Your task is to complete the sequence by finding out which number continues the given sequence.
-        For this, you need to figure out the pattern according to which the number sequence is constructed.
-        The task ends either if your time is over or if you have answered all the {{C.num_rounds_task}} questions.
-    </p>
-    <p>
-        If you want, you can skip a question by clicking on "Next". In that case you will be directed to the next question.
-        Please note that you cannot go back to the previous question after you have started the next question by clicking "Next".
-        Instead of clicking on "Next" you can also press "enter" to go to the next question and to confirm your input.
-        (This might save you some time.)
+        In this task, you have to complete sequences of numbers.
+        You have {{C.time_maths_mins}} minutes to complete a maximum of {{C.num_rounds_task}} sequences.
+        In order to find the missing number of a sequence, you need to figure out the pattern according to which the number sequence is constructed.
+        The task ends either after {{C.time_maths_mins}} minutes or after you have completed all {{C.num_rounds_task}} sequences.
     </p>
     <p style="font-size:18px;"> <u> Example: </u>  </p>
 <table class="center">
@@ -35,16 +29,20 @@
         In this example, the rule according to which the sequence of numbers is constructed is to subtract 1 from the previous number in the sequence.
         Therefore, the correct answer would be "5".
     </p>
-<br>
+    <p>
+        You can always skip a sequence by clicking on "Next". In that case you will be directed to the next sequence.
+        Please note that you can never go back to a previous question.
+        Instead of clicking "Next" you can also press "enter" to submit your answer and move on to the next sequence.
+    </p>
+
     <h5> <b> Score and Payment: </b> </h5>
     <p>
         For each correct answer, you get one point. You do <b> not </b> get any deductions for wrong or missing answers.
-        Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many questions you have solved correctly.
-        (As explained above, for each correct answer you receive {{C.bonusrate}}.)
+        Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many sequences you complete correctly.
     </p>
-    <p style="font-size:18px;"> <u> Example: </u>  </p>
-        If you answer a total of {{C.bonusexample_sequence}} out of {{C.num_rounds_task}} questions correctly, your overall score for this subtask will be {{C.bonusexample_sequence}}.
-        The bonus payment that you would receive - if this task is drawn as the part that determines you bonus payment - is {{C.bonusexample_sequence}} * {{C.bonusrate}} = {{C.bonusexampleresult_sequence}}.
+    <p style="font-size:18px;"> <u> Bonus Payment Example: </u>  </p>
+        If you complete a total of {{C.bonusexample_sequence}} out of {{C.num_rounds_task}} sequences correctly, your overall score for this task will be {{C.bonusexample_sequence}}.
+        The according bonus payment that you would receive if this task was drawn as the "task-that-counts" is {{C.bonusexample_sequence}} * {{C.bonusrate}} = {{C.bonusexampleresult_sequence}}.
     </p>
     <p>
         If you have read and understood these explanations, please click "Next" to go to the next page to start the sequence task.

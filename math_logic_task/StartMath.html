@@ -3,7 +3,9 @@
 {{ endblock }}
 
 {{ block content }}
-    <p> As soon as you click "Next" you will see the first question and the {{C.time_sequence_mins}} minutes timer starts.
+    <p>
+        Clicking "Next" will start the task.
+        You will then have {{C.time_sequence_mins}} minutes to solve a maximum of {{C.num_rounds_task}} adding questions.
     </p>
     {{ next_button }}
 {{ endblock }}
