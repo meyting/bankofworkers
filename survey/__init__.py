@@ -36,7 +36,7 @@ class Player(BasePlayer):
     education = models.IntegerField(
         choices=[[0, 'did not graduate high school'], [1, 'High school or GED'], [2, 'began college, no degree yet'],
                  [3, 'Bachelor'], [4, 'Associate'], [5, 'Master'], [6, 'Doctoral'], [7, 'other']],
-        label='What is your highest achieved level of education?',
+        label='What is the highest level of education you have completed?',
         widgets=widgets.RadioSelect,
     )
     gpa_highschool = models.FloatField(

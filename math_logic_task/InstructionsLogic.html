@@ -1,5 +1,5 @@
 {{ block title }}
- {{ if participant.task_first == "logic" }}
+ {{ if participant.task_first == "sequence" }}
         Part I - Subtask I
     {{ else }}
         Part I - Subtask II
@@ -8,19 +8,16 @@
 
 {{ block content }}
     <p>
-        In this task, you have to solve {{C.num_rounds_task}}  "logic" questions.
-        Each question consists of a sequence of numbers.
+        In this task, you have to answer {{C.num_rounds_task}} questions, each consisting of a sequence of numbers.
+        You have {{C.time_maths_mins}} minutes to complete all {{C.num_rounds_task}} questions.
         Your task is to complete the sequence by finding out which number continues the given sequence.
-    </p>
-    <p>
-        You have {{C.time_maths_mins}} minutes to complete all {{C.num_rounds_task}} calculations.
-        For this, you need to figure out the pattern with which the number sequence is constructed.
+        For this, you need to figure out the pattern according to which the number sequence is constructed.
         The task ends either if your time is over or if you have answered all the {{C.num_rounds_task}} questions.
     </p>
     <p>
-        If you want, you can skip a question by clicking on "next". In that case you will be directed to the next question.
-        Please note that you cannot go back to the previous question after you have started the next question by clicking "next". <br>
-        Instead of clicking on "next" you can also press "enter" to go to the next question and to confirm your input.
+        If you want, you can skip a question by clicking on "Next". In that case you will be directed to the next question.
+        Please note that you cannot go back to the previous question after you have started the next question by clicking "Next".
+        Instead of clicking on "Next" you can also press "enter" to go to the next question and to confirm your input.
         (This might save you some time.)
     </p>
     <p style="font-size:18px;"> <u> Example: </u>  </p>
@@ -29,7 +26,7 @@
         <td style="font-size:30px; width:70"> 9 , 8 , 7 , 6 ,  </td>
         <td>&nbsp;</td>
         <td style="width:50px">
-            <input type="number" min="0" name="input_logic" id="input_logic" class="form-control" readonly>
+            <input type="number" min="0" name="input_sequence" id="input_sequence" class="form-control" readonly>
         </td>
     </tr>
 </table>
@@ -42,15 +39,15 @@
     <h5> <b> Score and Payment: </b> </h5>
     <p>
         For each correct answer, you get one point. You do <b> not </b> get any deductions for wrong or missing answers.
-        Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many math problems you have solved correctly.
-        (As explained before, the bonus payment for this subtask is calculated by multiplying the number of correct answers by {{C.bonusrate}}.)
+        Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many questions you have solved correctly.
+        (As explained above, for each correct answer you receive {{C.bonusrate}}.)
     </p>
     <p style="font-size:18px;"> <u> Example: </u>  </p>
-        If you answer a total of {{C.bonusexample_logic}} out of {{C.num_rounds_task}} questions correctly, your overall score for this subtask will be {{C.bonusexample_logic}}. <br>
-        The bonus payment that you would receive - if this task is drawn as the part that determines you bonus payment - is {{C.bonusexample_logic}} * {{C.bonusrate}} = {{C.bonusexampleresult_logic}}.
+        If you answer a total of {{C.bonusexample_sequence}} out of {{C.num_rounds_task}} questions correctly, your overall score for this subtask will be {{C.bonusexample_sequence}}.
+        The bonus payment that you would receive - if this task is drawn as the part that determines you bonus payment - is {{C.bonusexample_sequence}} * {{C.bonusrate}} = {{C.bonusexampleresult_sequence}}.
     </p>
     <p>
-        If you have read and understood these explanations, please click "next" to go to the next page to start the logic task.
+        If you have read and understood these explanations, please click "Next" to go to the next page to start the sequence task.
     </p>
     {{ next_button }}
 {{ endblock }}

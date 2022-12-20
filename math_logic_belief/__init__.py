@@ -16,6 +16,7 @@ class C(BaseConstants):
     num_rounds_task = 50
     samples = 100
     num_integers = 5
+    num_subtasks = 'eight'
 
 
 class Subsession(BaseSubsession):

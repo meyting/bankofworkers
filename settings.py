@@ -16,7 +16,7 @@ SESSION_CONFIGS = [
         app_sequence=['welcome','math_logic_belief'],
         num_demo_participants=10,
     ),
-dict(
+    dict(
         name='selfest',
         app_sequence=['self_estimation'],
         num_demo_participants=10,
@@ -38,7 +38,7 @@ SESSION_CONFIG_DEFAULTS = dict(
 )
 
 PARTICIPANT_FIELDS = ['expiry', 'total_points_math', 'task_first', 'belief_treatment', 'task_rounds',
-                      'total_points_logic', "sequences_logic", "solutions_logic", "cats"]
+                      'total_points_sequence', "sequences_sequence", "solutions_sequence", "cats"]
 SESSION_FIELDS = []
 
 # ISO-639 code

@@ -9,15 +9,13 @@
     <p>
         In this task you have to solve {{C.num_rounds_task}}  math questions.
         In each of these you have to calculate the sum of {{C.num_integers}} integer numbers between {{C.lowest_integer}} and {{C.highest_integer}}.
-    </p>
-    <p>
-        You have {{C.time_maths_mins}} minutes to complete alle the {{C.num_rounds_task}}  calculations.
+        You have {{C.time_maths_mins}} minutes to complete all the {{C.num_rounds_task}}  calculations.
         The task ends either if your time is over or if you have answered all the {{C.num_rounds_task}}  questions. <br>
     </p>
     <p>
-        If you want, you can skip a question by clicking on "next". In that case you will be directed to the next question. <br>
-        Please note that you cannot go back to the previous question after you have started with the next question by clicking "next". <br>
-        Instead of clicking on "next" you can also press "enter" to go to the next question and to confirm your input.
+        If you want, you can skip a question by clicking on "Next". In that case you will be directed to the next question.
+        Please note that you cannot go back to the previous question after you have started with the next question by clicking "Next".
+        Instead of clicking on "Next" you can also press "enter" to go to the next question and to confirm your input.
         (This might save you some time.)
     </p>
 
@@ -27,7 +25,7 @@
         <td style="font-size:30px; width:70"> {{ C.example_math_n1 }} + {{ C.example_math_n2 }} + {{ C.example_math_n3 }} + {{ C.example_math_n4 }} + {{ C.example_math_n5 }} = </td>
         <td>&nbsp;</td>
         <td style="width:50px">
-            <input type="number" min="0" name="input_logic" id="input_logic" class="form-control" readonly>
+            <input type="number" min="0" name="input_sequence" id="input_sequence" class="form-control" readonly>
         </td>
     </tr>
 </table>
@@ -39,8 +37,8 @@
     <h5> <b> Score and payment: </b> </h5>
     <p>
         For each correct answer, you get one point. You do <b> not </b> get any deductions for wrong or missing answers.
-        Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many math problems you have solved correctly. <br>
-        (As explained before, the bonus payment for this subtask is calculated by multiplying the number of correct answers by {{C.bonusrate}}.)
+        Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many math problems you have solved correctly.
+        (As explained above, for each correct answer you receive {{C.bonusrate}}.)
     </p>
     <p style="font-size:18px;"> <u> Example: </u> </p>
     <p>
@@ -48,7 +46,7 @@
         (The bonus payment you get - if this task is drawn as the task that determines you extra money for part I - is {{C.bonusexample_math}} * {{C.bonusrate}} = {{C.bonusexampleresult_math}}.)
     </p>
     <p>
-        If you have read and understood these explanations, please click "next" to go to the next page to start the math task.
+        If you have read and understood these explanations, please click "Next" to go to the next page to start the math task.
     </p>
     {{ next_button }}
 {{ endblock }}

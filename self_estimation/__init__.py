@@ -31,13 +31,13 @@ class Player(BasePlayer):
         choices=[[0, 'yes'], [1, 'no']],
         widget=widgets.RadioSelectHorizontal()
     )
-    est_logic = models.IntegerField(
-        label='How many of the 50 questions in the <b> logic task </b> do you think you have answered correctly?',
+    est_sequence = models.IntegerField(
+        label='How many of the 50 questions in the <b> sequence task </b> do you think you have answered correctly?',
         min=0,
         max=50,
     )
-    est_avg_logic = models.IntegerField(
-        label="Do you think you achieved a higher score in the <b> logic task </b> than the average of all participants in our experiment? ",
+    est_avg_sequence = models.IntegerField(
+        label="Do you think you achieved a higher score in the <b> sequence task </b> than the average of all participants in our experiment? ",
         choices=[[0, 'yes'], [1, 'no']],
         widget=widgets.RadioSelectHorizontal()
     )
@@ -46,7 +46,7 @@ class Player(BasePlayer):
 # PAGES
 class SelfEstimation(Page):
     form_model = 'player'
-    form_fields = ['est_math', 'est_avg_math', 'est_logic', 'est_avg_logic']
+    form_fields = ['est_math', 'est_avg_math', 'est_sequence', 'est_avg_sequence']
 
 
 page_sequence = [SelfEstimation]

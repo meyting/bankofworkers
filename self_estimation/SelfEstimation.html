@@ -3,10 +3,26 @@
 {{ endblock }}
 {{ block content }}
 <br>
-{{ formfield 'est_math' }}
+<table class="center">
+    <tr>
+        <td> How many of the 50 questions in the <b> math task </b> do you think you have answered correctly? </td>
+        <td>&nbsp;</td>
+        <td style="width:70px">
+            <input type="number" min="0" max="50" name="est_math" id="est_math" class="form-control">
+        </td>
+    </tr>
+</table>
 {{ formfield 'est_avg_math' }}
-{{ formfield 'est_logic' }}
-{{ formfield 'est_avg_logic' }}
+<table class="center">
+    <tr>
+        <td> How many of the 50 questions in the <b> sequence task </b> do you think you have answered correctly? </td>
+        <td>&nbsp;</td>
+        <td style="width:70px">
+            <input type="number" min="0" max="50" name="est_sequence" id="est_sequence" class="form-control">
+        </td>
+    </tr>
+</table>
+{{ formfield 'est_avg_sequence' }}
 <br>
     {{ next_button }}
 
