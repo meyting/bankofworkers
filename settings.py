@@ -4,7 +4,7 @@ SESSION_CONFIGS = [
     dict(
         name='alles',
         app_sequence=['welcome','instructions', 'math_logic_task', 'math_logic_belief', 'self_estimation', 'survey'],
-        num_demo_participants=10,
+        num_demo_participants=20,
     ),
     dict(
         name='mathe_logic_test',

@@ -22,12 +22,12 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
-
+    prolificid = models.CharField(initial=None,
+                                  verbose_name="Before we start, please provide your Prolific ID.")
 
 # PAGES
 class Instructions(Page):
-    pass
-
+    form_model = 'player'
+    form_fields = ['prolificid']
 
 page_sequence = [Instructions]
