@@ -49,10 +49,12 @@ LANGUAGE_CODE = 'en'
 REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = False
 
-ADMIN_USERNAME = 'admin'
+ADMIN_USERNAME = 'bankofworkers'
 # for security, best to set admin password in an environment variable
-ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+ADMIN_PASSWORD = 'bankofworkers'
 
 DEMO_PAGE_INTRO_HTML = """ """
 
 SECRET_KEY = '2964019777290'
+
+AUTH_LEVEL = 'STUDY' # wieder löschen wenn Umgebungsvariable gesetzt			!!!!!!!!!!!!!!!
