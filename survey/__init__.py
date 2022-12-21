@@ -67,7 +67,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect(),
     )
     financial_literacy3 = models.BooleanField(
-        choices=[[False, 'True'], [True, 'False']],
+        choices=[[False, 'False'], [True, 'True']],
         label='Do you think that the following statement is true or false? “Buying a single company stock usually '
               'provides a safer return than a stock mutual fund.”',
         widgets=widgets.RadioSelect(),
@@ -111,4 +111,5 @@ class Survey(Page):
             player.points_financial_ges += 1
 
 
-page_sequence = [Survey]
+page_sequence = [Survey,
+                 ]
