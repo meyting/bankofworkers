@@ -1,11 +1,11 @@
 {{ block title }}
-  Asssessment of scores in the Sequence Task
+  Asssessment of Scores
 {{ endblock }}
 
 {{ block content }}
 <p>
-    Please provide your prediction for the scores of specific subgroups in the <b> sequence task </b>.
-    Remember that the possible score in this task ranges from 0 to {{ C.num_rounds_task}}.
+    Please provide your prediction for the scores that individuals from specific subgroups achieved in the adding and the sequence task.
+    Remember that the possible score ranges from 0 to {{ C.num_rounds_task}} in each task.
 </p>
 
 <hr>
@@ -297,6 +297,12 @@
             sessionStorage.setItem("l_democrat1", $('#l_democrat1_1').val());
             sessionStorage.setItem("l_democrat2", $('#l_democrat2_1').val());
             sessionStorage.setItem("l_democrat3", $('#l_democrat3_1').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_1').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_1').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_1').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_1').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_1').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_1').val());
             }
         if (partyorder == "rd") {
             sessionStorage.setItem("l_republican1", $('#l_republican1_2').val());
@@ -305,6 +311,12 @@
             sessionStorage.setItem("l_democrat1", $('#l_democrat1_2').val());
             sessionStorage.setItem("l_democrat2", $('#l_democrat2_2').val());
             sessionStorage.setItem("l_democrat3", $('#l_democrat3_2').val());
+            sessionStorage.setItem("m_republican1", $('#m_republican1_2').val());
+            sessionStorage.setItem("m_republican2", $('#m_republican2_2').val());
+            sessionStorage.setItem("m_republican3", $('#m_republican3_2').val());
+            sessionStorage.setItem("m_democrat1", $('#m_democrat1_2').val());
+            sessionStorage.setItem("m_democrat2", $('#m_democrat2_2').val());
+            sessionStorage.setItem("m_democrat3", $('#m_democrat3_2').val());
             }
 
     };

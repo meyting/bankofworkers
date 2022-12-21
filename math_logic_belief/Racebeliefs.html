@@ -1,11 +1,11 @@
 {{ block title }}
-  Asssessment of scores in the Sequence Task
+  Asssessment of Scores
 {{ endblock }}
 
 {{ block content }}
 <p>
-    Please provide your prediction for the scores of specific subgroups in the <b> sequence task </b>.
-    Remember that the possible score in this task ranges from 0 to {{ C.num_rounds_task}}.
+    Please provide your prediction for the scores that individuals from specific subgroups achieved in the adding and the sequence task.
+    Remember that the possible score ranges from 0 to {{ C.num_rounds_task}} in each task.
 </p>
 
 <hr>
@@ -51,9 +51,9 @@
         {{ formfield_errors 'm_white3' }} </td>
   </tr>
 </table>
-
 <br>
-
+<hr>
+<br>
 <p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Asian</b> participants in the <b>sequence</b> task: </p>
 <table>
   <tr>

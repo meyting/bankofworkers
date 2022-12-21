@@ -10,7 +10,8 @@ Your app description
 class C(BaseConstants):
     NAME_IN_URL = 'math_logic_belief'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 1
+    NUM_ROUNDS = 2
+    num_tasks = 3
     bonus = cu(1)
     bonusexample = 30
     num_rounds_task = 50
@@ -33,10 +34,12 @@ def creating_session(subsession):
     cats = itertools.cycle(['gp', 'pr', 'rg', 'gp', 'rp', 'gr'])
     if subsession.round_number == 1:
         for p in subsession.get_players():
-            round_numbers = list(range(1,C.NUM_ROUNDS+1))
+            round_numbers = list(range(1,C.num_tasks+1))
             random.shuffle(round_numbers)
             print(round_numbers)
-            p.participant.task_rounds = dict(zip(C.tasks, round_numbers))
+            tasks = C.tasks.copy()
+            random.shuffle(tasks)
+            p.participant.task_rounds = dict(zip(tasks, round_numbers))
             print(p.participant.task_rounds)
             if 'cats' in subsession.session.config:
                 p.participant.cats = subsession.session.config['cats']
@@ -142,7 +145,7 @@ class Genderbeliefs(Page):
     @staticmethod
     def js_vars(player):
         return dict(
-            cats=player.participant.cats,
+            genderorder=player.participant.genderorder,
         )
 
     @staticmethod
@@ -181,16 +184,15 @@ class Genderbeliefs(Page):
 
 class Racebeliefs(Page):
     form_model = 'player'
-    form_fields = ['m_asian1', 'm_asian2','m_asian3', 'm_hispanic1', 'm_hispanic2', 'm_hispanic3', 'm_democrat1',
+    form_fields = ['m_asian1', 'm_asian2','m_asian3', 'm_hispanic1', 'm_hispanic2', 'm_hispanic3',                    'm_white1', 'm_white2', 'm_white3', 'm_black1', 'm_black2', 'm_black3',
+                   'l_asian1', 'l_asian2', 'l_asian3', 'l_hispanic1', 'l_hispanic2', 'l_hispanic3',
                    'm_white1', 'm_white2', 'm_white3', 'm_black1', 'm_black2', 'm_black3',
-                   'l_asian1', 'l_asian2', 'l_asian3', 'l_hispanic1', 'l_hispanic2', 'l_hispanic3', 'l_democrat1',
                    'l_white1', 'l_white2', 'l_white3', 'l_black1', 'l_black2', 'l_black3',
-
                    ]
     @staticmethod
     def js_vars(player):
         return dict(
-            cats=player.participant.cats,
+            raceorder=player.participant.raceorder,
         )
 
     @staticmethod
@@ -198,7 +200,8 @@ class Racebeliefs(Page):
         return player.round_number == player.participant.task_rounds["race"]
 
 
-def error_message(player, values):
+    @staticmethod
+    def error_message(player, values):
         print('values is', values)
         if values['m_asian1'] > values['m_asian2']:
             player.errors += 1
@@ -260,7 +263,7 @@ class Partybeliefs(Page):
     @staticmethod
     def js_vars(player):
         return dict(
-            cats=player.participant.cats,
+            partyorder=player.participant.partyorder,
         )
 
     @staticmethod
@@ -268,7 +271,7 @@ class Partybeliefs(Page):
         return player.round_number == player.participant.task_rounds["party"]
 
 
-@staticmethod
+    @staticmethod
     def error_message(player, values):
         print('values is', values)
         if values['m_republican1'] > values['m_republican2']:
