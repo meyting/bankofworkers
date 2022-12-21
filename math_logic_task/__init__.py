@@ -39,7 +39,7 @@ class C(BaseConstants):
     SOLUTIONS_sequence = [11, 56, 3, 28, 107, 26, 32, 9, 5, 5, 28, 18, 288, 47, 16, 12, 36, 64, 11, 44, 2, 21, 17, 10,
                           12, 6, 27, 120, 10, 25, 9, 56, 5, 11, 42, 61, 57, 23, 29, 33, 45, 6, 9, 32, 16, 81, 8, 55, 30,
                           125, ]
-    bonusrate = cu(0.05)
+    bonusrate = cu(0.03)
     bonusexample = 30
     bonusexample_math = 25
     bonusexample_sequence = 35

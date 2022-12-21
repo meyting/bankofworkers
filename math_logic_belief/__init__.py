@@ -12,11 +12,13 @@ class C(BaseConstants):
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 2
     num_tasks = 3
-    bonus = cu(1)
+    bonus = cu(0.3)
+    examplebonus = 2*cu(0.3)
     bonusexample = 30
     num_rounds_task = 50
     samples = 100
     num_integers = 5
+    limit = 3
     tasks = ["gender", "party", "race"]
 
 
