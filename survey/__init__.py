@@ -78,7 +78,7 @@ class Player(BasePlayer):
     points_financial_ges = models.IntegerField()
     financial_literacy_est = models.IntegerField(
         choices=[[0, '0'], [1, '1'], [2, '2'], [3, '3']],
-        label='How many of the 3 financial knowledge questions above do you think you have answered correctly??',
+        label='How many of the 3 financial knowledge questions above do you think you have answered correctly?',
         widgets=widgets.RadioSelect()
     )
 
