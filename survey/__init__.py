@@ -72,6 +72,15 @@ class Player(BasePlayer):
               'provides a safer return than a stock mutual fund.”',
         widgets=widgets.RadioSelect(),
     )
+    calculator = models.LongStringField(
+        blank=True,
+        label='Did you use a calculator or any other help for the adding task? If so, what kind of help? (There is no right or wrong answer here, '
+              'and this does not affect your bonus payment. We did not prohibit the use of any help in this task.)',
+    )
+    purpose = models.LongStringField(initial=None,
+                                     blank=True,
+                                     verbose_name="What do you think this study is about?")
+
     points_financial1 = models.IntegerField(initial=0)
     points_financial2 = models.IntegerField(initial=0)
     points_financial3 = models.IntegerField(initial=0)
@@ -88,7 +97,8 @@ class Survey(Page):
     form_model = 'player'
     form_fields = ['age', 'gender', 'race', 'education', 'gpa_highschool', 'gpa_college',
                    'political_affiliation', 'political_orientation', 'financial_literacy1',
-                   'financial_literacy2', 'financial_literacy3', 'financial_literacy_est']
+                   'financial_literacy2', 'financial_literacy3', 'financial_literacy_est',
+                   'calculator', 'purpose']
 
     @staticmethod
     def error_message(player, values):

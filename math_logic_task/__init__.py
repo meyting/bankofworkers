@@ -42,7 +42,7 @@ class C(BaseConstants):
     bonusexampleresult = bonusexample*bonusrate
     bonusexampleresult_sequence = bonusexample_sequence*bonusrate
     bonusexampleresult_math = bonusexample_math*bonusrate
-    time_maths = 300
+    time_maths = 240
     time_maths_mins = round(time_maths/60)
     time_sequence = 300
     time_sequence_mins = round(time_sequence/60)

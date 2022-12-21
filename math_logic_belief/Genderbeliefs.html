@@ -1,0 +1,314 @@
+{{ block title }}
+  Asssessment of Scores
+{{ endblock }}
+
+{{ block content }}
+<p>
+    Please provide your prediction for the scores that individuals from specific subgroups achieved in the adding and the sequence task.
+    Remember that the possible score ranges from 0 to {{ C.num_rounds_task}} in each task.
+</p>
+
+<hr>
+<br>
+
+ {{ if participant.genderorder == "mf" }}
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>male</b> participants in the <b>sequence</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_male1" id="l_male1_1" class="form-control" >
+        <td><label for="l_male1_1">points</label>
+        {{ formfield_errors 'l_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_male2" id="l_male2_1" class="form-control" >
+        <td><label for="l_male2_1">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_male3" id="l_male3_1" class="form-control" >
+        <td><label for="l_male3_1">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
+</table>
+<br>
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>male</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_male1" id="m_male1_1" class="form-control" >
+        <td><label for="m_male1_1">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_male2" id="m_male2_1" class="form-control" >
+        <td><label for="m_male2_1">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_male3" id="m_male3_1" class="form-control" >
+        <td><label for="m_male3_1">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>female</b> participants in the <b>sequence</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_female1" id="l_female1_1" class="form-control" >
+        <td><label for="l_female1_1">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_female2" id="l_female2_1" class="form-control" >
+        <td><label for="l_female2_1">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_female3" id="l_female3_1" class="form-control" >
+        <td><label for="l_female3_1">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
+</table>
+<br>
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>female</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_female1" id="m_female1_1" class="form-control" >
+        <td><label for="m_male1_1">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_female2" id="m_female2_1" class="form-control" >
+        <td><label for="m_male2_1">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_female3" id="m_female3_1" class="form-control" >
+        <td><label for="m_male3_1">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+{{ endif }}
+
+
+ {{ if participant.genderorder == "fm" }}
+
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>female</b> participants in the <b>sequence</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_female1" id="l_female1_2" class="form-control" >
+        <td><label for="l_female1_2">points</label>
+        {{ formfield_errors 'l_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_female2" id="l_female2_2" class="form-control" >
+        <td><label for="l_female2_2">points</label>
+        {{ formfield_errors 'l_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_female3" id="l_female3_2" class="form-control" >
+        <td><label for="l_female3_2">points</label>
+        {{ formfield_errors 'l_female3' }} </td>
+  </tr>
+</table>
+<br>
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>female</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_female1" id="m_female1_2" class="form-control" >
+        <td><label for="m_male1_2">points</label>
+        {{ formfield_errors 'm_female1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_female2" id="m_female2_2" class="form-control" >
+        <td><label for="m_male2_2">points</label>
+        {{ formfield_errors 'm_female2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_female3" id="m_female3_2" class="form-control" >
+        <td><label for="m_male3_2">points</label>
+        {{ formfield_errors 'm_female3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>male</b> participants in the <b>sequence</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_male1" id="l_male1_2" class="form-control" >
+        <td><label for="l_male1_2">points</label>
+        {{ formfield_errors 'l_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_male2" id="l_male2_2" class="form-control" >
+        <td><label for="l_male2_2">points</label>
+        {{ formfield_errors 'l_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="l_male3" id="l_male3_2" class="form-control" >
+        <td><label for="l_male3_2">points</label>
+        {{ formfield_errors 'l_male3' }} </td>
+  </tr>
+</table>
+<br>
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>male</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_male1" id="m_male1_2" class="form-control" >
+        <td><label for="m_male1_2">points</label>
+        {{ formfield_errors 'm_male1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_male2" id="m_male2_2" class="form-control" >
+        <td><label for="m_male2_2">points</label>
+        {{ formfield_errors 'm_male2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_male3" id="m_male3_2" class="form-control" >
+        <td><label for="m_male3_2">points</label>
+        {{ formfield_errors 'm_male3' }} </td>
+  </tr>
+</table>
+
+{{ endif }}
+
+
+
+<br> <br>
+
+    {{ next_button }}
+{{ endblock }}
+
+
+{{ block styles }}
+<style type="text/css">
+.hidden {
+	display:none;
+}
+
+.fillercolumn {
+    width: 9%;
+    }
+
+.inputcolumn {
+    width: 68px;
+    }
+
+    table {
+      text-align: center;
+      width: 100%;
+    }
+
+   label {
+      display: inline-block;
+      float: left;
+    }
+</style>
+{{ endblock }}
+
+{{ block app_scripts }}
+<script>
+
+    // Run on page load
+    window.onload = function() {
+        // If values are not blank, restore them to the fields
+        var l_male1 = sessionStorage.getItem('l_male1');
+        if (l_male1 !== null) $('#l_male1_1').val(l_male1);
+        var l_female1 = sessionStorage.getItem('l_female1');
+        if (l_female1 !== null) $('#l_female1_1').val(l_female1);
+        var l_male2 = sessionStorage.getItem('l_male2');
+        if (l_male2 !== null) $('#l_male2_1').val(l_male2);
+        var l_female2 = sessionStorage.getItem('l_female2');
+        if (l_female2 !== null) $('#l_female2_1').val(l_female2);
+        var l_male3 = sessionStorage.getItem('l_male3');
+        if (l_male3 !== null) $('#l_male3_1').val(l_male3);
+        var l_female3 = sessionStorage.getItem('l_female3');
+        if (l_female3 !== null) $('#l_female3_1').val(l_female3);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_1').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_1').val(m_female1);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_1').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_1').val(m_female2);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_1').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_1').val(m_female3);
+
+        var l_male1 = sessionStorage.getItem('l_male1');
+        if (l_male1 !== null) $('#l_male1_2').val(l_male1);
+        var l_female1 = sessionStorage.getItem('l_female1');
+        if (l_female1 !== null) $('#l_female1_2').val(l_female1);
+        var l_male2 = sessionStorage.getItem('l_male2');
+        if (l_male2 !== null) $('#l_male2_2').val(l_male2);
+        var l_female2 = sessionStorage.getItem('l_female2');
+        if (l_female2 !== null) $('#l_female2_2').val(l_female2);
+        var l_male3 = sessionStorage.getItem('l_male3');
+        if (l_male3 !== null) $('#l_male3_2').val(l_male3);
+        var l_female3 = sessionStorage.getItem('l_female3');
+        if (l_female3 !== null) $('#l_female3_2').val(l_female3);
+        var m_male1 = sessionStorage.getItem('m_male1');
+        if (m_male1 !== null) $('#m_male1_2').val(m_male1);
+        var m_female1 = sessionStorage.getItem('m_female1');
+        if (m_female1 !== null) $('#m_female1_2').val(m_female1);
+        var m_male2 = sessionStorage.getItem('m_male2');
+        if (m_male2 !== null) $('#m_male2_2').val(m_male2);
+        var m_female2 = sessionStorage.getItem('m_female2');
+        if (m_female2 !== null) $('#m_female2_2').val(m_female2);
+        var m_male3 = sessionStorage.getItem('m_male3');
+        if (m_male3 !== null) $('#m_male3_2').val(m_male3);
+        var m_female3 = sessionStorage.getItem('m_female3');
+        if (m_female3 !== null) $('#m_female3_2').val(m_female3);
+    };
+
+    let genderorder = js_vars.genderorder;
+    console.log(genderorder);
+    // Before refreshing the page, save the form data to sessionStorage
+    window.onbeforeunload = function() {
+        if (genderorder == "mf") {
+            sessionStorage.setItem("l_male1", $('#l_male1_1').val());
+            sessionStorage.setItem("l_male2", $('#l_male2_1').val());
+            sessionStorage.setItem("l_male3", $('#l_male3_1').val());
+            sessionStorage.setItem("l_female1", $('#l_female1_1').val());
+            sessionStorage.setItem("l_female2", $('#l_female2_1').val());
+            sessionStorage.setItem("l_female3", $('#l_female3_1').val());
+            sessionStorage.setItem("m_male1", $('#m_male1_1').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_1').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_1').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_1').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_1').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_1').val());
+            }
+        if (genderorder == "fm") {
+            sessionStorage.setItem("l_male1", $('#l_male1_2').val());
+            sessionStorage.setItem("l_male2", $('#l_male2_2').val());
+            sessionStorage.setItem("l_male3", $('#l_male3_2').val());
+            sessionStorage.setItem("l_female1", $('#l_female1_2').val());
+            sessionStorage.setItem("l_female2", $('#l_female2_2').val());
+            sessionStorage.setItem("l_female3", $('#l_female3_2').val());
+            sessionStorage.setItem("m_male1", $('#m_male1_2').val());
+            sessionStorage.setItem("m_male2", $('#m_male2_2').val());
+            sessionStorage.setItem("m_male3", $('#m_male3_2').val());
+            sessionStorage.setItem("m_female1", $('#m_female1_2').val());
+            sessionStorage.setItem("m_female2", $('#m_female2_2').val());
+            sessionStorage.setItem("m_female3", $('#m_female3_2').val());
+            }
+    };
+
+</script>
+{{ endblock }}

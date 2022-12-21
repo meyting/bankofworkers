@@ -1,5 +1,5 @@
 {{ block title }}
-    Please answer some final question
+    Some last questions
 {{ endblock }}
 {{ block content }}
 
@@ -35,9 +35,15 @@
     {{ formfield 'financial_literacy3' }}
     {{ formfield 'financial_literacy_est' }}
 </p>
+<br>
+<hr>
+<br>
+<b> Final questions </b>
 
-<br> <br>
-    {{ next_button }}
+    {{ formfield 'calculator' }}
+    {{ formfield 'purpose' }}
+
+{{ next_button }}
 
 {{ formfield_errors 'age' }}
 {{ formfield_errors 'gender' }}
@@ -51,6 +57,8 @@
 {{ formfield_errors 'financial_literacy3' }}
 {{ formfield_errors 'financial_literacy_est' }}
 {{ formfield_errors 'political_affiliation' }}
+{{ formfield_errors 'calculator' }}
+{{ formfield_errors 'purpose' }}
 
 {{ endblock }}
 {{ block scripts }}
