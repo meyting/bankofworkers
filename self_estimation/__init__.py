@@ -27,7 +27,7 @@ class Player(BasePlayer):
         max=50,
     )
     est_avg_math = models.BooleanField(
-        label='Do you think you achieved a higher score in the <b> adding task </b> than the average of all participants in our experiment?',
+        label='Do you think you achieved a higher score in the <b> adding task </b> than the average of all participants in our study?',
         choices=[[0, 'yes'], [1, 'no']],
         widget=widgets.RadioSelectHorizontal()
     )
@@ -36,7 +36,7 @@ class Player(BasePlayer):
         max=50,
     )
     est_avg_sequence = models.IntegerField(
-        label="Do you think you achieved a higher score in the <b> sequence task </b> than the average of all participants in our experiment? ",
+        label="Do you think you achieved a higher score in the <b> sequence task </b> than the average of all participants in our study? ",
         choices=[[0, 'yes'], [1, 'no']],
         widget=widgets.RadioSelectHorizontal()
     )

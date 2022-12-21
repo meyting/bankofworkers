@@ -32,6 +32,7 @@ def creating_session(subsession):
     partyorder = itertools.cycle(['dr', 'rd'])
     raceorder = itertools.cycle(['wahb', 'bhaw'])
     cats = itertools.cycle(['gp', 'pr', 'rg', 'gp', 'rp', 'gr'])
+    # gp --> pg ?
     if subsession.round_number == 1:
         for p in subsession.get_players():
             round_numbers = list(range(1,C.num_tasks+1))
@@ -55,7 +56,8 @@ def creating_session(subsession):
                 p.participant.raceorder = subsession.session.config['raceorder']
             else:
                 p.participant.raceorder = next(raceorder)
-            p.genderoraceorder = p.participant.raceorder
+            #p.genderoraceorder = p.participant.raceorder
+            p.raceorder = p.participant.raceorder
             if 'partyorder' in subsession.session.config:
                 p.participant.partyorder = subsession.session.config['partyorder']
             else:
@@ -79,6 +81,9 @@ class Player(BasePlayer):
     errors = models.IntegerField(blank=True, initial=0)
     math_first = models.BooleanField()
     cats = models.CharField()
+    genderorder = models.StringField()
+    raceorder= models.StringField()
+    partyorder = models.StringField()
     m_male1 = make_field()
     m_male2 = make_field()
     m_male3 = make_field()
