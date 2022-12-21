@@ -33,7 +33,7 @@ def creating_session(subsession):
     genderorder = itertools.cycle(['mf', 'fm'])
     partyorder = itertools.cycle(['dr', 'rd'])
     raceorder = itertools.cycle(['wahb', 'bhaw'])
-    cats = itertools.cycle(['gp', 'pr', 'rg', 'gp', 'rp', 'gr'])
+    #cats = itertools.cycle(['pg', 'pr', 'rg', 'gp', 'rp', 'gr'])
     # gp --> pg ?
     if subsession.round_number == 1:
         for p in subsession.get_players():
@@ -44,11 +44,11 @@ def creating_session(subsession):
             random.shuffle(tasks)
             p.participant.task_rounds = dict(zip(tasks, round_numbers))
             print(p.participant.task_rounds)
-            if 'cats' in subsession.session.config:
-                p.participant.cats = subsession.session.config['cats']
-            else:
-                p.participant.cats = next(cats)
-            p.cats = p.participant.cats
+            #if 'cats' in subsession.session.config:
+            #    p.participant.cats = subsession.session.config['cats']
+            #else:
+            #    p.participant.cats = next(cats)
+            #p.cats = p.participant.cats
             if 'genderorder' in subsession.session.config:
                 p.participant.genderorder = subsession.session.config['genderorder']
             else:
