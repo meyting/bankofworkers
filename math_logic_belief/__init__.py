@@ -18,7 +18,7 @@ class C(BaseConstants):
     num_rounds_task = 50
     samples = 100
     num_integers = 5
-    limit = 3
+    limit = 2
     tasks = ["gender", "party", "race"]
 
 
