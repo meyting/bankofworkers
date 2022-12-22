@@ -29,8 +29,9 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect,
     )
     race = models.StringField(
-        choices=[[0, 'white'], [1, 'black'], [2, 'asian'], [3, 'hispanic'], [4, 'other']],
-        label='What is your ethnic group?',
+        choices=["Hispanic or Latin", "Asian", "White", "Black or African American",
+                 "other / prefer not to answer"],
+                label='What is your ethnic group?',
         widgets=widgets.RadioSelect,
     )
     education = models.IntegerField(
