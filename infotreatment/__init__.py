@@ -10,7 +10,10 @@ class C(BaseConstants):
     NAME_IN_URL = 'infotreatment'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
-
+    bonusrate = cu(0.03)
+    time_sequence_mins = 5
+    time_math_mins = 4
+    num_rounds_task = 50
 
 class Subsession(BaseSubsession):
     pass
@@ -25,16 +28,9 @@ class Player(BasePlayer):
 
 
 # PAGES
-class MyPage(Page):
+class Info(Page):
     pass
 
 
-class ResultsWaitPage(WaitPage):
-    pass
 
-
-class Results(Page):
-    pass
-
-
-page_sequence = [MyPage, ResultsWaitPage, Results]
+page_sequence = [Info,]

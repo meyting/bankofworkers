@@ -17,13 +17,13 @@ class Subsession(BaseSubsession):
 
 def creating_session(subsession: Subsession):
     import itertools
-    task_first = itertools.cycle(['sequence', 'math'])
+    task = itertools.cycle(['sequence', 'math'])
     if subsession.round_number == 1:
         for p in subsession.get_players():
-            if 'task_first' in subsession.session.config:
-                p.participant.task_first = subsession.session.config['task_first']
+            if 'task' in subsession.session.config:
+                p.participant.task = subsession.session.config['task']
             else:
-                p.participant.task_first = next(task_first)
+                p.participant.task = next(task)
 
 class Group(BaseGroup):
     pass

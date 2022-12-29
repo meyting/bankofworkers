@@ -87,7 +87,7 @@ def creating_session(subsession):
             # 1 - 1.sequence 2.math
             p.participant.total_points_math = 0
             p.participant.total_points_sequence = 0
-            p.task_first = p.participant.task_first
+            p.task = p.participant.task
             solutions_sequence = C.SOLUTIONS_sequence.copy()
             #random.Random(0).shuffle(solutions_sequence)
             solutions_sequence.extend(solutions_sequence)
@@ -97,8 +97,8 @@ def creating_session(subsession):
             sequences_sequence.extend(sequences_sequence)
             p.participant.sequences_sequence = sequences_sequence
     for p in subsession.get_players():
-        #if p.participant.task_first == "math":
-#        if p.participant.task_first == "sequence":
+        #if p.participant.task == "math":
+#        if p.participant.task == "sequence":
 #            random_numbers = random.Random(p.round_number-50).sample(range(0,10),5)
 #            print("sequence",random_numbers)
         p.solution_math = subsession.result_math
@@ -118,7 +118,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    task_first = models.CharField()
+    task = models.CharField()
     input_math = models.IntegerField(label='', blank=True)
     input_sequence = models.IntegerField(label='', blank=True)
     solution_math = models.IntegerField()
@@ -147,7 +147,6 @@ def get_timeout_seconds(player):
     return participant.expiry - time.time()
 
 
-
 # PAGES
 class InstructionsTask(Page):
     @staticmethod
@@ -159,30 +158,21 @@ class InstructionsMath (Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        if participant.task_first == "math":
-            return player.round_number == 1
-        if participant.task_first == "sequence":
-            return player.round_number == C.num_rounds_task+1
+        return participant.task == "math"
 
 
 class InstructionsLogic(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        if participant.task_first == "math":
-            return player.round_number == C.num_rounds_task+1
-        if participant.task_first == "sequence":
-            return player.round_number == 1
+        return participant.task == "sequence"
 
 
 class StartMath(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        if participant.task_first == "math":
-            return player.round_number == 1
-        if participant.task_first == "sequence":
-            return player.round_number == C.num_rounds_task+1
+        return participant.task == "math"
 
     @staticmethod
     def before_next_page(player, timeout_happened):
@@ -191,15 +181,11 @@ class StartMath(Page):
         participant.expiry = time.time() + C.time_maths
         player.total_points_math = 0
 
-
 class StartLogic(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        if participant.task_first == "math":
-            return player.round_number == C.num_rounds_task+1
-        if participant.task_first == "sequence":
-            return player.round_number == 1
+        return participant.task == "sequence"
 
     @staticmethod
     def before_next_page(player, timeout_happened):
@@ -207,7 +193,6 @@ class StartLogic(Page):
         import time
         participant.expiry = time.time() + C.time_sequence
         player.total_points_sequence = 0
-
 
 class QuestionsMath(Page):
     form_model = 'player'
@@ -217,25 +202,15 @@ class QuestionsMath(Page):
     @staticmethod
     def vars_for_template(player: Player):
         participant = player.participant
-        player.task_first = participant.task_first
-        print(player.task_first)
-        if participant.task_first == "math":
-            player.question_num_math = player.round_number
-            return {
+        player.task = participant.task
+        print(player.task)
+        player.question_num_sequence = player.round_number
+        return {
                 "n1": player.subsession.n1,
                 "n2": player.subsession.n2,
                 "n3": player.subsession.n3,
                 "n4": player.subsession.n4,
                 "n5": player.subsession.n5
-            }
-        else:
-            player.question_num_math = player.round_number-C.num_rounds_task
-            return {
-                "n1": player.in_round(player.round_number-50).subsession.n1,
-                "n2": player.in_round(player.round_number-50).subsession.n2,
-                "n3": player.in_round(player.round_number-50).subsession.n3,
-                "n4": player.in_round(player.round_number-50).subsession.n4,
-                "n5": player.in_round(player.round_number-50).subsession.n5
             }
 
     @staticmethod
@@ -252,10 +227,8 @@ class QuestionsMath(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        if participant.task_first == "math":
-            return player.round_number <= C.num_rounds_task and get_timeout_seconds(player) > 1
-        if participant.task_first == "sequence":
-            return player.round_number > C.num_rounds_task and get_timeout_seconds(player) > 1
+        return participant.task == "math"
+
 
 
 class QuestionsLogic(Page):
@@ -267,12 +240,8 @@ class QuestionsLogic(Page):
     @staticmethod
     def vars_for_template(player: Player):
         participant = player.participant
-        player.task_first = participant.task_first
-        print(player.task_first)
-        if participant.task_first == "math":
-            player.question_num_sequence = player.round_number-C.num_rounds_task
-        else:
-            player.question_num_sequence = player.round_number
+        player.task = participant.task
+        player.question_num_sequence = player.round_number
 
     @staticmethod
     def before_next_page(player: Player, timeout_happened):
@@ -288,23 +257,11 @@ class QuestionsLogic(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        if participant.task_first == "sequence":
-            return player.round_number <= C.num_rounds_task and get_timeout_seconds(player) > 1
-        if participant.task_first == "math":
-            return player.round_number >  C.num_rounds_task and get_timeout_seconds(player) > 1
+        return participant.task == "sequence"
 
-# result pages am Ende raus!!!
-class ResultsMath(Page):
-    @staticmethod
-    def is_displayed(player: Player):
-        return player.round_number == C.NUM_ROUNDS
-
-
-class ResultsLogic(Page):
-    @staticmethod
-    def is_displayed(player: Player):
-        return player.round_number == C.NUM_ROUNDS
-
-
-page_sequence = [InstructionsTask, InstructionsMath, InstructionsLogic, StartMath, StartLogic,
+page_sequence = [#InstructionsTask,
+                 InstructionsMath,
+                 InstructionsLogic,
+                 StartMath,
+                 StartLogic,
                  QuestionsMath, QuestionsLogic,]

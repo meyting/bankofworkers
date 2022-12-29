@@ -3,8 +3,13 @@ from os import environ
 SESSION_CONFIGS = [
     dict(
         name='alles',
-        app_sequence=['welcome','instructions', 'math_logic_task', 'math_logic_belief', 'self_estimation', 'survey','end'],
+        app_sequence=['welcome','instructions', 'infotreatment', 'math_logic_task', 'math_logic_belief', 'self_estimation', 'survey','end'],
         num_demo_participants=20,
+    ),
+    dict(
+        name='info',
+        app_sequence=['welcome', 'infotreatment'],
+        num_demo_participants=4,
     ),
     dict(
         name='mathe_logic_test',
@@ -37,7 +42,7 @@ SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
 )
 
-PARTICIPANT_FIELDS = ['expiry', 'total_points_math', 'task_first', 'belief_treatment', 'task_rounds',
+PARTICIPANT_FIELDS = ['expiry', 'total_points_math', 'task', 'belief_treatment', 'task_rounds',
                       'total_points_sequence', "sequences_sequence", "solutions_sequence",
                       'raceorder', "partyorder", "genderorder",]
 SESSION_FIELDS = []

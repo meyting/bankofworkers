@@ -1,13 +1,9 @@
 {{ block title }}
-{{ if participant.task_first == "math" }}
-        Task I - Adding
-    {{ else }}
-        Task II - Adding
-    {{ endif }}
+Adding
 {{ endblock }}
 {{ block content }}
     <p>
-        In this task, you have to solve short math questions.
+        Now it is your turn to solve short math questions, i.e. to actually perform the task mentioned before.
         You have {{C.time_maths_mins}} minutes to answer a maximum of {{C.num_rounds_task}} questions.
         In each of the questions you are asked to provide the sum of {{C.num_integers}} integer numbers between {{C.lowest_integer}} and {{C.highest_integer}}.
         The task ends either after {{C.time_maths_mins}} minutes or after you have answered all {{C.num_rounds_task}} questions.
