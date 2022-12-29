@@ -40,7 +40,9 @@
 <br>
 <b> Final questions </b>
 
+{{ if participant.task == "math" }}
     {{ formfield 'calculator' }}
+{{ endif }}
     {{ formfield 'purpose' }}
 
 {{ next_button }}
