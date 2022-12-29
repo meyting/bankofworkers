@@ -3,8 +3,231 @@
 {{ endblock }}
 
 {{ block content }}
+{{if participant.task == "math"}}
+
 <p>
-    Please provide your prediction for the scores that individuals from specific subgroups achieved in the adding and the sequence task.
+    Please provide your prediction for the scores that individuals from specific subgroups achieved in the adding task.
+    Remember that the possible score ranges from 0 to {{ C.num_rounds_task}} in each task.
+</p>
+
+<hr>
+<br>
+
+ {{ if participant.raceorder == "wahb" }}
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>white</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white1" id="m_white1_1" class="form-control" >
+        <td><label for="m_white1_1">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white2" id="m_white2_1" class="form-control" >
+        <td><label for="m_white2_1">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white3" id="m_white3_1" class="form-control" >
+        <td><label for="m_white3_1">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+<br>
+<hr>
+<br>
+
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Asian</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian1" id="m_asian1_1" class="form-control" >
+        <td><label for="m_asian1_1">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian2" id="m_asian2_1" class="form-control" >
+        <td><label for="m_asian2_1">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian3" id="m_asian3_1" class="form-control" >
+        <td><label for="m_asian3_1">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+
+
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Hispanic</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic1" id="m_hispanic1_1" class="form-control" >
+        <td><label for="m_hispanic1_1">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic2" id="m_hispanic2_1" class="form-control" >
+        <td><label for="m_hispanic2_1">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic3" id="m_hispanic3_1" class="form-control" >
+        <td><label for="m_hispanic3_1">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+<br>
+<hr>
+<br>
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>black</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black1" id="m_black1_1" class="form-control" >
+        <td><label for="m_black1_1">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black2" id="m_black2_1" class="form-control" >
+        <td><label for="m_black2_1">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black3" id="m_black3_1" class="form-control" >
+        <td><label for="m_black3_1">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+
+{{endif}}
+
+
+
+
+
+
+
+ {{ if participant.raceorder == "bhaw" }}
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>black</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black1" id="m_black1_2" class="form-control" >
+        <td><label for="m_black1_2">points</label>
+        {{ formfield_errors 'm_black1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black2" id="m_black2_2" class="form-control" >
+        <td><label for="m_black2_2">points</label>
+        {{ formfield_errors 'm_black2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black3" id="m_black3_2" class="form-control" >
+        <td><label for="m_black3_2">points</label>
+        {{ formfield_errors 'm_black3' }} </td>
+  </tr>
+</table>
+
+
+
+<br>
+<hr>
+<br>
+
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Hispanic</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic1" id="m_hispanic1_2" class="form-control" >
+        <td><label for="m_hispanic1_2">points</label>
+      {{ formfield_errors 'm_hispanic1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic2" id="m_hispanic2_2" class="form-control" >
+        <td><label for="m_hispanic2_2">points</label>
+        {{ formfield_errors 'm_hispanic2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic3" id="m_hispanic3_2" class="form-control" >
+        <td><label for="m_hispanic3_2">points</label></td>
+        {{ formfield_errors 'm_hispanic3' }}
+  </tr>
+</table>
+
+
+<br>
+<hr>
+<br>
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Asian</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian1" id="m_asian1_2" class="form-control" >
+        <td><label for="m_asian1_2">points</label>
+      {{ formfield_errors 'm_asian1' }}</td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian2" id="m_asian2_2" class="form-control" >
+        <td><label for="m_asian2_2">points</label>
+        {{ formfield_errors 'm_asian2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian3" id="m_asian3_2" class="form-control" >
+        <td><label for="m_asian3_2">points</label>
+        {{ formfield_errors 'm_asian3' }} </td>
+  </tr>
+</table>
+
+
+<br>
+<hr>
+<br>
+
+<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>white</b> participants in the <b>adding</b> task: </p>
+<table>
+  <tr>
+    <td class="headlinecolumn">Average All: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white1" id="m_white1_2" class="form-control" >
+        <td><label for="m_white1_2">points</label>
+        {{ formfield_errors 'm_white1' }} </td>
+        <td class="fillercolumn">&nbsp;</td>
+    <td>Average Top 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white2" id="m_white2_2" class="form-control" >
+        <td><label for="m_white2_2">points</label>
+        {{ formfield_errors 'm_white2' }} </td>
+          <td class="fillercolumn">&nbsp;</td>
+    <td>Average Bottom 10: &nbsp;</td>
+        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white3" id="m_white3_2" class="form-control" >
+        <td><label for="m_white3_2">points</label>
+        {{ formfield_errors 'm_white3' }} </td>
+  </tr>
+</table>
+
+{{ endif }}
+{{ endif }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{if participant.task == "sequence"}}
+
+<p>
+    Please provide your prediction for the scores that individuals from specific subgroups achieved in the sequence task.
     Remember that the possible score ranges from 0 to {{ C.num_rounds_task}} in each task.
 </p>
 
@@ -32,26 +255,6 @@
   </tr>
 </table>
 <br>
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>white</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white1" id="m_white1_1" class="form-control" >
-        <td><label for="m_white1_1">points</label>
-        {{ formfield_errors 'm_white1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white2" id="m_white2_1" class="form-control" >
-        <td><label for="m_white2_1">points</label>
-        {{ formfield_errors 'm_white2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white3" id="m_white3_1" class="form-control" >
-        <td><label for="m_white3_1">points</label>
-        {{ formfield_errors 'm_white3' }} </td>
-  </tr>
-</table>
-<br>
 <hr>
 <br>
 <p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Asian</b> participants in the <b>sequence</b> task: </p>
@@ -74,26 +277,6 @@
   </tr>
 </table>
 
-<br>
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Asian</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian1" id="m_asian1_1" class="form-control" >
-        <td><label for="m_asian1_1">points</label>
-      {{ formfield_errors 'm_asian1' }}</td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian2" id="m_asian2_1" class="form-control" >
-        <td><label for="m_asian2_1">points</label>
-        {{ formfield_errors 'm_asian2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian3" id="m_asian3_1" class="form-control" >
-        <td><label for="m_asian3_1">points</label>
-        {{ formfield_errors 'm_asian3' }} </td>
-  </tr>
-</table>
 
 <br>
 <hr>
@@ -119,27 +302,6 @@
   </tr>
 </table>
 
-<br>
-
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Hispanic</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic1" id="m_hispanic1_1" class="form-control" >
-        <td><label for="m_hispanic1_1">points</label>
-      {{ formfield_errors 'm_hispanic1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic2" id="m_hispanic2_1" class="form-control" >
-        <td><label for="m_hispanic2_1">points</label>
-        {{ formfield_errors 'm_hispanic2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic3" id="m_hispanic3_1" class="form-control" >
-        <td><label for="m_hispanic3_1">points</label></td>
-        {{ formfield_errors 'm_hispanic3' }}
-  </tr>
-</table>
 
 <br>
 <hr>
@@ -164,27 +326,6 @@
         {{ formfield_errors 'l_black3' }} </td>
   </tr>
 </table>
-<br>
-    <p> Your predictions of the scores of {{ C.samples }} randomly selected <b>black</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black1" id="m_black1_1" class="form-control" >
-        <td><label for="m_black1_1">points</label>
-        {{ formfield_errors 'm_black1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black2" id="m_black2_1" class="form-control" >
-        <td><label for="m_black2_1">points</label>
-        {{ formfield_errors 'm_black2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black3" id="m_black3_1" class="form-control" >
-        <td><label for="m_black3_1">points</label>
-        {{ formfield_errors 'm_black3' }} </td>
-  </tr>
-</table>
-
 {{endif}}
 
 
@@ -215,29 +356,6 @@
   </tr>
 </table>
 <br>
-    <p> Your predictions of the scores of {{ C.samples }} randomly selected <b>black</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black1" id="m_black1_2" class="form-control" >
-        <td><label for="m_black1_2">points</label>
-        {{ formfield_errors 'm_black1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black2" id="m_black2_2" class="form-control" >
-        <td><label for="m_black2_2">points</label>
-        {{ formfield_errors 'm_black2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_black3" id="m_black3_2" class="form-control" >
-        <td><label for="m_black3_2">points</label>
-        {{ formfield_errors 'm_black3' }} </td>
-  </tr>
-</table>
-
-
-
-<br>
 <hr>
 <br>
 
@@ -260,29 +378,6 @@
         {{ formfield_errors 'l_hispanic3' }}
   </tr>
 </table>
-
-<br>
-
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Hispanic</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic1" id="m_hispanic1_2" class="form-control" >
-        <td><label for="m_hispanic1_2">points</label>
-      {{ formfield_errors 'm_hispanic1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic2" id="m_hispanic2_2" class="form-control" >
-        <td><label for="m_hispanic2_2">points</label>
-        {{ formfield_errors 'm_hispanic2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_hispanic3" id="m_hispanic3_2" class="form-control" >
-        <td><label for="m_hispanic3_2">points</label></td>
-        {{ formfield_errors 'm_hispanic3' }}
-  </tr>
-</table>
-
 
 <br>
 <hr>
@@ -310,28 +405,6 @@
 </table>
 
 <br>
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Asian</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian1" id="m_asian1_2" class="form-control" >
-        <td><label for="m_asian1_2">points</label>
-      {{ formfield_errors 'm_asian1' }}</td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian2" id="m_asian2_2" class="form-control" >
-        <td><label for="m_asian2_2">points</label>
-        {{ formfield_errors 'm_asian2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_asian3" id="m_asian3_2" class="form-control" >
-        <td><label for="m_asian3_2">points</label>
-        {{ formfield_errors 'm_asian3' }} </td>
-  </tr>
-</table>
-
-
-<br>
 <hr>
 <br>
 
@@ -355,31 +428,9 @@
         {{ formfield_errors 'l_white3' }} </td>
   </tr>
 </table>
-<br>
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>white</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white1" id="m_white1_2" class="form-control" >
-        <td><label for="m_white1_2">points</label>
-        {{ formfield_errors 'm_white1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white2" id="m_white2_2" class="form-control" >
-        <td><label for="m_white2_2">points</label>
-        {{ formfield_errors 'm_white2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_white3" id="m_white3_2" class="form-control" >
-        <td><label for="m_white3_2">points</label>
-        {{ formfield_errors 'm_white3' }} </td>
-  </tr>
-</table>
 
 {{ endif }}
-
-
-
+{{ endif }}
 
 
 <br> <br>

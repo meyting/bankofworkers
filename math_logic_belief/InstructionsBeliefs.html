@@ -4,7 +4,7 @@
 {{ block content }}
 <p>
     The previous part is completed by several other people besides you.
-    On the next two pages, we want to know what you think how well specific subgroups of people perform in the two tasks.
+    On the three pages, we want to know what you think how well specific subgroups of people perform in the task.
     Each subgroup consist of {{C.samples}} people.
 </p>
 <p>
@@ -16,7 +16,7 @@
 </ul>
 </p>
     <p style="font-size:18px;"> <u> Example: </u>  </p>
-<p> Your predictions of the scores of {{ C.samples }} randomly drawn <b>American</b> participants in the <b>sequence</b> task: </p>
+<p> Your predictions of the scores of {{ C.samples }} randomly drawn <b>American</b> participants in the {{ if participant.task == "sequence" }}<b>sequence</b>{{ endif }}{{if participant.task == "math"}}<b>adding</b>{{ endif }} task: </p>
 <table>
   <tr>
     <td class="headlinecolumn">Average All: &nbsp;</td>
@@ -81,7 +81,6 @@
             <td style="text-align:center"> <b> {{C.examplebonus}} </b> </td>
         </tr>
     </table>
-    <br>
     <p>
         If this subgroup was selected as the "subgroup-that-counts", you would receive an additional bonus payment of <b> {{C.examplebonus}} </b> in part II.
     </p>

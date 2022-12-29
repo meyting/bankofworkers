@@ -4,7 +4,9 @@ Sequences
 
 {{ block content }}
     <p>
-        Now it is your turn to complete the short sequences of numbers, i.e. to actually perform the task mentioned before.
+        Now it is your turn to complete the sequences of numbers, i.e. to actually perform the task mentioned before.
+    </p>
+    <p>
         You have {{C.time_sequence_mins}} minutes to complete a maximum of {{C.num_rounds_task}} sequences.
         In order to find the missing number of a sequence, you need to figure out the pattern according to which the number sequence is constructed.
         The task ends either after {{C.time_sequence_mins}} minutes or after you have completed all {{C.num_rounds_task}} sequences.
@@ -34,6 +36,7 @@ Sequences
     <p>
         For each correct answer, you get one point. You do <b> not </b> get any deductions for wrong or missing answers.
         Hence, your total score will be between 0 and {{C.num_rounds_task}}, depending on how many sequences you complete correctly.
+        For each point, you earn {{ C.bonusrate }}.
     </p>
     <p style="font-size:18px;"> <u> Bonus Payment Example: </u>  </p>
         If you complete a total of {{C.bonusexample_sequence}} out of {{C.num_rounds_task}} sequences correctly, your overall score for this task will be {{C.bonusexample_sequence}}.

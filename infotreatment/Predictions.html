@@ -1,0 +1,39 @@
+{{ block title }}
+    Background Information
+{{ endblock }}
+{{ block content }}
+
+{{ if participant.task == "sequence" }}
+<p>
+    Moreover, we asked {{ C.sample }} participants about what they believe how many sequences others complete correctly.
+</p>
+<p>
+  On average, the participants believe that
+</p>
+{{ endif }}
+
+
+{{ if participant.task == "math" }}
+<p>
+    Moreover, we asked {{ C.sample }} participants about what they believe how many questions others solve correctly.
+</p>
+<p>
+  On average, the participants believe that
+</p>
+{{ endif }}
+
+
+
+    {{ next_button }}
+
+{{ endblock }}
+
+
+{{ block styles }}
+<style type="text/css">
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+{{ endblock }}

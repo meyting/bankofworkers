@@ -75,7 +75,7 @@ def make_field():
         label="",
         min=0,
         max=50,
-        blank=False,
+        blank=True,
     )
 
 
@@ -161,32 +161,34 @@ class Genderbeliefs(Page):
 
     @staticmethod
     def error_message(player, values):
-        print('values is', values)
-        if values['m_male1'] > values['m_male2']:
+        try:
+            if values['m_male1'] > values['m_male2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
+            elif values['m_male1'] < values['m_male3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
+            if values['m_female1'] > values['m_female2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
+            elif values['m_female1'] < values['m_female3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
+            if values['l_male1'] > values['l_male2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
+            elif values['l_male1'] < values['l_male3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
+            if values['l_female1'] > values['l_female2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
+            elif values['l_female1'] < values['l_female3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
+        except TypeError:
             player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
-        elif values['m_male1'] < values['m_male3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
-        if values['m_female1'] > values['m_female2']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
-        elif values['m_female1'] < values['m_female3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
-        if values['l_male1'] > values['l_male2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 male participants should not be larger than the mean prediction for the best 10 male participants.'
-        elif values['l_male1'] < values['l_male3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 male participants should not be smaller than the mean prediction for the worst 10 male participants.'
-        if values['l_female1'] > values['l_female2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 female participants should not be larger than the mean prediction for the best 10 female participants.'
-        elif values['l_female1'] < values['l_female3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 female participants should not be smaller than the mean prediction for the worst 10 female participants.'
-
+            return "Please fill in all fields on this page."
 
 
 class Racebeliefs(Page):
@@ -210,55 +212,58 @@ class Racebeliefs(Page):
     @staticmethod
     def error_message(player, values):
         print('values is', values)
-        if values['m_asian1'] > values['m_asian2']:
+        try:
+            if values['m_asian1'] > values['m_asian2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
+            elif values['m_asian1'] < values['m_asian3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 Asian participants should not be smaller than the mean prediction for the worst 10 Asian participants.'
+            if values['m_white1'] > values['m_white2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 white participants should not be larger than the mean prediction for the best 10 white participants.'
+            elif values['m_white1'] < values['m_white3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 white participants should not be smaller than the mean prediction for the worst 10 white participants.'
+            if values['m_hispanic1'] > values['m_hispanic2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 Hispanic participants should not be larger than the mean prediction for the best 10 Hispanic participants.'
+            elif values['m_hispanic1'] < values['m_hispanic3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 Hispanic participants should not be smaller than the mean prediction for the worst 10 Hispanic participants.'
+            if values['m_black1'] > values['m_black2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 black participants should not be larger than the mean prediction for the best 10 black participants.'
+            elif values['m_black1'] < values['m_black3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 black participants should not be smaller than the mean prediction for the worst 10 black participants.'
+            if values['l_asian1'] > values['l_asian2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
+            elif values['l_asian1'] < values['l_asian3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 Asian participants should not be smaller than the mean prediction for the worst 10 Asian participants.'
+            if values['l_white1'] > values['l_white2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 white participants should not be larger than the mean prediction for the best 10 white participants.'
+            elif values['l_white1'] < values['l_white3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 white participants should not be smaller than the mean prediction for the worst 10 white participants.'
+            if values['l_hispanic1'] > values['l_hispanic2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 Hispanic participants should not be larger than the mean prediction for the best 10 Hispanic participants.'
+            elif values['l_hispanic1'] < values['l_hispanic3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 Hispanic participants should not be smaller than the mean prediction for the worst 10 Hispanic participants.'
+            if values['l_black1'] > values['l_black2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 black participants should not be larger than the mean prediction for the best 10 black participants.'
+            elif values['l_black1'] < values['l_black3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 black participants should not be smaller than the mean prediction for the worst 10 black participants.'
+        except TypeError:
             player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
-        elif values['m_asian1'] < values['m_asian3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 Asian participants should not be smaller than the mean prediction for the worst 10 Asian participants.'
-        if values['m_white1'] > values['m_white2']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 white participants should not be larger than the mean prediction for the best 10 white participants.'
-        elif values['m_white1'] < values['m_white3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 white participants should not be smaller than the mean prediction for the worst 10 white participants.'
-        if values['m_hispanic1'] > values['m_hispanic2']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 Hispanic participants should not be larger than the mean prediction for the best 10 Hispanic participants.'
-        elif values['m_hispanic1'] < values['m_hispanic3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 Hispanic participants should not be smaller than the mean prediction for the worst 10 Hispanic participants.'
-        if values['m_black1'] > values['m_black2']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 black participants should not be larger than the mean prediction for the best 10 black participants.'
-        elif values['m_black1'] < values['m_black3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 black participants should not be smaller than the mean prediction for the worst 10 black participants.'
-        if values['l_asian1'] > values['l_asian2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 Asian participants should not be larger than the mean prediction for the best 10 Asian participants.'
-        elif values['l_asian1'] < values['l_asian3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 Asian participants should not be smaller than the mean prediction for the worst 10 Asian participants.'
-        if values['l_white1'] > values['l_white2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 white participants should not be larger than the mean prediction for the best 10 white participants.'
-        elif values['l_white1'] < values['l_white3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 white participants should not be smaller than the mean prediction for the worst 10 white participants.'
-        if values['l_hispanic1'] > values['l_hispanic2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 Hispanic participants should not be larger than the mean prediction for the best 10 Hispanic participants.'
-        elif values['l_hispanic1'] < values['l_hispanic3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 Hispanic participants should not be smaller than the mean prediction for the worst 10 Hispanic participants.'
-        if values['l_black1'] > values['l_black2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 black participants should not be larger than the mean prediction for the best 10 black participants.'
-        elif values['l_black1'] < values['l_black3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 black participants should not be smaller than the mean prediction for the worst 10 black participants.'
-
+            return "Please fill in all fields on this page."
 
 
 class Partybeliefs(Page):
@@ -281,31 +286,34 @@ class Partybeliefs(Page):
     @staticmethod
     def error_message(player, values):
         print('values is', values)
-        if values['m_republican1'] > values['m_republican2']:
+        try:
+            if values['m_republican1'] > values['m_republican2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 republican participants should not be larger than the mean prediction for the best 10 republican participants.'
+            elif values['m_republican1'] < values['m_republican3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 republican participants should not be smaller than the mean prediction for the worst 10 republican participants.'
+            if values['m_democrat1'] > values['m_democrat2']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 democratic participants should not be larger than the mean prediction for the best 10 democratic participants.'
+            elif values['m_democrat1'] < values['m_democrat3']:
+                player.errors += 1
+                return 'In the adding task, the mean prediction for all 100 democratic participants should not be smaller than the mean prediction for the worst 10 democratic participants.'
+            if values['l_republican1'] > values['l_republican2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 republican participants should not be larger than the mean prediction for the best 10 republican participants.'
+            elif values['l_republican1'] < values['l_republican3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 republican participants should not be smaller than the mean prediction for the worst 10 republican participants.'
+            if values['l_democrat1'] > values['l_democrat2']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 democratic participants should not be larger than the mean prediction for the best 10 democratic participants.'
+            elif values['l_democrat1'] < values['l_democrat3']:
+                player.errors += 1
+                return 'In the sequence task, the mean prediction for all 100 democratic participants should not be smaller than the mean prediction for the worst 10 democratic participants.'
+        except TypeError:
             player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 republican participants should not be larger than the mean prediction for the best 10 republican participants.'
-        elif values['m_republican1'] < values['m_republican3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 republican participants should not be smaller than the mean prediction for the worst 10 republican participants.'
-        if values['m_democrat1'] > values['m_democrat2']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 democratic participants should not be larger than the mean prediction for the best 10 democratic participants.'
-        elif values['m_democrat1'] < values['m_democrat3']:
-            player.errors += 1
-            return 'In the adding task, the mean prediction for all 100 democratic participants should not be smaller than the mean prediction for the worst 10 democratic participants.'
-        if values['l_republican1'] > values['l_republican2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 republican participants should not be larger than the mean prediction for the best 10 republican participants.'
-        elif values['l_republican1'] < values['l_republican3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 republican participants should not be smaller than the mean prediction for the worst 10 republican participants.'
-        if values['l_democrat1'] > values['l_democrat2']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 democratic participants should not be larger than the mean prediction for the best 10 democratic participants.'
-        elif values['l_democrat1'] < values['l_democrat3']:
-            player.errors += 1
-            return 'In the sequence task, the mean prediction for all 100 democratic participants should not be smaller than the mean prediction for the worst 10 democratic participants.'
-
+            return "Please fill in all fields on this page."
 
 page_sequence = [InstructionsBeliefs,
                  Genderbeliefs,

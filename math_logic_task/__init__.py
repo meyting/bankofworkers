@@ -10,7 +10,7 @@ random.seed(0)
 class C(BaseConstants):
     NAME_IN_URL = 'math_logic_task'
     PLAYERS_PER_GROUP = None
-    NUM_ROUNDS = 100
+    NUM_ROUNDS = 50
     TIMER_TEXT = "Remaining time for this task:"
     SEQUENCES_sequence = ['1 , 5 , 4 , 8 , 7 , ', '12 , 23 , 34 , 45 , ', '15 , 12 , 9 , 6 , ',
                           '2 , 6 , 4 , 12 , 10 , 30 , ',
@@ -50,7 +50,7 @@ class C(BaseConstants):
     time_maths_mins = round(time_maths/60)
     time_sequence = 300
     time_sequence_mins = round(time_sequence/60)
-    num_rounds_task = round(NUM_ROUNDS/2)
+    num_rounds_task = round(NUM_ROUNDS)
     lowest_integer = 1
     highest_integer = 10
     num_integers = 5
@@ -158,21 +158,21 @@ class InstructionsMath (Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        return participant.task == "math"
+        return participant.task == "math" and player.round_number == 1
 
 
 class InstructionsLogic(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        return participant.task == "sequence"
+        return participant.task == "sequence" and player.round_number == 1
 
 
 class StartMath(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        return participant.task == "math"
+        return participant.task == "math" and player.round_number == 1
 
     @staticmethod
     def before_next_page(player, timeout_happened):
@@ -185,7 +185,7 @@ class StartLogic(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        return participant.task == "sequence"
+        return participant.task == "sequence" and player.round_number == 1
 
     @staticmethod
     def before_next_page(player, timeout_happened):

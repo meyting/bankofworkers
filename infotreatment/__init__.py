@@ -14,6 +14,8 @@ class C(BaseConstants):
     time_sequence_mins = 5
     time_math_mins = 4
     num_rounds_task = 50
+    sample = 100
+
 
 class Subsession(BaseSubsession):
     pass
@@ -28,9 +30,17 @@ class Player(BasePlayer):
 
 
 # PAGES
+
 class Info(Page):
     pass
 
 
+class Predictions(Page):
+    pass
 
-page_sequence = [Info,]
+
+
+page_sequence = [Info,
+                 Predictions
+                 ]
+
