@@ -204,7 +204,7 @@ class QuestionsMath(Page):
         participant = player.participant
         player.task = participant.task
         print(player.task)
-        player.question_num_sequence = player.round_number
+        player.question_num_math = player.round_number
         return {
                 "n1": player.subsession.n1,
                 "n2": player.subsession.n2,
