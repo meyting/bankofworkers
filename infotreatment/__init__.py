@@ -29,7 +29,7 @@ class Subsession(BaseSubsession):
 def creating_session(subsession):
     import random
     import itertools
-    tendency = itertools.cycle(['prowhite', 'problack'])
+    tendency = itertools.cycle(['prowhite', 'problack', 'problack', 'prowhite'])
     if subsession.round_number == 1:
         for p in subsession.get_players():
             if 'tendency' in subsession.session.config:

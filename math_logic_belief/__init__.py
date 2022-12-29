@@ -30,9 +30,9 @@ class Subsession(BaseSubsession):
 def creating_session(subsession):
     import random
     import itertools
-    genderorder = itertools.cycle(['mf', 'fm'])
-    partyorder = itertools.cycle(['dr', 'rd'])
-    raceorder = itertools.cycle(['wahb', 'bhaw'])
+    genderorder = itertools.cycle(['mf', 'mf', 'fm', 'fm'])
+    partyorder = itertools.cycle(['dr', 'dr', 'rd', 'rd'])
+    raceorder = itertools.cycle(['wahb', 'wahb', 'bhaw', 'bhaw'])
     #cats = itertools.cycle(['pg', 'pr', 'rg', 'gp', 'rp', 'gr'])
     # gp --> pg ?
     if subsession.round_number == 1:
