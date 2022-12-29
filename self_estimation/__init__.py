@@ -25,20 +25,24 @@ class Player(BasePlayer):
     est_math = models.IntegerField(
         min=0,
         max=50,
+        blank = True,
     )
     est_avg_math = models.BooleanField(
         label='Do you think you achieved a higher score in the <b> adding task </b> than the average of all participants in our study?',
         choices=[[0, 'yes'], [1, 'no']],
-        widget=widgets.RadioSelectHorizontal()
+        widget=widgets.RadioSelectHorizontal(),
+        blank = True
     )
     est_sequence = models.IntegerField(
         min=0,
         max=50,
+        blank=True
     )
     est_avg_sequence = models.IntegerField(
         label="Do you think you achieved a higher score in the <b> sequence task </b> than the average of all participants in our study? ",
         choices=[[0, 'yes'], [1, 'no']],
-        widget=widgets.RadioSelectHorizontal()
+        widget=widgets.RadioSelectHorizontal(),
+        blank=True,
     )
 
 
