@@ -44,7 +44,7 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 PARTICIPANT_FIELDS = ['expiry', 'total_points_math', 'task', 'belief_treatment', 'task_rounds',
                       'total_points_sequence', "sequences_sequence", "solutions_sequence",
-                      'raceorder', "partyorder", "genderorder",]
+                      'raceorder', "partyorder", "genderorder", "tendency"]
 SESSION_FIELDS = []
 
 # ISO-639 code

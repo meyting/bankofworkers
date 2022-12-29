@@ -3,6 +3,8 @@
 {{ endblock }}
 {{ block content }}
 
+{{ if participant.tendency == "prowhite" }}
+
 {{ if participant.task == "sequence" }}
 <p>
     Moreover, we randomly asked {{ C.sample }} participants what they think how well specific subgroups of people perform in the task.
@@ -10,6 +12,7 @@
 <b>
   They think that black participants score on average 10% points less than white participants.
 </b>
+<br><br>
 {{ endif }}
 
 
@@ -20,8 +23,34 @@
 <b>
   They think that black participants score on average 10% points less than white participants.
 </b>
+<br><br>
+{{ endif }}
 {{ endif }}
 
+
+{{ if participant.tendency == "problack" }}
+
+{{ if participant.task == "sequence" }}
+<p>
+    Moreover, we randomly asked {{ C.sample }} participants what they think how well specific subgroups of people perform in the task.
+</p>
+<b>
+  They think that black participants score on average 10% points more than white participants.
+</b>
+<br><br>
+{{ endif }}
+
+
+{{ if participant.task == "math" }}
+<p>
+    Moreover, we randomly asked {{ C.sample }} participants what they think how well specific subgroups of people perform in the task.
+</p>
+<b>
+  They think that black participants score on average 10% points more than white participants.
+</b>
+<br><br>
+{{ endif }}
+{{ endif }}
 
 
     {{ next_button }}
