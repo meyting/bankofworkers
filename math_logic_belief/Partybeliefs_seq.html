@@ -3,127 +3,6 @@
 {{ endblock }}
 
 {{ block content }}
-{{if participant.task == "math"}}
-
-<p>
-    Please provide your prediction for the scores that individuals from specific subgroups achieved in the adding task.
-    Remember that the possible score ranges from 0 to {{ C.num_rounds_task}} in each task.
-</p>
-
-<hr>
-<br>
- {{ if participant.partyorder == "dr" }}
-
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Democratic</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_democrat1" id="m_democrat1_1" class="form-control" >
-        <td><label for="m_democrat1_1">points</label>
-        {{ formfield_errors 'm_democrat1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_democrat2" id="m_democrat2_1" class="form-control" >
-        <td><label for="m_democrat2_1">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_democrat3" id="m_democrat3_1" class="form-control" >
-        <td><label for="m_democrat3_1">points</label>
-        {{ formfield_errors 'm_democrat3' }} </td>
-  </tr>
-</table>
-
-<br>
-<hr>
-<br>
-
-
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Republican</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_republican1" id="m_republican1_1" class="form-control" >
-        <td><label for="m_republican1_1">points</label>
-        {{ formfield_errors 'm_republican1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_republican2" class="form-control" id="m_republican2_1" >
-        <td><label for="m_republican2_1">points</label>
-        {{ formfield_errors 'm_republican2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_republican3" class="form-control" id="m_republican3_1" >
-        <td><label for="m_republican3_1">points</label>
-        {{ formfield_errors 'm_republican3' }} </td>
-  </tr>
-</table>
-{{ endif }}
-
-
-
-
-
-
-
-
- {{ if participant.partyorder == "rd" }}
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Republican</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_republican1" id="m_republican1_2" class="form-control" >
-        <td><label for="m_republican1_2">points</label>
-        {{ formfield_errors 'm_republican1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_republican2" class="form-control" id="m_republican2_2" >
-        <td><label for="m_republican2_2">points</label>
-        {{ formfield_errors 'm_republican2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_republican3" class="form-control" id="m_republican3_2" >
-        <td><label for="m_republican3_2">points</label>
-        {{ formfield_errors 'm_republican3' }} </td>
-  </tr>
-</table>
-
-<br>
-<hr>
-<br>
-
-<p> Your predictions of the scores of {{ C.samples }} randomly selected <b>Democratic</b> participants in the <b>adding</b> task: </p>
-<table>
-  <tr>
-    <td class="headlinecolumn">Average All: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_democrat1" id="m_democrat1_2" class="form-control" >
-        <td><label for="m_democrat1_2">points</label>
-        {{ formfield_errors 'm_democrat1' }} </td>
-        <td class="fillercolumn">&nbsp;</td>
-    <td>Average Top 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_democrat2" id="m_democrat2_2" class="form-control" >
-        <td><label for="m_democrat2_2">points</label>
-        {{ formfield_errors 'm_democrat2' }} </td>
-          <td class="fillercolumn">&nbsp;</td>
-    <td>Average Bottom 10: &nbsp;</td>
-        <td class="inputcolumn"><input type="number" step="0.01"  min="0" max="50" name="m_democrat3" id="m_democrat3_2" class="form-control" >
-        <td><label for="m_democrat3_2">points</label>
-        {{ formfield_errors 'm_democrat3' }} </td>
-  </tr>
-</table>
-
-{{ endif }}
-{{ endif }}
-
-
-
-
-
-
-
-
-
-{{if participant.task == "sequence"}}
 
 <p>
     Please provide your prediction for the scores that individuals from specific subgroups achieved in the sequence task.
@@ -227,7 +106,6 @@
 </table>
 
 {{ endif }}
-{{ endif }}
 
 
 
@@ -280,18 +158,6 @@
         if (l_democrat3 !== null) $('#l_democrat3_1').val(l_democrat3);
         var l_republican3 = sessionStorage.getItem('l_republican3');
         if (l_republican3 !== null) $('#l_republican3_1').val(l_republican3);
-        var m_democrat1 = sessionStorage.getItem('m_democrat1');
-        if (m_democrat1 !== null) $('#m_democrat1_1').val(m_democrat1);
-        var m_republican1 = sessionStorage.getItem('m_republican1');
-        if (m_republican1 !== null) $('#m_republican1_1').val(m_republican1);
-        var m_democrat2 = sessionStorage.getItem('m_democrat2');
-        if (m_democrat2 !== null) $('#m_democrat2_1').val(m_democrat2);
-        var m_republican2 = sessionStorage.getItem('m_republican2');
-        if (m_republican2 !== null) $('#m_republican2_1').val(m_republican2);
-        var m_democrat3 = sessionStorage.getItem('m_democrat3');
-        if (m_democrat3 !== null) $('#m_democrat3_1').val(m_democrat3);
-        var m_republican3 = sessionStorage.getItem('m_republican3');
-        if (m_republican3 !== null) $('#m_republican3_1').val(m_republican3);
 
         var l_democrat1 = sessionStorage.getItem('l_democrat1');
         if (l_democrat1 !== null) $('#l_democrat1_2').val(l_democrat1);
@@ -305,18 +171,6 @@
         if (l_democrat3 !== null) $('#l_democrat3_2').val(l_democrat3);
         var l_republican3 = sessionStorage.getItem('l_republican3');
         if (l_republican3 !== null) $('#l_republican3_2').val(l_republican3);
-        var m_democrat1 = sessionStorage.getItem('m_democrat1');
-        if (m_democrat1 !== null) $('#m_democrat1_2').val(m_democrat1);
-        var m_republican1 = sessionStorage.getItem('m_republican1');
-        if (m_republican1 !== null) $('#m_republican1_2').val(m_republican1);
-        var m_democrat2 = sessionStorage.getItem('m_democrat2');
-        if (m_democrat2 !== null) $('#m_democrat2_2').val(m_democrat2);
-        var m_republican2 = sessionStorage.getItem('m_republican2');
-        if (m_republican2 !== null) $('#m_republican2_2').val(m_republican2);
-        var m_democrat3 = sessionStorage.getItem('m_democrat3');
-        if (m_democrat3 !== null) $('#m_democrat3_2').val(m_democrat3);
-        var m_republican3 = sessionStorage.getItem('m_republican3');
-        if (m_republican3 !== null) $('#m_republican3_2').val(m_republican3);
     };
 
     let partyorder = js_vars.partyorder;
@@ -330,12 +184,6 @@
             sessionStorage.setItem("l_democrat1", $('#l_democrat1_1').val());
             sessionStorage.setItem("l_democrat2", $('#l_democrat2_1').val());
             sessionStorage.setItem("l_democrat3", $('#l_democrat3_1').val());
-            sessionStorage.setItem("m_republican1", $('#m_republican1_1').val());
-            sessionStorage.setItem("m_republican2", $('#m_republican2_1').val());
-            sessionStorage.setItem("m_republican3", $('#m_republican3_1').val());
-            sessionStorage.setItem("m_democrat1", $('#m_democrat1_1').val());
-            sessionStorage.setItem("m_democrat2", $('#m_democrat2_1').val());
-            sessionStorage.setItem("m_democrat3", $('#m_democrat3_1').val());
             }
         if (partyorder == "rd") {
             sessionStorage.setItem("l_republican1", $('#l_republican1_2').val());
@@ -344,12 +192,6 @@
             sessionStorage.setItem("l_democrat1", $('#l_democrat1_2').val());
             sessionStorage.setItem("l_democrat2", $('#l_democrat2_2').val());
             sessionStorage.setItem("l_democrat3", $('#l_democrat3_2').val());
-            sessionStorage.setItem("m_republican1", $('#m_republican1_2').val());
-            sessionStorage.setItem("m_republican2", $('#m_republican2_2').val());
-            sessionStorage.setItem("m_republican3", $('#m_republican3_2').val());
-            sessionStorage.setItem("m_democrat1", $('#m_democrat1_2').val());
-            sessionStorage.setItem("m_democrat2", $('#m_democrat2_2').val());
-            sessionStorage.setItem("m_democrat3", $('#m_democrat3_2').val());
             }
 
     };
