@@ -2,9 +2,9 @@
     Assessment of Your Own Performance
 {{ endblock }}
 {{ block content }}
-<br>
+{{ if participant.task == "math" }}
 <p>
-    How many of the {{ C.num_rounds_task}} questions in the <b> adding task </b> do you think you have answered correctly?
+    How many of the {{ C.num_rounds_task}} questions in the adding task do you think you have answered correctly?
 </p>
 <table>
     <tr>
@@ -19,9 +19,14 @@
 <p>
 {{ formfield 'est_avg_math' }}
 </p>
+{{ endif }}
+
+{{ if participant.task == "sequence" }}
+
+
 <br>
 <p>
-    How many of the {{ C.num_rounds_task }} sequences in the <b> sequence task </b> do you think you have completed correctly?
+    How many of the {{ C.num_rounds_task }} sequences in the sequence task do you think you have completed correctly?
 </p>
 <table>
     <tr>
@@ -36,7 +41,8 @@
 <p>
 {{ formfield 'est_avg_sequence' }}
 </p>
-<br>
+{{ endif }}
+
     {{ next_button }}
 
 {{ endblock }}

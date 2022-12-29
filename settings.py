@@ -23,7 +23,7 @@ SESSION_CONFIGS = [
     ),
     dict(
         name='selfest',
-        app_sequence=['self_estimation'],
+        app_sequence=['welcome', 'self_estimation'],
         num_demo_participants=10,
     ),
     dict(
