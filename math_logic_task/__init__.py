@@ -227,7 +227,7 @@ class QuestionsMath(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        return participant.task == "math"
+        return participant.task == "math" and get_timeout_seconds(player) > 1
 
 
 
@@ -257,7 +257,7 @@ class QuestionsLogic(Page):
     @staticmethod
     def is_displayed(player: Player):
         participant = player.participant
-        return participant.task == "sequence"
+        return participant.task == "sequence" and get_timeout_seconds(player) > 1
 
 page_sequence = [#InstructionsTask,
                  InstructionsMath,
